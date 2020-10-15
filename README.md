@@ -28,3 +28,8 @@ O site vai ser gerado na pasta `./build`
 ```
 $ npx @docusaurus/init@next init code classic
 ```
+
+# Github Secrets
+
+Deve ser criado um secret com o nome "ACCESS_TOKEN" e ele tem que conter o resultado do comando `surge token`
+
