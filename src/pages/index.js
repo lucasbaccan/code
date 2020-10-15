@@ -8,33 +8,31 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: 'Easy to Use',
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    title: <center>Vá direto ao ponto</center>,
+    imageUrl: 'img/clockSmall.svg',
     description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
+      <center>
+        Pra que ler um monte de conteúdo se você pode ir direto no que precisa.
+      </center>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    title: <center>Não perca uma ideia</center>,
+    imageUrl: 'img/lightbulbSmall.svg',
     description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
+      <center>
+        Ficar pesquisando material é mancada<br />
+        Utilize dicas, truques, macetes ...
+      </center>
     ),
   },
   {
-    title: 'Powered by React',
+    title: <center>Docusaurus: Powered by React</center>,
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
+      <center>
+        Documentação feita de forma simples e rápida.
+      </center>
     ),
   },
 ];
@@ -55,28 +53,48 @@ function Feature({imageUrl, title, description}) {
 }
 
 function Home() {
-  const context = useDocusaurusContext();
-  const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <header className={clsx('hero hero--primary', styles.heroBanner)}>
-        <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={clsx(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={useBaseUrl('docs/')}>
-              Get Started
+      description="Dicas, truques, manhas &macetes">
+      <main>
+        <div className={styles.hero}>
+          <div className={styles.heroInner}>
+            <h1 className={styles.heroProjectTagline}>
+              <img
+                alt="Logo"
+                className={styles.heroLogo}
+                src={useBaseUrl('img/programmer.svg')}
+              />
+              Dicas{' '}
+              <span className={styles.heroProjectKeywords}>truques</span>{' '}
+              <br />
+              manhas
+              <span className={styles.heroProjectKeywords}> &macetes</span>
+              {/* <br />
+              Foque no que é{' '}
+              <br />
+              <span className={styles.heroProjectKeywords}>importante!</span> */}
+            </h1>
+            <br />
+            <h3 className={styles.heroProjectTagline}>
+              Programação{' '}
+              <span className={styles.heroProjectKeywords}>tecnologia</span>{' '}
+              software
+              <span className={styles.heroProjectKeywords}> &hardware</span>
+
+            </h3>
+          </div>
+          <br />
+          <br />
+          <div className={styles.indexCtas}>
+              <Link
+                className={styles.indexCtasGetStartedButton}
+                to={useBaseUrl('docs/')}>
+                Bora lá
             </Link>
           </div>
         </div>
-      </header>
+      </main>
       <main>
         {features && features.length > 0 && (
           <section className={styles.features}>
