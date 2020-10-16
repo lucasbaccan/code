@@ -2,6 +2,11 @@ module.exports = {
   someSidebar: [
     'menu',
     {
+      'Ferramentas Online': [
+        'ferramentas-online/gitignore'
+      ]
+    },
+    {
       Sobre: [
         {
           type: 'link',
