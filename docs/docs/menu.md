@@ -25,7 +25,8 @@ Abaixo tem uma lista de links de materiais ou utilize o campo de busca.
 
 ## Último Post
 
-Nenhum
+**.gitignore** - Gere de forma simples o arquivo .gitignore do seu projeto.  
+[veja mais aqui](ferramentas-online/gitignore)
 
 ---
 
