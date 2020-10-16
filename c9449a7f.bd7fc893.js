@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[29],{86:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"lucas-baccan","name":"lucas baccan","count":1,"permalink":"/blog/tags/lucas-baccan"}')}}]);
