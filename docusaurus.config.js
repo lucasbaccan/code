@@ -16,7 +16,7 @@ module.exports = {
     announcementBar: {
       id: 'banner',
       content:
-      '⭐️ Novos conteúdos estão em desenvolvimento, então não se esqueça de adicionar aos favoritos! ⭐️',
+        '⭐️ Novos conteúdos estão em desenvolvimento, então não se esqueça de adicionar aos favoritos! ⭐️',
       backgroundColor: '#c41508',
       textColor: '#fff',
     },
@@ -36,10 +36,22 @@ module.exports = {
         {
           to: 'docs/',
           activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'Menu',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'right'},
+        {
+          to: 'off-topic/',
+          activeBasePath: 'off-topic',
+          label: 'Off-topic',
+          position: 'left',
+        },
+        // {
+        //   to: 'info/',
+        //   activeBasePath: 'info',
+        //   label: 'Off-topics',
+        //   position: 'left',
+        // },
+        { to: 'blog', label: 'Blog', position: 'right' },
         {
           href: 'https://github.com/lucasbaccan/code/',
           // label: 'GitHub',
@@ -103,16 +115,18 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
+          id: 'docs',
+          path: 'docs/docs',
+          editUrl: 'https://github.com/lucasbaccan/code/edit/master/',
+          routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+          editUrl: 'https://github.com/lucasbaccan/code/edit/master/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -121,14 +135,52 @@ module.exports = {
     ],
   ],
   plugins: [
-    [require.resolve('@cmfcmf/docusaurus-search-local'), {
-      blogRouteBasePath: '/blog', // must correspond to the base route path configured for the blog plugin
-      docsRouteBasePath: '/', // must correspond to the base route path configured for the docs plugin
-      indexBlog: true, // whether to index blog pages
-      indexDocs: true, // whether to index docs pages
-      indexPages: true, // whether to index static pages
-      // /404.html is never indexed
-      language: "pt" // language of your documentation, see next section
-    }]
+    [
+      require.resolve('@cmfcmf/docusaurus-search-local'), {
+        blogRouteBasePath: '/blog', // must correspond to the base route path configured for the blog plugin
+        docsRouteBasePath: '/', // must correspond to the base route path configured for the docs plugin
+        indexBlog: true, // whether to index blog pages
+        indexDocs: true, // whether to index docs pages
+        indexPages: true, // whether to index static pages
+        // /404.html is never indexed
+        language: "pt" // language of your documentation, see next section
+      }
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'exemplos',
+        path: 'docs/exemplos',
+        editUrl: 'https://github.com/lucasbaccan/code/edit/master/',
+        routeBasePath: 'exemplos',
+        sidebarPath: require.resolve('./sidebarsExemplos.js'),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'info',
+        path: 'docs/info',
+        editUrl: 'https://github.com/lucasbaccan/code/edit/master/',
+        routeBasePath: 'info',
+        sidebarPath: require.resolve('./sidebarsInfo.js'),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'off-topic',
+        path: 'docs/off-topic',
+        editUrl: 'https://github.com/lucasbaccan/code/edit/master/',
+        routeBasePath: 'off-topic',
+        sidebarPath: require.resolve('./sidebarsOffTopic.js'),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      },
+    ]
   ],
 };
