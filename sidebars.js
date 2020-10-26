@@ -7,6 +7,11 @@ module.exports = {
       ]
     },
     {
+      'Tutoriais': [
+        'tutorial/git'
+      ]
+    },
+    {
       Sobre: [
         {
           type: 'link',

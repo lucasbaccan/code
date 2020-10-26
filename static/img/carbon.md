@@ -1,0 +1,3 @@
+<!-- Imagem do Git Init -->
+https://carbon.now.sh/?bg=rgba(171%2C184%2C195%2C0)&t=theme%3Aoi60v75h0s&wt=boxy&l=application%2Fx-sh&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=13px&lh=137%25&si=false&es=4x&wm=false&code=~%252Fgit%252FGit%250A%2524%2520git%2520init%250AInitialized%2520empty%2520Git%2520repository%2520in%2520C%253A%252FUsers%252Fgit%252FGit%252F.git%252F%250A%250A~%252Fgit%252FGit%2520(master)%250A%2524%2520ls%2520-la%250Adrwxr-xr-x%25201%2520User%2520197121%25200%2520out%252014%252022%253A17%2520.%252F%250Adrwxr-xr-x%25201%2520User%2520197121%25200%2520out%252014%252022%253A17%2520..%252F%250Adrwxr-xr-x%25201%2520User%2520197121%25200%2520out%252014%252022%253A17%2520.git%252F
+
