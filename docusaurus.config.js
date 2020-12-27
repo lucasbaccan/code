@@ -62,52 +62,84 @@ module.exports = {
     },
     footer: {
       style: 'dark',
-      // links: [
-      //   {
-      //     title: 'Docs',
-      //     items: [
-      //       {
-      //         label: 'Style Guide',
-      //         to: 'docs/',
-      //       },
-      //       {
-      //         label: 'Second Doc',
-      //         to: 'docs/doc2/',
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     title: 'Community',
-      //     items: [
-      //       {
-      //         label: 'Stack Overflow',
-      //         href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-      //       },
-      //       {
-      //         label: 'Discord',
-      //         href: 'https://discordapp.com/invite/docusaurus',
-      //       },
-      //       {
-      //         label: 'Twitter',
-      //         href: 'https://twitter.com/docusaurus',
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     title: 'More',
-      //     items: [
-      //       {
-      //         label: 'Blog',
-      //         to: 'blog',
-      //       },
-      //       {
-      //         label: 'GitHub',
-      //         href: 'https://github.com/facebook/docusaurus',
-      //       },
-      //     ],
-      //   },
-      // ],
-      copyright: `Copyright © ${new Date().getFullYear()} Built with Docusaurus and ❤.`,
+      links: [
+        // {
+        //   title: 'Docs',
+        //   items: [
+        //     {
+        //       label: 'Style Guide',
+        //       to: 'docs/',
+        //     },
+        //     {
+        //       label: 'Second Doc',
+        //       to: 'docs/doc2/',
+        //     },
+        //   ],
+        // },
+        // {
+        //   title: 'Community',
+        //   items: [
+        //     {
+        //       label: 'Stack Overflow',
+        //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+        //     },
+        //     {
+        //       label: 'Discord',
+        //       href: 'https://discordapp.com/invite/docusaurus',
+        //     },
+        //     {
+        //       label: 'Twitter',
+        //       href: 'https://twitter.com/docusaurus',
+        //     },
+        //   ],
+        // },
+        // {
+        //   title: 'More',
+        //   items: [
+        //     {
+        //       label: 'Blog',
+        //       to: 'blog',
+        //     },
+        //     {
+        //       label: 'GitHub',
+        //       href: 'https://github.com/facebook/docusaurus',
+        //     },
+        //   ],
+        // },
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'Última publicação',
+              to: 'docs/#último-post',
+            },
+          ],
+        },
+        {
+          title: 'Contribuição',
+          items: [
+            {
+              label: 'Solicitações',
+              to: '/info/solicitacao',
+            },
+          ],
+        },
+        {
+          title: 'Sobre',
+          items: [
+           
+            {
+              label: 'Sobre',
+              to: '/info/sobre',
+            },
+            {
+              label: 'Créditos',
+              to: '/info/creditos',
+            }
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Built with Docusaurus and ❤`,
     },
   },
   presets: [

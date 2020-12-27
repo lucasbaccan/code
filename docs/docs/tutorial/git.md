@@ -118,7 +118,7 @@ Se você nunca teve experiência com Terminal (Linux/MacOS) ou CMD/Powershell (W
 
 ### Instalação
 
-*** Vai ficar para depois, estou com preguiça de montar uma máquina virtual e tirar as prints, fica para depois. ***
+Vai ficar para depois, mas não tem segredo, no windows pelo menos, é meio que *next*, *next* e *next*
 
 ### Configuração
 

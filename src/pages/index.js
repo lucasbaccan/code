@@ -31,7 +31,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <center>
-        Documentação feita de forma simples e rápida.
+        Documentação feita de forma simples e rápida utilizando <a href="https://v2.docusaurus.io/">Docusaurus</a>
       </center>
     ),
   },
