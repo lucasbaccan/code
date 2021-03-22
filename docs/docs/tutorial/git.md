@@ -240,7 +240,7 @@ Até o momento vimos o caminho perfeito, mas se fizer 💩, o que o <Highlight c
 
 Vamos com calma nessa parte, pois dependendo dos parâmetros que utilizar com `git reset` você pode perder alterações em seu código, então vamos ver elas e entender melhor.
 
-Um dos parâmetros que temos é o **--soft**, ele vai voltar somente os arquivos do seu diretório local, mas vai manter o histórico dos commits e a estrutura do seu repositório local.
+Um dos parâmetros que temos é o **--soft**, ele vai voltar somente os commits do seu diretório local, mas vai manter as alterações nos arquivos.
 ```bash
 git reset --soft origin/master
 # ou
