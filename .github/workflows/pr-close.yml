@@ -1,0 +1,29 @@
+name: Close Pull Request
+
+on:
+  pull_request:
+    types: [ closed ]
+
+jobs:
+  delte-surge-sh:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Setup Node
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: 16
+
+    - name: Install Surge.sh
+      run: npm install -g surge
+
+    - name: Delete site on Surge.sh
+      run: surge teardown https://pull-request-${{ github.event.pull_request.number }}-code.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
+
+    - name: Comment on pull request
+      uses: mshick/add-pr-comment@v1
+      with:
+        message: 'Não está mais disponível o site [https://pull-request-${{ github.event.pull_request.number }}-code.surge.sh](https://pull-request-${{ github.event.pull_request.number }}-code.surge.sh)/'
+        repo-token: ${{ secrets.GITHUB_TOKEN  }}
+        repo-token-user-login: "github-actions[bot]"
+        allow-repeats: false
