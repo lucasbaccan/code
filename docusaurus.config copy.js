@@ -23,8 +23,8 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'pt-BR',
-    locales: ['pt-BR'],
+    defaultLocale: 'pt',
+    locales: ['pt'],
   },
 
   presets: [
@@ -32,93 +32,74 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: false, // Não estou utilizando o docs do componente classic
-        blog: false, // Não estou utilizando o blog do componente classic
+        docs: false,
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
-    ],
-  ],
-
-  plugins: [
-    // Adicionar componente docs - /docs
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'docs',
-        path: 'docs/docs',
-        sidebarPath: require.resolve('./sidebarsDocs.js'),
-        editUrl: 'https://github.com/lucasbaccan/code/tree/master/',
-        routeBasePath: 'docs',
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
-    // Adicionar componente docs - /tutorial
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'tutorial',
-        path: 'docs/tutorial',
-        sidebarPath: require.resolve('./sidebarsTutorial.js'),
-        editUrl: 'https://github.com/lucasbaccan/code/tree/master/',
-        routeBasePath: 'tutorial',
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
-    // Adicionar componente docs - /info
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'info',
-        path: 'docs/info',
-        sidebarPath: require.resolve('./sidebarsInfo.js'),
-        editUrl: 'https://github.com/lucasbaccan/code/tree/master/',
-        routeBasePath: 'info',
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
-    // Adicionar componente docs - /off
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'off',
-        path: 'docs/off',
-        sidebarPath: require.resolve('./sidebarsOff.js'),
-        editUrl: 'https://github.com/lucasbaccan/code/tree/master/',
-        routeBasePath: 'off',
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
-    // Adicionar componente docs - /exemplos
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'exemplos',
-        path: 'docs/exemplos',
-        sidebarPath: require.resolve('./sidebarsExemplos.js'),
-        editUrl: 'https://github.com/lucasbaccan/code/tree/master/',
-        routeBasePath: 'exemplos',
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
-    ],
-    // Adicionar componente blog - /blog
-    [
-      '@docusaurus/plugin-content-blog',
-      {
-        id: 'blog',
-        path: 'blog',
-        editUrl: 'https://github.com/lucasbaccan/code/tree/master/',
-        routeBasePath: 'blog',
-        showReadingTime: true,
-        blogSidebarCount: 'ALL',
-        postsPerPage: 10,
-      },
+      plugins: [
+        [
+          '@docusaurus/plugin-content-docs',
+          {
+            id: 'docs',
+            path: 'docs/docs',
+            sidebarPath: require.resolve('./sidebarsDocs.js'),
+            editUrl: 'https://github.com/lucasbaccan/code/tree/master/',
+            routeBasePath: 'docs',
+            showLastUpdateAuthor: true,
+            showLastUpdateTime: true,
+          },
+        ],
+        [
+          '@docusaurus/plugin-content-docs',
+          {
+            id: 'tutorial',
+            path: 'docs/tutorial',
+            sidebarPath: require.resolve('./sidebarsTutorial.js'),
+            editUrl: 'https://github.com/lucasbaccan/code/tree/master/',
+            routeBasePath: 'tutorial',
+            showLastUpdateAuthor: true,
+            showLastUpdateTime: true,
+          },
+        ],
+        [
+          '@docusaurus/plugin-content-docs',
+          {
+            id: 'info',
+            path: 'docs/info',
+            sidebarPath: require.resolve('./sidebarsInfo.js'),
+            editUrl: 'https://github.com/lucasbaccan/code/tree/master/',
+            routeBasePath: 'info',
+            showLastUpdateAuthor: true,
+            showLastUpdateTime: true,
+          },
+        ],
+        [
+          '@docusaurus/plugin-content-docs',
+          {
+            id: 'off',
+            path: 'docs/off',
+            sidebarPath: require.resolve('./sidebarsOff.js'),
+            editUrl: 'https://github.com/lucasbaccan/code/tree/master/',
+            routeBasePath: 'off',
+            showLastUpdateAuthor: true,
+            showLastUpdateTime: true,
+          },
+        ],
+        [
+          '@docusaurus/plugin-content-blog',
+          {
+            id: 'blog',
+            path: 'blog',
+            editUrl: 'https://github.com/lucasbaccan/code/tree/master/',
+            routeBasePath: 'blog',
+            showReadingTime: true,
+            blogSidebarCount: 'ALL',
+            postsPerPage: 10,
+          },
+        ],
+      ],
     ],
   ],
 
@@ -128,7 +109,7 @@ const config = {
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
-        respectPrefersColorScheme: true, // respect user's OS color scheme preference
+        respectPrefersColorScheme: false,
       },
       // announcementBar: {
       //   id: 'banner',
@@ -138,12 +119,18 @@ const config = {
       //   textColor: '#fff',
       // },
       navbar: {
-        title: 'My Site',
+        title: 'Code',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Logo',
           src: 'img/programmer.svg',
         },
         items: [
+          // {
+          //   type: 'doc',
+          //   docId: 'index',
+          //   position: 'left',
+          //   label: 'Docs',
+          // },
           {
             to: 'docs/',
             activeBasePath: 'docs',
@@ -165,7 +152,7 @@ const config = {
           },
           {
             href: 'https://github.com/lucasbaccan/code',
-            // label: 'GitHub', // Utilizar o ícone do GitHub
+            // label: 'GitHub', 
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
