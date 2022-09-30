@@ -9,6 +9,6 @@ Em 2020 eu fiz um piloto, mas ficou na gaveta por um tempo. Agora, em 2022, reso
 
 Ele é feito com [Docusaurus](https://docusaurus.io/), um gerador de sites estáticos para documentação de projetos open source. O código fonte do site está disponível no [GitHub](https://github.com/lucasbaccan/code).
 
-Se quiser saber como eu fiz esse site, basta ver o tutorial que eu fiz, lá eu explico passo a passo como criar um site com Docusaurus e hospedá-lo no GitHub Pages.
+Se quiser saber como eu fiz esse site, basta ver o [tutorial](/tutorial/site_docusaurus/introducao) que eu fiz, lá eu explico passo a passo como criar um site com Docusaurus e hospedá-lo no GitHub Pages.
 
 Caso tenha interesse em saber mais sobre mim, basta ver a página [Sobre o autor](/info/sobre_autor).
