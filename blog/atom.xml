@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://new.code.lucasbaccan.com.br/blog</id>
+    <title>Code Blog</title>
+    <updated>2022-09-30T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://new.code.lucasbaccan.com.br/blog"/>
+    <subtitle>Code Blog</subtitle>
+    <icon>https://new.code.lucasbaccan.com.br/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[#1 - Primeiro post]]></title>
+        <id>1</id>
+        <link href="https://new.code.lucasbaccan.com.br/blog/1"/>
+        <updated>2022-09-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Primeiro post]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="primeiro-post">Primeiro post<a class="hash-link" href="#primeiro-post" title="Link direto para o título">​</a></h2><p>Fala pessoal</p><p>La em outubro de 2020, eu criei esse site, com a intenção de colocar alguns conteúdos relacionados a tecnologia. A ideia veio, mas ficou parada. Agora quase 2 anos depois, vou voltar com a ideia, quem sabe agora de certo 😀.</p><p>A intenção é tornar os site que eu favoritar, sugestões e solicitações de amigos em conteúdos aqui, conteúdos dos quais sejam uteis e facilitem no nosso dia a dia.</p><p>Então seja bem vindo, adicione aos favoritos e se prepare para conteúdos incríveis. </p><p><img loading="lazy" alt="programmer.png" src="/assets/images/programmer-77bebd40c79e85f15938314a34cf8c13.png" width="512" height="512" class="img_ev3q"></p>]]></content>
+        <author>
+            <name>Lucas Elias Baccan</name>
+            <uri>https://github.com/lucasbaccan</uri>
+        </author>
+        <category label="2022" term="2022"/>
+        <category label="09/2022" term="09/2022"/>
+        <category label="Lucas" term="Lucas"/>
+        <category label="Elias" term="Elias"/>
+        <category label="Baccan" term="Baccan"/>
+    </entry>
+</feed>
