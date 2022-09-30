@@ -21,3 +21,145 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Custom CSS */
+
+.hero {
+  /* background-color: #2b3137; */
+  background-color: var(--ifm-color-primary);
+  padding: 48px;
+}
+
+.heroInner {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+.heroProjectTagline {
+  color: #fff;
+  font-size: 60px;
+  margin: 0;
+}
+
+h3.heroProjectTagline{
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  margin: 0;
+}
+
+.heroProjectKeywords {
+  color: #000;
+}
+
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.heroLogo {
+  animation-duration: 2s;
+  animation-name: jackInTheBox;
+  float: right;
+  margin-top: 20px;
+  padding: 0 20px 20px;
+  max-width: 340px;
+}
+
+.indexCtas {
+  display: block;
+  float: none;
+  margin: 0 auto;
+  align-items: center;
+  max-width: fit-content;
+  text-align: center;
+}
+
+/* .indexCtas {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  max-width: fit-content;
+  margin: auto;
+} */
+
+.indexCtasGetStartedButton {
+  border: 1px solid #fff;
+  display: inline-block;
+  line-height: 1.2em;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 8px;
+  border-width: 2px;
+  background-color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 18px 36px;
+  margin: 10px;
+  /* margin-right: 20px; */
+}
+
+.indexCtasGetStartedButton:hover {
+  /* border: 1px solid var(--ifm-color-primary); */
+  border: 1px solid #fff;
+  display: inline-block;
+  line-height: 1.2em;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 8px;
+  border-width: 2px;
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 18px 36px;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .heroInner {
+    padding: 0;
+  }
+
+  .heroProjectTagline {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .h3.heroProjectTagline{
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .heroLogo {
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .indexCtas {
+    justify-content: center;
+  }
+}
