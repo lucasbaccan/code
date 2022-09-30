@@ -1,6 +1,7 @@
 module.exports = {
   docs: [
     'index',
+    'git/index',
     {
       type: 'category',
       label: 'Site com docusaurus',
