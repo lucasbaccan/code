@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcode=self.webpackChunkcode||[]).push([[1452],{7160:e=>{e.exports=JSON.parse('[{"label":"Ferramentas online","permalink":"/docs/tags/ferramentas-online","count":1},{"label":"Git","permalink":"/docs/tags/git","count":1},{"label":"Gitingore","permalink":"/docs/tags/gitingore","count":1}]')}}]);
