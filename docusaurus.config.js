@@ -138,9 +138,9 @@ const config = {
       //   textColor: '#fff',
       // },
       navbar: {
-        title: 'My Site',
+        title: 'Code',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Logo',
           src: 'img/programmer.svg',
         },
         items: [
