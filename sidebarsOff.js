@@ -8,6 +8,6 @@ module.exports = {
     'germantech/aws_ec2',
     'germantech/aws_s3',
     'germantech/aws_route53',
-    'germantech/arara_gtech_site
+    'germantech/arara_gtech_site',
   ],
 };
