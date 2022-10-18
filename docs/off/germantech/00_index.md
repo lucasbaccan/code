@@ -8,14 +8,14 @@ Com a reestruturação do servidor de banco de dados `arara.gtech.site`, novas t
 
 O objetivo é passar pelos seguintes tópicos:
 
-- [Linux](./linux)
-- [Jenkins](./jenkins)
-- [Postgres](./postgres)
-- [Docker](./docker)
-- [AWS EC2](./aws_ec2)
-- [AWS S3](./aws_s3)
-- [AWS Route53](./aws_route53)
-- [arara.gtech.site](./arara_gtech_site)
+- [Linux](./germantech/linux)
+- [Jenkins](./germantech/jenkins)
+- [Postgres](./germantech/postgres)
+- [Docker](./germantech/docker)
+- [AWS EC2](./germantech/aws_ec2)
+- [AWS S3](./germantech/aws_s3)
+- [AWS Route53](./germantech/aws_route53)
+- [arara.gtech.site](./germantech/arara_gtech_site)
 
 ## Servidor
 
