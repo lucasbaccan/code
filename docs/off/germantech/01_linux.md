@@ -3,111 +3,229 @@ id: linux
 title: Linux
 ---
 
+:::tip LINK
+**LINK:** [https://www.linux.org/](https://www.linux.org/)
+:::
+
+## Sumário
+
+- [Introdução](#introdução)
+- [Manipulação de arquivos e diretórios](#manipulação-de-arquivos-e-diretórios)
+- [Comandos do sistema](#comandos-do-sistema)
+- [Manipulação de processos](#manipulação-de-processos)
+
 ## Introdução
 
 Quando falamos de servidores, a grande maioria roda Linux. Por isso, é importante saber como funciona o sistema operacional e seus comandos.
 
-Uma forma fácil de aprender é através do [copy.sh](https://copy.sh/v86/?profile=linux26), um emulador de Linux que roda no navegador.
+Uma forma fácil de aprender é através do [copy.sh](https://copy.sh/v86/?profile=linux26), um emulador de Linux que roda no navegador, então você pode testar os comandos sem precisar instalar nada.
 
-Além disso, utilize **Cheatsheets** para consultar os comandos mais utilizados.
+Além disso, utilize **Cheatsheets** para consultar os comandos mais utilizados, aqui abaixo temos alguns exemplos:
 - [Lista 1](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
 - [Lista 2](https://www.linuxtrainingacademy.com/linux-commands-cheat-sheet/)
 - [Lista 3](https://www.guru99.com/linux-commands-cheat-sheet.html)
 
-## Comandos
 
-### `ls` - Listar arquivos
+:::note Importante
+Abaixo você pode encontrar alguns comandos básicos para começar a utilizar o Linux, nos exemplos você pode ver o comando e em que pasta ele foi executado.
+```bash title="Pasta em que o comando foi executado"
+Comando que foi executado
+```
+:::
 
-O comando `ls` é usado para listar os arquivos e diretórios do diretório atual. Para listar os arquivos e diretórios de outro diretório, basta passar o caminho do diretório como parâmetro.
+:::tip Dica
+Os comandos abaixo são um pequeno resumo dos comandos mais utilizados, para mais informações, busque o manual do comando.
 
 ```bash
+comando --help
+```
+Exemplo:
+```bash
+ls --help
+```
+:::
+
+## Manipulação de arquivos e diretórios
+
+Vamos ver alguns comandos para começar a mexer no Linux, começando pela manipulação de arquivos e diretórios. 
+
+O sistema de arquivos do Linux segue uma hierarquia, onde o diretório raiz é representado por `/`, e todos os outros diretórios são filhos dele. Todos os arquivos e diretórios são organizados em uma árvore, onde cada nó é um diretório e cada folha é um arquivo. Vamos ver alguns comandos para manipular os arquivos e diretórios.
+
+### `ls` - Lista os arquivos e pastas do diretório atual
+
+Você pode usar o comando `ls` para listar os arquivos e pastas do diretório atual. Por exemplo, se você estiver no diretório `/home/usuario`, ao executar o comando `ls` irá listar todos os arquivos e pastas do diretório `/home/usuario`.
+
+```bash title="/home/usuario"
 ls
 ```
 
-```bash
-ls /home
+Mas você pode listar os arquivos e pastas de outros diretórios, basta passar o caminho do diretório como parâmetro do comando `ls`. Por exemplo, se você quiser listar os arquivos e pastas do diretório `/home/usuario/Documentos`, basta executar o comando `ls /home/usuario/Documentos`, mesmo que você não esteja no diretório `/home/usuario/Documentos`.
+
+```bash title="/home"
+ls /home/usuario/Documentos
 ```
 
-### `cd` - Mudar de diretório
+:::note Argumentos
+- `-a` - Lista todos os arquivos e pastas, inclusive os que começam com `.` (ponto).
+- `-l` - Lista os arquivos e pastas com mais detalhes.
+- `-h` - Lista os arquivos e pastas com o tamanho em formato legível.
 
-O comando `cd` é usado para navegar entre os diretórios. Para navegar para um diretório, basta passar o caminho do diretório como parâmetro.
-
+Exemplo:
 ```bash
-cd /home
+ls -lah
+```
+:::
+
+### `cd` - Muda o diretório atual
+
+Você pode usar o comando `cd` para mudar o diretório atual. Por exemplo, se você estiver no diretório `/home/usuario` e quiser mudar para o diretório `/home/usuario/Documentos`, basta executar o comando `cdDocumentos` ou `cd /home/usuario/Documentos`.
+
+```bash title="/home/usuario"
+cd Documentos
 ```
 
-### `mkdir` - Criar diretório
+Essa é a forma mais simples de usar o comando `cd`, utilizando os caminhos relativos. Mas você pode usar caminhos absolutos, como no exemplo abaixo:
 
-O comando `mkdir` é usado para criar um diretório. Para criar um diretório, basta passar o nome do diretório como parâmetro.
-
-```bash
-mkdir /home/root
+```bash title="/home"
+cd /home/usuario/Documentos
 ```
 
-### `rm` - Apagar arquivo(s)
+### `pwd` - Mostra o diretório atual
 
-O comando `rm` é usado para remover um arquivo ou diretório. Para remover um arquivo, basta passar o caminho do arquivo como parâmetro.
+Você pode usar o comando `pwd` para mostrar o diretório atual. Por exemplo, se você estiver no diretório `/home/usuario/Documentos`, ao executar o comando `pwd` irá mostrar o caminho `/home/usuario/Documentos`.
 
 ```bash
-rm /home/root/file.txt
+pwd
 ```
 
-Para remover um diretório, basta passar o caminho do diretório como parâmetro e adicionar a opção `-r`.
+### `mkdir` - Cria um diretório
 
-```bash
-rm -r /home/root
+Você pode usar o comando `mkdir` para criar um diretório. Por exemplo, se você estiver no diretório `/home/usuario/Documentos` e quiser criar um diretório chamado `Projetos`, basta executar o comando `mkdir Projetos`.
+
+```bash title=/home/usuario/Documentos
+mkdir Projetos
 ```
 
-### `cp` - Copiar arquivo(s)
+### `touch` - Cria um arquivo
 
-O comando `cp` é usado para copiar um arquivo ou diretório. Para copiar um arquivo, basta passar o caminho do arquivo como parâmetro.
+Você pode usar o comando `touch` para criar um arquivo. Por exemplo, se você estiver no diretório `/home/usuario/Documentos` e quiser criar um arquivo chamado `README.md`, basta executar o comando `touch README.md`.
 
-```bash
-cp /home/root/file.txt /home/root/file2.txt
+```bash title=/home/usuario/Documentos
+touch README.md
 ```
 
-Para copiar um diretório, basta passar o caminho do diretório como parâmetro e adicionar a opção `-r`.
+### `cat` - Mostra o conteúdo de um arquivo
 
-```bash
-cp -r /home/root /home/root2
+Você pode usar o comando `cat` para mostrar o conteúdo de um arquivo. Por exemplo, se você estiver no diretório `/home/usuario/Documentos` e quiser mostrar o conteúdo do arquivo `README.md`, basta executar o comando `cat README.md`.
+
+```bash title=/home/usuario/Documentos
+cat README.md
 ```
 
-### `mv` - Mover arquivo(s)
+Esse comando é muito útil para mostrar o conteúdo de arquivos sem abrir um editor de texto.
 
-O comando `mv` é usado para mover um arquivo ou diretório ou renomear um arquivo ou diretório. Para mover um arquivo, basta passar o caminho do arquivo como parâmetro.
+### `cp` - Copia um arquivo ou diretório
 
-```bash
-mv /home/root/file.txt /home/root/file2.txt
+Você pode usar o comando `cp` para copiar um arquivo ou diretório. Por exemplo, se você estiver no diretório `/home/usuario/Documentos` e quiser copiar o arquivo `README.md` para o diretório `Projetos`, basta executar o comando `cp README.md Projetos`.
+
+```bash title=/home/usuario/Documentos
+cp README.md Projetos
 ```
 
-Para mover um diretório, basta passar o caminho do diretório como parâmetro e adicionar a opção `-r`.
+Caso você queira copiar um diretório, basta adicionar o argumento `-r` (recursivo).
 
-```bash
-mv -r /home/root /home/root2
+```bash title=/home/usuario/Documentos
+cp -r Projetos Projetos2
 ```
 
-### `cat` - Exibir conteúdo de arquivo
+### `mv` - Move um arquivo ou diretório / Renomeia um arquivo ou diretório
 
-O comando `cat` é usado para exibir o conteúdo de um arquivo. Para exibir o conteúdo de um arquivo, basta passar o caminho do arquivo como parâmetro.
+Você pode usar o comando `mv` para mover um arquivo ou diretório. Por exemplo, se você estiver no diretório `/home/usuario/Documentos` e quiser mover o arquivo `README.md` para o diretório `Projetos`, basta executar o comando `mv README.md Projetos`.
 
-```bash
-cat /home/root/file.txt
+```bash title=/home/usuario/Documentos
+mv README.md Projetos
 ```
 
-### `echo` - Exibir mensagem
+Caso você queira mover um diretório, basta adicionar o argumento `-r` (recursivo).
 
-O comando `echo` é usado para exibir uma mensagem na tela. Para exibir uma mensagem, basta passar a mensagem como parâmetro.
+```bash title=/home/usuario/Documentos
+mv -r Projetos Projetos2
 
-```bash
-echo "Hello World"
+
+### `rm` - Remove um arquivo ou diretório
+
+Você pode usar o comando `rm` para remover um arquivo ou diretório. Por exemplo, se você estiver no diretório `/home/usuario/Documentos` e quiser remover o arquivo `README.md`, basta executar o comando `rm README.md`.
+
+```bash title=/home/usuario/Documentos
+rm README.md
 ```
 
-### `sudo` - Executar comando como administrador
+Para remover um diretório, você precisa passar o parâmetro `-r` para o comando `rm`. Por exemplo, se você estiver no diretório `/home/usuario/Documentos` e quiser remover o diretório `Projetos`, basta executar o comando `rm -r Projetos`.
 
-O comando `sudo` é usado para executar um comando como super usuário. Para executar um comando como super usuário, basta passar o comando como parâmetro.
+```bash title=/home/usuario/Documentos
+rm -r Projetos
+```
+
+:::caution Atenção
+Você pode utilizar `rm -rf` para remover um diretório e todos os seus arquivos e subdiretórios, mas tome cuidado ao utilizar esse comando, pois ele não pede confirmação.
+:::
+
+## Comandos do sistema
+
+Agora que você já conhece os comandos básicos, vamos ver alguns comandos do sistema.
+
+### `history` - Mostra o histórico de comandos
+
+Você pode usar o comando `history` para mostrar o histórico de comandos. Por exemplo, se você executar o comando `history`, irá mostrar todos os comandos que você executou no terminal.
 
 ```bash
-sudo chmod 777 /home/root/file.txt
+history
+```
+
+### `clear` - Limpa a tela do terminal
+
+Você pode usar o comando `clear` para limpar a tela do terminal. Por exemplo, se você executar o comando `clear`, irá limpar a tela do terminal.
+
+```bash
+clear
+```
+
+:::tip
+Você pode usar o atalho `Ctrl + L` para limpar a tela do terminal.
+:::
+
+### `whoami` - Mostra o nome do usuário atual
+
+Você pode usar o comando `whoami` para mostrar o nome do usuário atual. Por exemplo, se você executar o comando `whoami`, irá mostrar o nome do usuário atual.
+
+```bash
+whoami
+```
+
+:::note Nota
+Esse comando aparece no filme [Tron: Legacy](https://www.imdb.com/title/tt1104001/), quando o personagem Flynn está no terminal do computador do Clu. O personagem Flynn digita o comando `whoami` e o computador do Clu responde com o nome do usuário atual (`Flynn`).
+
+![img_linux1.png](./img_linux1.png)
+:::
+
+### `which` - Mostra o caminho de um comando
+
+Você pode usar o comando `which` para mostrar o caminho de um comando. Por exemplo, se você executar o comando `which ls`, irá mostrar o caminho do comando `ls`.
+
+```bash
+which ls
+```
+
+Caso o não seja retornado nenhum resultado, significa que o comando não está instalado no sistema ou que o comando não está no `PATH`.
+
+### `sudo` - Executa um comando como administrador
+
+Você pode usar o comando `sudo` para executar um comando como administrador. Por exemplo, se você quiser instalar um pacote, basta executar o comando `sudo apt install pacote`.
+
+Geralmente, o comando `sudo` é utilizado para dar privilégios de administrador para um usuário comum executar comandos que necessitam de privilégios de administrador.
+
+```bash
+sudo apt install pacote
 ```
 
 ### `chmod` - Alterar permissões
@@ -128,13 +246,13 @@ O número 7 representa que o usuário tem permissão de leitura, escrita e execu
 
 Em resumo:
 - 0 = Sem permissão
-- **1 = Execução**
-- **2 = Escrita**
-- 3 = Escrita e execução (2 + 1)
-- **4 = Leitura**
-- 5 = Leitura e execução (4 + 1)
-- 6 = Leitura e escrita (4 + 2)
-- 7 = Leitura, escrita e execução (4 + 2 + 1)
+- **1 = Execução** `(x)`
+- **2 = Escrita** `(w)`
+- 3 = Escrita e execução (2 + 1) `(w + x)`
+- **4 = Leitura** `(r)`
+- 5 = Leitura e execução (4 + 1) `(r + x)`
+- 6 = Leitura e escrita (4 + 2) `(r + w)`
+- 7 = Leitura, escrita e execução (4 + 2 + 1) `(r + w + x)`
 
 ```bash
 chmod 777 /home/root/file.txt
@@ -176,7 +294,7 @@ df /home/root
 O comando `du` é usado para exibir o tamanho de um arquivo ou diretório. 
 
 ```bash
-du 
+du
 ```
 
 Sem parâmetros, o comando `du` exibe o tamanho de todos os arquivos e diretórios do diretório atual. Por isso, é recomendado passar o caminho do diretório como parâmetro além da opção `-h` para exibir o tamanho em formato legível e `--max-depth=1` para exibir o tamanho de apenas um nível de diretórios.
@@ -184,6 +302,10 @@ Sem parâmetros, o comando `du` exibe o tamanho de todos os arquivos e diretóri
 ```bash
 du -h --max-depth=1 / | sort -h
 ```
+
+:::tip Dica
+Existem outros pacotes que podem ser instalados para exibir o tamanho de arquivos e diretórios de forma mais amigável, como o [`ncdu`](https://dev.yorhel.nl/ncdu) ou o [`dust`](https://github.com/bootandy/dust)
+:::
 
 ### `find` - Buscar arquivo(s)
 
@@ -193,29 +315,7 @@ O comando `find` é usado para buscar um arquivo ou diretório. Para buscar um a
 find / --name file.txt
 ```
 
-### `grep` - Buscar por palavra em arquivo
-
-O comando `grep` é usado para buscar por uma palavra em um arquivo. Para buscar por uma palavra em um arquivo, basta passar a palavra como parâmetro.
-
-```bash
-grep "Hello" /home/root/file.txt
-```
-
-### `ifconfig` - Exibir endereços de rede
-
-O comando `ifconfig` é usado para exibir os endereços de rede. Para exibir os endereços de rede, basta passar o caminho do arquivo como parâmetro.
-
-```bash
-ifconfig
-```
-
-### `ping` - Testar conexão com host
-
-O comando `ping` é usado para testar a conexão com um host. Para testar a conexão com um host, basta passar o host como parâmetro.
-
-```bash
-ping google.com
-```
+## Manipulação de processos
 
 ### `ps` - Exibir processos
 
@@ -239,6 +339,10 @@ Em alguns casos, é necessário passar a opção `-u` para exibir os processos d
 top -u root
 ```
 
+:::tip Dica
+Existem outras alternativas para exibir os processos, [`htop`](https://htop.dev/), ele é um pacote instalado a parte, mas tem uma interface mais agradável.
+:::
+
 ### `kill` - Finalizar processo
 
 O comando `kill` é usado para finalizar um processo. Para finalizar um processo, basta passar o PID do processo como parâmetro.
@@ -247,22 +351,8 @@ O comando `kill` é usado para finalizar um processo. Para finalizar um processo
 kill 1234
 ```
 
-### `service` - Iniciar/Parar/Reiniciar/Status de serviço
-
-O comando `service` é usado para iniciar, parar, reiniciar e verificar o status de um serviço. Para iniciar, parar, reiniciar e verificar o status de um serviço, basta passar o nome do serviço como parâmetro.
+Existem algumas opções para finalizar um processo, como `-9` que finaliza o processo imediatamente.
 
 ```bash
-service apache2 start
-```
-
-```bash
-service apache2 stop
-```
-
-```bash
-service apache2 restart
-```
-
-```bash
-service apache2 status
+kill -9 1234
 ```

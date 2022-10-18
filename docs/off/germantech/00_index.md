@@ -15,6 +15,7 @@ O objetivo é passar pelos seguintes tópicos:
 - [AWS EC2](germantech/aws_ec2)
 - [AWS S3](germantech/aws_s3)
 - [AWS Route53](germantech/aws_route53)
+- [arara.gtech.site](germantech/arara_gtech_site)
 
 ## Servidor
 

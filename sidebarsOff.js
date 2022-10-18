@@ -7,6 +7,7 @@ module.exports = {
     'germantech/docker',
     'germantech/aws_ec2',
     'germantech/aws_s3',
-    'germantech/aws_route53'
+    'germantech/aws_route53',
+    'germantech/arara_gtech_site
   ],
 };
