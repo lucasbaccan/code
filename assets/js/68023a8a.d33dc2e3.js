@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcode=self.webpackChunkcode||[]).push([[3464],{4592:e=>{e.exports=JSON.parse('{"pluginId":"off","version":"current","label":"Next","banner":null,"badge":false,"noIndex":false,"className":"docs-version-current","isLast":true,"docsSidebars":{},"docs":{"index":{"id":"index","title":"Index","description":""}}}')}}]);
