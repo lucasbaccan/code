@@ -15,5 +15,6 @@ module.exports = {
         'site_docusaurus/github_actions',
       ],
     },
+    'vivo_modem/index',
   ],
 };
