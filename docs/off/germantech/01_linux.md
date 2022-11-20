@@ -45,6 +45,28 @@ ls --help
 ```
 :::
 
+## Distribuições Linux
+
+Existem diversas distribuições Linux, cada uma com suas características e peculiaridades. Algumas das mais populares são:
+
+- [Ubuntu](https://ubuntu.com/)
+- [Debian](https://www.debian.org/)
+- [Fedora](https://getfedora.org/pt_BR/)
+- [Arch Linux](https://www.archlinux.org/)
+- [Manjaro](https://manjaro.org/)
+- [CentOS](https://www.centos.org/)
+- [Red Hat](https://www.redhat.com/pt-br)
+
+Cada uma delas tem seu próprio gerenciador de pacotes, que é um programa que gerencia a instalação, remoção e atualização de programas. Alguns exemplos são:
+
+- [apt](https://wiki.debian.org/pt-br/Apt)
+- [yum](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/s1-yum)
+- [pacman](https://wiki.archlinux.org/index.php/Pacman)
+- [dnf](https://dnf.readthedocs.io/en/latest/)
+- [zypper](https://en.opensuse.org/SDB:Zypper_manual)
+
+Então antes de trabalhar com um servidor Linux, é importante saber qual distribuição está sendo utilizada e qual é o gerenciador de pacotes e em que versão está instalado.
+
 ## Manipulação de arquivos e diretórios
 
 Vamos ver alguns comandos para começar a mexer no Linux, começando pela manipulação de arquivos e diretórios. 
