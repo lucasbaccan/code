@@ -3,7 +3,7 @@ id: arara_gtech_site
 title: arara.gtech.site
 ---
 
-:::
+:::tip LINK
 **LINK:** [https://github.com/lucasbaccan/arara.gtech.site](https://github.com/lucasbaccan/arara.gtech.site)
 :::
 
