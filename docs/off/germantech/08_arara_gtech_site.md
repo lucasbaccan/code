@@ -3,13 +3,14 @@ id: arara_gtech_site
 title: arara.gtech.site
 ---
 
+:::tip LINK
 **LINK:** [https://github.com/lucasbaccan/arara.gtech.site](https://github.com/lucasbaccan/arara.gtech.site)
 :::
 
 ## Como clonar 
 
 ```
-git clone URL
+git clone https://github.com/lucasbaccan/arara.gtech.site.git
 ```
 
 ## Requisitos
@@ -31,7 +32,7 @@ Esse projeto sobe alguns containers para o funcionamento do banco de dados. São
 - [Node Exporter](https://github.com/prometheus/node_exporter)
 
 
-A imagem do PostgreSQL é a oficial do Docker Hub, na versão [postgres:11.16-alpine3.16](https://hub.docker.com/layers/library/postgres/11.16-alpine3.16/images/sha256-4ca9917323f3e0b0d9b721868a5af182040b840ab2968ab2439de546fa599024), o que significa que a versão do Postgres é a 11.16, que está rodando em um SO Alpine, que é extremamente robusto e minimalista. Já o PgAdmin é a imagem [dpage/pgadmin4:6.13](https://hub.docker.com/layers/dpage/pgadmin4/6.13/images/sha256-8f6a7197c89e4817669596b4edac8a21a8d087dadb2a7639ec99999b507f3052), que é a versão 6.13 do PgAdmin4, que está rodando em um SO Alpine.
+A imagem do PostgreSQL é a oficial do Docker Hub, na versão [postgres:11.16](https://hub.docker.com/layers/library/postgres/11.16/images/sha256-fdfb434d69d7884d6366840279dc3e721d1bd67cc1d02d51aeea7497f323fc5e?context=explore), o que significa que a versão do Postgres é a 11.16 e o SO é Debian. Já o PgAdmin é a imagem [dpage/pgadmin4:6.13](https://hub.docker.com/layers/dpage/pgadmin4/6.13/images/sha256-8f6a7197c89e4817669596b4edac8a21a8d087dadb2a7639ec99999b507f3052), que é a versão 6.13 do PgAdmin4, que está rodando em um SO Alpine.
 
 ### postgres_db
 
@@ -86,15 +87,16 @@ Esse container é o responsável por exportar as métricas do servidor para o Pr
 
 Após o clone do projeto, vai existir alguns arquivos `.sh`, basta executar eles:
 * Configuração
-    * `env.sh`: arquivo de configuração do ambiente do servidor
-    * `ssh_key_generate.sh`: script para gerar a chave SSH para o container `postgres_cron`
+    * `env.sh`: arquivo de configuração do ambiente do servidor.
+    * `ssh_key_generate.sh`: script para gerar a chave SSH para o container `postgres_cron`.
+    * `criar_ambiente.sh`: script para criar o ambiente do servidor, utilizado na primeira vez.
 
 * Status do servidor
-    * `start.sh`: script para iniciar o servidor (pode passar o parâmetro `true` para ver o log
-    * `stop.sh`: script para parar o servidor
-    * `restart.sh`: script para reiniciar o servidor
+    * `start.sh`: script para iniciar o servidor (pode passar o parâmetro `true` para ver o log.
+    * `stop.sh`: script para parar o servidor.
+    * `restart.sh`: script para reiniciar o servidor.
 
 * Restaurar backup
-    * `restore.sh`: script para restaurar os backups do S3
-    * `restore_stop.sh`: script para parar o script de restauração
-
+    * `restore.sh`: script para restaurar os backups do S3.
+    * `restore_stop.sh`: script para parar o script de restauração.
+    * `restore_continue.sh`: script para continuar o script de restauração.
