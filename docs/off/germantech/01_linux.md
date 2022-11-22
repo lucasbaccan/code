@@ -172,7 +172,7 @@ Caso você queira mover um diretório, basta adicionar o argumento `-r` (recursi
 
 ```bash title=/home/usuario/Documentos
 mv -r Projetos Projetos2
-
+```
 
 ### `rm` - Remove um arquivo ou diretório
 
@@ -377,4 +377,99 @@ Existem algumas opções para finalizar um processo, como `-9` que finaliza o pr
 
 ```bash
 kill -9 1234
+```
+
+## Gerenciamento de serviços
+
+:::warning Aviso
+Os comandos abaixo são específicos para o sistema operacional Linux, verifique qual o gerenciador de serviços do seu sistema operacional.
+:::
+
+Os principais gerenciadores de serviços são:
+
+- `systemd`
+- `init`
+
+### `systemctl` - Gerenciador de serviços do systemd
+
+O comando `systemctl` é usado para gerenciar os serviços do `systemd`.
+
+Para listar os serviços, basta passar a opção `list-units` como parâmetro.
+
+```bash
+systemctl list-units
+```
+
+Para iniciar um serviço, basta passar a opção `start` e o nome do serviço como parâmetro.
+
+```bash
+systemctl start ssh
+```
+
+Para parar um serviço, basta passar a opção `stop` e o nome do serviço como parâmetro.
+
+```bash
+systemctl stop ssh
+```
+
+Para reiniciar um serviço, basta passar a opção `restart` e o nome do serviço como parâmetro.
+
+```bash
+systemctl restart ssh
+```
+
+Para fazer com que um serviço inicie automaticamente, basta passar a opção `enable` e o nome do serviço como parâmetro.
+
+```bash
+systemctl enable ssh
+```
+
+Para desabilitar um serviço, basta passar a opção `disable` e o nome do serviço como parâmetro.
+
+```bash
+systemctl disable ssh
+```
+
+### `service` - Gerenciador de serviços do init
+
+O comando `service` é usado para gerenciar os serviços do `init`.
+
+Para listar os serviços, basta passar a opção `--status-all` como parâmetro.
+
+```bash
+service --status-all
+# or
+/etc/init.d --status-all
+```
+
+Para iniciar um serviço, basta passar o nome do serviço como parâmetro.
+
+```bash
+service ssh start
+# or
+/etc/init.d ssh start
+```
+
+Para parar um serviço, basta passar o nome do serviço como parâmetro.
+
+```bash
+service ssh stop
+# or
+/etc/init.d ssh stop
+```
+
+Para reiniciar um serviço, basta passar o nome do serviço como parâmetro.
+
+```bash
+service ssh restart
+# or
+/etc/init.d ssh restart
+```
+
+Para fazer com que um serviço inicie automaticamente, basta passar a opção `--level` e o nome do serviço como parâmetro.
+
+```bash
+service ssh --level 2345
+# or
+/etc/init.d ssh --level 2345
 ```

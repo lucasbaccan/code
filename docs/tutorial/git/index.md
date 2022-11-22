@@ -345,12 +345,7 @@ Achei interessante a imagem, tem uma representação do fluxo de acordo com cada
 
 <div style={{textAlign: 'center', fontSize: '15px', color: '#999'}}>
 
-![Fluxo de trabalho](git-local-remote.png)
-
-<div style={{fontSize: '15px', color: '#999'}}>
-
+![Fluxo de trabalho](git-local-remote.png)<br />
 Fonte: https://greenido.wordpress.com/2014/08/03/git-101-part-2-a-bit-more-advance-commands/
-
-</div>
 
 </div>
