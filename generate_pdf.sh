@@ -5,7 +5,21 @@
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd "$parent_path"
 
+# Get current branch
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+echo "Branch atual: $BRANCH"
+
+# Change branch to "gh-pages"
+git checkout gh-pages
+
+# Atualizar o repositório
+git pull origin gh-pages
+git reset --hard origin/gh-pages
+
 CAMINHO_ARQUIVOS="./pdf"
+
+mkdir -p $CAMINHO_ARQUIVOS
 
 # Gerar curso de DevOps
 gerar_pdf_producao () {
@@ -55,4 +69,12 @@ gerar_pdf () {
     --outputPDFFilename="$CAMINHO_ARQUIVOS/$FILE_NAME.pdf"
 }
 
-gerar_pdf_localhost 'Mini curso de DevOps' "/off/germantech" "germantech"
+# Gerar o PDF dos curso para a Germantech.
+gerar_pdf_producao 'Mini curso de DevOps' "/off/germantech" "germantech"
+
+git add ./pdf/*.pdf
+git commit -am "Generate PDF"
+git push origin gh-pages
+
+# Change branch to "$BRANCH"
+git checkout $BRANCH
