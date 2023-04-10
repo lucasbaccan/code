@@ -11,10 +11,10 @@
         <item>
             <title><![CDATA[#1 - Primeiro post]]></title>
             <link>https://new.code.lucasbaccan.com.br/blog/1</link>
-            <guid>1</guid>
+            <guid>https://new.code.lucasbaccan.com.br/blog/1</guid>
             <pubDate>Fri, 30 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Primeiro post]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="primeiro-post">Primeiro post<a class="hash-link" href="#primeiro-post" title="Link direto para o título">​</a></h2><p>Fala pessoal</p><p>La em outubro de 2020, eu criei esse site, com a intenção de colocar alguns conteúdos relacionados a tecnologia. A ideia veio, mas ficou parada. Agora quase 2 anos depois, vou voltar com a ideia, quem sabe agora de certo 😀.</p><p>A intenção é tornar os site que eu favoritar, sugestões e solicitações de amigos em conteúdos aqui, conteúdos dos quais sejam uteis e facilitem no nosso dia a dia.</p><p>Então seja bem vindo, adicione aos favoritos e se prepare para conteúdos incríveis. </p><p><img loading="lazy" alt="programmer.png" src="/assets/images/programmer-77bebd40c79e85f15938314a34cf8c13.png" width="512" height="512" class="img_ev3q"></p>]]></content:encoded>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="primeiro-post">Primeiro post<a href="#primeiro-post" class="hash-link" aria-label="Link direto para Primeiro post" title="Link direto para Primeiro post">​</a></h2><p>Fala pessoal</p><p>La em outubro de 2020, eu criei esse site, com a intenção de colocar alguns conteúdos relacionados a tecnologia. A ideia veio, mas ficou parada. Agora quase 2 anos depois, vou voltar com a ideia, quem sabe agora de certo 😀.</p><p>A intenção é tornar os site que eu favoritar, sugestões e solicitações de amigos em conteúdos aqui, conteúdos dos quais sejam uteis e facilitem no nosso dia a dia.</p><p>Então seja bem vindo, adicione aos favoritos e se prepare para conteúdos incríveis. </p><p><img loading="lazy" alt="programmer.png" src="/assets/images/programmer-77bebd40c79e85f15938314a34cf8c13.png" width="512" height="512" class="img_ev3q"></p>]]></content:encoded>
             <category>2022</category>
             <category>09/2022</category>
             <category>Lucas</category>
