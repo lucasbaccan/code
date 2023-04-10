@@ -3,8 +3,8 @@ id: arara_gtech_site
 title: arara.gtech.site
 ---
 
-:::tip LINK
-**LINK:** [https://github.com/lucasbaccan/arara.gtech.site](https://github.com/lucasbaccan/arara.gtech.site)
+:::tip Projeto
+**Projeto privado de Lucas Baccan:** [https://github.com/lucasbaccan/arara.gtech.site](https://github.com/lucasbaccan/arara.gtech.site)
 :::
 
 ## Como clonar 
@@ -79,7 +79,7 @@ Esse container é o responsável por coletar as métricas dos bancos de dados e 
 
 Esse container é o responsável por exportar as métricas do banco de dados para o Prometheus. O padrão seria exportar a porta 9187, mas ela só é visível para os containers.
 
-### node_exporter
+### node_exporter (opcional)
 
 Esse container é o responsável por exportar as métricas do servidor para o Prometheus. O padrão seria exportar a porta 9100, mas ela só é visível para os containers.
 
@@ -87,12 +87,13 @@ Esse container é o responsável por exportar as métricas do servidor para o Pr
 
 Após o clone do projeto, vai existir alguns arquivos `.sh`, basta executar eles:
 * Configuração
+    * `server_install.sh`: script para instalar o servidor, é resultado dos comandos utilizados na criação do servidor utilizando **AWS Linux**.
     * `env.sh`: arquivo de configuração do ambiente do servidor.
     * `ssh_key_generate.sh`: script para gerar a chave SSH para o container `postgres_cron`.
     * `criar_ambiente.sh`: script para criar o ambiente do servidor, utilizado na primeira vez.
 
 * Status do servidor
-    * `start.sh`: script para iniciar o servidor (pode passar o parâmetro `true` para ver o log.
+    * `start.sh`: script para iniciar o servidor (pode passar o parâmetro `true` para ver o log).
     * `stop.sh`: script para parar o servidor.
     * `restart.sh`: script para reiniciar o servidor.
 
@@ -100,3 +101,6 @@ Após o clone do projeto, vai existir alguns arquivos `.sh`, basta executar eles
     * `restore.sh`: script para restaurar os backups do S3.
     * `restore_stop.sh`: script para parar o script de restauração.
     * `restore_continue.sh`: script para continuar o script de restauração.
+
+* Outros
+    *  `convert_unix.sh`: script para converter os arquivos da pasta atual para o formato UNIX, caso estejam no formato Windows. Requer o pacote `dos2unix` instalado.
