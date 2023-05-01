@@ -49,6 +49,9 @@ jobs:
       - name: List files in build folder
         run: ls -laR build
 
+      - name: Change owner of build folder
+        run: sudo chown -R $USER:$USER build
+
       - name: Install Surge.sh
         run: npm install -g surge
 
