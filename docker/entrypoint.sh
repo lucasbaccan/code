@@ -12,4 +12,4 @@ echo "BASE_URL=${BASE_URL}"
 npm run serve &
 wait-on ${BASE_URL} && ./docker/gerar_pdf.sh ${BASE_URL}
 
-chmod -R 777 /app/build
+chmod -R 777 /app/pdf

@@ -46,11 +46,16 @@ jobs:
         env:
           BASE_URL: "http://localhost:3000"
 
-      - name: List files in build folder
-        run: ls -laR build
 
       - name: Change owner of build folder
         run: sudo chown -R $USER:$USER build
+
+        # Copy pdf files to build/pdf folder
+      - name: Copy pdf files to build/pdf folder
+        run: cp -R pdf build/pdf
+
+      - name: List files in build folder
+        run: ls -laR build
 
       - name: Install Surge.sh
         run: npm install -g surge
