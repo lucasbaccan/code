@@ -46,6 +46,9 @@ jobs:
         env:
           BASE_URL: "http://localhost:3000"
 
+      - name: List files in build folder
+        run: ls -R build
+
       - name: Install Surge.sh
         run: npm install -g surge
 
