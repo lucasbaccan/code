@@ -36,7 +36,7 @@ jobs:
         run: npm run build
 
       - name: Build PDF files (docker-compose)
-        run: docker-compose ./pdf/docker-compose.yml up
+        run: docker compose -f ./docker/docker-compose.yml up --build
         env:
           BASE_URL: "https://code.lucasbaccan.com.br"
 
