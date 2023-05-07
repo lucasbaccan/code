@@ -55,12 +55,6 @@ gerar () {
     echo "PDF gerado em $CAMINHO_ARQUIVOS/$FILE_NAME.pdf"
     echo "------------------------"
 
-    # if folder "build" exists, copy the pdf to it
-    # if [ -d "../build" ]
-    # then
-    #   mkdir -p "../build/pdf"
-    #   cp "$CAMINHO_ARQUIVOS/$FILE_NAME.pdf" "../build/pdf/$FILE_NAME.pdf"
-    # fi
 }
 
 # Gerar o PDF dos curso para a Germantech.
