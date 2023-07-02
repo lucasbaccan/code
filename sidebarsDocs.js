@@ -9,5 +9,6 @@ module.exports = {
         'ferramentas_online/gitignore_io/index',
       ],
     },
+    'programas/index',
   ],
 };

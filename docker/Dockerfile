@@ -1,6 +1,5 @@
 FROM node:18-slim
 
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 
 # Install Google Chrome Stable and fonts
 # Note: this installs the necessary libs to make the browser work with Puppeteer.
@@ -13,6 +12,10 @@ RUN apt-get update && apt-get install gnupg wget libx11-6 libx11-xcb1 libxtst6 l
   
   # Instalar o Chrome e as fontes
   # apt-get install google-chrome-stable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf -y --no-install-recommends && \
+
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+ENV CHROMIUM_PATH /usr/bin/google-chrome-stable
+ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
 
 COPY entrypoint.sh /entrypoint.sh
 
