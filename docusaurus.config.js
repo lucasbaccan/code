@@ -120,6 +120,23 @@ const config = {
         postsPerPage: 10,
       },
     ],
+    // Adicionar componente search
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        docsRouteBasePath: [
+          "/docs",
+          "/info",
+          "/tutorial",
+        ],
+        blogRouteBasePath: [
+          "/blog"
+        ],
+        language: ["pt"],
+        // highlightSearchTermsOnTargetPage: true,
+        docsPluginIdForPreferredVersion: "docs",
+      },
+    ],
   ],
 
   themeConfig:
