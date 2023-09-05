@@ -11,7 +11,7 @@ Em 2023 montei um [computador](#desktop), ele substituirá o meu [notebook](#not
 ### Configuração atual
 - **Sistema operacinal**: Windows 11 Pro
 - **Processador**: [AMD Ryzen 9 7900X](https://www.amd.com/pt/products/cpu/amd-ryzen-9-7900x)
-- **Placa de vídeo**: [Nvidea RTX 3070 8GB](https://www.galax.com/pt/graphics-card/geforce-rtx-3070ti-oc.html) (Galax)
+- **Placa de vídeo**: [Nvidea RTX 3070 Ti 8GB](https://www.galax.com/pt/graphics-card/30-series/3070ti-series/geforce-rtx-3070ti-sg.html) (Galax)
 - **Placa mãe**: [Asrock X670E Steel Legend](https://www.asrock.com/mb/AMD/X670E%20Steel%20Legend/index.asp)
 - **RAM**: [32 GB (2x16 GB) 6000 mhz](https://www.gskill.com/product/165/390/1661410135/F5-6000J3038F16GX2-TZ5NR) (G.Skill Trident Z5 Neo)
 - **Armazenamento**: [2 TB SSD](https://www.kingspec.com/product/nx-series-106.html) (Kingspec NX)
@@ -60,4 +60,4 @@ Para comunicar com o computador, utilizo um adaptador **[Xbox One Wireless Adapt
 
 ### Roteador
 
-Atualmente tenho um plano de internet de 300 Mbps da **Vivo Fibra** (300 Mbps Down / 150 Mbps Up), e para poder utilizar essa velocidade, utilizo um roteador **[Asus RT-AX88U](https://www.asus.com/Networking/RT-AX88U/)**, que é bem rápido e tem um bom alcance, além de já ter suporte a Wi-Fi 6.
+Tenho um **[Asus RT-AX88U](https://www.asus.com/Networking/RT-AX88U/)**, que é bem rápido e tem um bom alcance, além de já ter suporte a Wi-Fi 6. Eu tinha um plano de internet de 300 Mbps da **Vivo Fibra** (300 Mbps Down / 150 Mbps Up), mas após um ano, começou a surgir taxas extras, então mudei para um provedor local, a **[Opção Telecom](https://vempraopcao.com.br/)**, com o plano de 530Mbps (530 Mbps Down / 530 Mbps Up) pelo mesmo preço que eu pagava na **Vivo Fibra**. 
