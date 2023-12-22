@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcode=self.webpackChunkcode||[]).push([[4e3],{5605:t=>{t.exports=JSON.parse('{"label":"Tutorial","permalink":"/tutorial/tags/tutorial","allTagsPath":"/tutorial/tags","count":1,"items":[{"id":"git/index","title":"Git","description":"Git, tudo que voc\xea precisa saber sobre Git.","permalink":"/tutorial/git/"}]}')}}]);
