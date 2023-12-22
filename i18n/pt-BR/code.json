@@ -1,0 +1,37 @@
+{
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Resultados da pesquisa para \"{query}\"",
+    "description": "Título da página de pesquisa para consulta não vazia"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Pesquisar na documentação",
+    "description": "O título da página de pesquisa para consulta vazia"
+  },
+  "theme.SearchPage.searchContext.everywhere": {
+    "message": "em todos os lugares"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "1 documento encontrado|{count} documentos encontrados",
+    "description": "O rotulo pluralizado para \"{count} documentos encontrados\". Use tantas formas plurais (separadas por \"|\") quanto seu idioma suporta (consulte https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "Nenhum documento foi encontrado",
+    "description": "O parágrafo para resultado de pesquisa vazio"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Nenhum resultado"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Ver todos os resultados"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Ver resultados fora de {context}"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Ver todos os resultados em {context}"
+  },
+  "theme.SearchBar.label": {
+    "message": "Pesquisar",
+    "description": "O rótulo ARIA e o marcador de posição para o botão de pesquisa"
+  }
+}

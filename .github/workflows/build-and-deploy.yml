@@ -27,13 +27,24 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2-beta
         with:
-          node-version: 16
+          node-version: 18
 
       - name: Install Dependencies
         run: npm install
 
       - name: Build
         run: npm run build
+
+      - name: Build PDF files (docker-compose)
+        run: docker compose -f ./docker/docker-compose.yml up --build
+        env:
+          BASE_URL: "https://code.lucasbaccan.com.br"
+        
+      - name: Change owner of build folder
+        run: sudo chown -R $USER:$USER build
+
+      - name: Copy pdf files to build/pdf folder
+        run: cp -R pdf build/pdf
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
