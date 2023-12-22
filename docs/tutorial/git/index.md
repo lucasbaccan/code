@@ -672,7 +672,6 @@ Até o momento vimos o caminho perfeito, mas se fizer 💩, o que o **git** pode
 Vamos com calma nessa parte, pois dependendo dos parâmetros que utilizar com `git reset` você pode perder alterações em seu código, então vamos ver elas e entender melhor.
 
 Um dos parâmetros que temos é o **--soft**, ele vai voltar somente os commits do seu diretório local, mas vai manter as alterações nos arquivos.
-
 ```bash
 git reset --soft origin/master
 # ou
@@ -774,7 +773,6 @@ Para listar todos os repositórios que o projeto tem, utilize `git branch -a`, o
 Deleta todos os arquivos que não estão indexados pelo git. Mesmo quando você dá um `git reset --hard`, arquivos que não tão indexados ficam. Utilize `git clean` para limpar esses arquivos.
 
 Eu gosto de utilizar os parâmetros **-d** e **-f**, que força apagar os arquivos e diretórios.
-
 ```bash
 git clean -df
 ```
@@ -790,13 +788,11 @@ Esse é um comando mais avançado, se algum dia você perder parte do código qu
 ## Cuidados
 
 Às vezes pode ser que seu objetivo seja forçar o envio de uma alteração, mas esse comando pode causar a perda de código permanentemente. Geralmente quando vemos um parâmetro **-f** temos que tomar cuidado, pois existe uma grande chance de ser **F** de Forçar, no caso, forçar uma alteração.
-
 ```bash
 git push -f origin master
 ```
 
 Um outro ponto para notar é que para deletarmos um branch local, utilizamos `git branch -d master`, entretanto, não dá para fazer push disso, então para deletar um branch remoto, basta colocar um **:** antes do seu nome, o que pode até acontecer por acidente na hora de digitar.
-
 ```bash
 git push origin :master
 ```
