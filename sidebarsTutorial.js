@@ -1,11 +1,12 @@
 module.exports = {
   docs: [
     'index',
+    'git/guia_rapido',
     'git/index',
     {
       type: 'category',
       label: 'Site com docusaurus',
-      collapsed: false,
+      collapsed: true,
       items: [
         'site_docusaurus/introducao',
         'site_docusaurus/criando_projeto',
