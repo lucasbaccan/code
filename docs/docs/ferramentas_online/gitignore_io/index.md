@@ -1,10 +1,6 @@
 ---
 id: index
-<<<<<<< HEAD
-title: Gitignore.io
-=======
 title: gitignore.io
->>>>>>> origin/master
 description: Gerador de arquivos .gitignore
 tags: ['Ferramentas online', 'Git', 'Gitingore']
 ---
@@ -75,8 +71,4 @@ O site contem diversas opções, e você pode juntar mais de uma opção ao mesm
 
 </div>
 
-<<<<<<< HEAD
-Então explore as opções sem medo, aposto que vai achar uma solução para seu projeto.
-=======
 Então explore as opções sem medo, aposto que vai achar uma solução para seu projeto. Boa sorte!
->>>>>>> origin/master

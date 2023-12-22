@@ -3,9 +3,6 @@ id: setup
 title: Meu setup
 ---
 
-<<<<<<< HEAD
-Atualmente utilizo um notebook para poder estudar, programar e jogar, o que está atendendo as minhas necessidades. Porém, pretendo adquirir um desktop para poder ter um melhor desempenho, mas isso ainda é um plano para o futuro.
-=======
 Em 2023 montei um [computador](#desktop), ele substituirá o meu [notebook](#notebook), que já está bem antigo, se tornando meu *setup* principal. Meu notebook ainda será utilizado para quando eu precisar de mobilidade.
 ## Desktop
 
@@ -20,7 +17,6 @@ Em 2023 montei um [computador](#desktop), ele substituirá o meu [notebook](#not
 - **Armazenamento**: [2 TB SSD](https://www.kingspec.com/product/nx-series-106.html) (Kingspec NX)
 - **Fonte**: [Cooler Master MWE GOLD 750 V2](https://www.coolermaster.com/br/pt-br/catalog/power-supplies/mwe-series/mwe-gold-750-v2/)
 
->>>>>>> origin/master
 
 ## Notebook
 
@@ -28,17 +24,6 @@ Em 2023 montei um [computador](#desktop), ele substituirá o meu [notebook](#not
 
 ### Configuração original
 - **Sistema operacinal**: Windows 8
-<<<<<<< HEAD
-- **Processador**: i7-4702MQ ([ARK](https://ark.intel.com/content/www/br/pt/ark/products/75119/intel-core-i7-4702mq-processor-6m-cache-up-to-3-20-ghz.html))
-- **RAM**: 8 GB (2x4 GB) 1600 mhz
-- **Armazenamento**: 1 TB HDD
-- **Placa de vídeo**: 750M 4GB + HD Graphics 4600
-
-### Configuração atual / Atualizações
-- **Sistema operacinal**: Windows 10 Pro
-- **RAM**: 16 GB (2x8 GB) 1600 mhz
-- **Armazenamento**: 480 SSD
-=======
 - **Processador**: [Intel i7-4702MQ](https://ark.intel.com/content/www/br/pt/ark/products/75119/intel-core-i7-4702mq-processor-6m-cache-up-to-3-20-ghz.html)
 - **RAM**: 8 GB (2x4 GB) 1600 mhz 
 - **Armazenamento**: 1 TB HDD 
@@ -48,7 +33,6 @@ Em 2023 montei um [computador](#desktop), ele substituirá o meu [notebook](#not
 - **Sistema operacinal**: Windows 10 Pro
 - **RAM**: 16 GB (2x8 GB) 1600 mhz (Kingston)
 - **Armazenamento**: 480 SSD (Kingston)
->>>>>>> origin/master
 
 ## Periféricos
 

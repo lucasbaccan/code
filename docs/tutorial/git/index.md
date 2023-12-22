@@ -2,48 +2,15 @@
 id: index
 title: Git
 description: Git, tudo que você precisa saber sobre Git.
-<<<<<<< HEAD
-tags: ['Tutorial', 'Git']
----
-
-=======
 tags: ["Tutorial", "Git"]
 ---
 
 import Center from '@site/src/components/Center';
 
->>>>>>> origin/master
 :::tip LINK
 **LINK:** [https://git-scm.com/](https://git-scm.com/)
 :::
 
-<<<<<<< HEAD
-# Introdução
-
-**Git**, para alguns um sonho, para outros um pesadelo, por que isso? Vamos entender o que é **Git**, para que usamos, como configurar, quais são os principais comandos, tudo que você precisa para começar a utilizar essa ferramenta incrível.  
-
-Na minha opinião, o **Git** é a ferramenta mais importante que você deve aprender, pois em muitas vagas de emprego é visto como um dos requisitos mínimos para um desenvolvedor e/ou profissional da área de TI. Não consigo imaginar uma empresa de software que não utiliza **Git** hoje em dia.
-
-:::note Aviso
-Futuramente em outro tópico vai ser abordado a fundo o que são os sites como Github, GitLab, Bitbucket entre outros. Pórem a grande diferença é que esses sites são servições que armazenam projetos que utilizam o versionamento que o **Git** realiza, pois o **Git** é uma ferramenta que roda em seu computador.
-:::
-<div style={{textAlign: 'center'}}>
-
-![Git logo](git-logo.png)
-
-<div style={{fontSize: '15px', color: '#999'}}>
-
-Logo do Git
-
-</div>
-
-</div>
-
-## O que é Git?
-
-No site oficial do **Git** tem a seguinte descrição:
-> Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.  
-=======
 ## Primeiramente
 
 Antes de começar a falar sobre **Git**, gostaria de dizer que este material foi criado com o intuito de ajudar as pessoas que estão começando a utilizar o **Git**, e não tem conhecimento nenhum sobre a ferramenta. Este material tem uma sequência de passos, para que você possa entender o que é o **Git**, como funciona, e como utilizar seus comandos com exemplos práticos, evoluindo comando em comando.
@@ -79,43 +46,11 @@ Futuramente em outro tópico será abordado a fundo o que são os sites como Git
 No site oficial do **Git** tem a seguinte definição:
 
 > Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
->>>>>>> origin/master
 
 Em uma tradução livre seria algo como:
 
 > Git é um sistema de controle de versão distribuído gratuitamente e de código aberto projetado para lidar com tudo, desde projetos pequenos a muito grandes com velocidade e eficiência.
 
-<<<<<<< HEAD
-Vamos entender o que está escrito, analisando algumas palavras chaves, começando com o que é um **sistema de controle de versão?** 
-
-Para responder esta pergunta, vamos entender em que categoria de programa o **Git** se encaixa e qual seu propósito.
-O **Git** é um ****SCM**** **S**ource **C**ode **M**anagement (Sistema de Controle de Código Fonte). Um dos seus principais recursos é o de versionamento de código, salvando quem, quando e o que foi alterado conforme seu software for evoluindo.
-
-**Distribuído** representa que ele funciona independente, não necessitando estar conectado a internet ou servidor.
-
-**Gratuito e de código aberto**, segundo seu criador, "Está é a única maneira certa de se fazer software".
-
-**Projetos pequenos e muito grandes**, é uma afirmação que não importa que projeto você tem, o **Git** vai conseguir lidar com ele.
-
-Além de tudo que foi dito acima, temos **com velocidade e eficiência**, todas essas palavras chaves são requisitos mínimos impostos quando o projeto do **Git** foi feito, e é seguido isto até hoje.
-
-## História resumida
-
-Seu criador é nada menos que Linus Torvalds, criador do Kernel Linux, do qual utilizava um outro programa de SCM, o *BitKeeper*. Pórem a empresa que criava o *BitKeeper* decidiu mudar a licença desse programa, que era gratuito e passou a ser um programa pago. Linus se negou a ter que pagar por um programa, e foi em busca de um substituto para o SCM que utilizava. Em sua procura, todas as opções de programas não atendiam aos seguintes requisitos:
-
-* Gratuito
-* Distribuído
-* Performance
-* Garantir que o que for salvo, possa ser baixado igual a forma que foi salvo.
-
-Todos esses pontos podem ser visto no video abaixo aos [10:23](https://youtu.be/4XpnKHJAok8?t=623).
-
-Essa busca resultou em nenhum programa. Nas palavras do Linus *`"O resultado final foi que eu decidi que posso escrever algo melhor do que qualquer coisa lá fora em duas semanas, e eu estava certo"`* essa frase foi dita durante uma palestra dentro do Google, do video abaixo, aos [12:15](https://youtu.be/4XpnKHJAok8?t=735).
-
-Eu falei que era resumido, mas basicamente o **Git** utiliza uma ferramenta do linux, o *diff*, está ferramenta gera a diferença entre dois arquivos, como isso ele já tinha pronto no Linux, bastava criar uma forma de salvar essas diferenças e organizar isso em uma árvore com a referência dos arquivos.
-
-<div style={{textAlign: 'center'}}>
-=======
 <!-- Adicionar um gif de pessoa confusa -->
 
 <Center>
@@ -153,7 +88,6 @@ Essa busca resultou em nenhum programa. Nas palavras do Linus _`"O resultado fin
 Eu falei que era resumido, mas basicamente o **Git** utiliza uma ferramenta do linux, o _diff_, está ferramenta gera a diferença entre dois arquivos, como isso ele já tinha pronto no Linux, bastava criar uma forma de salvar essas diferenças e organizar isso em uma árvore com a referência dos arquivos.
 
 <Center>
->>>>>>> origin/master
 
 <iframe 
     width="100%"
@@ -164,37 +98,6 @@ Eu falei que era resumido, mas basicamente o **Git** utiliza uma ferramenta do l
     allowfullscreen
 ></iframe>
 
-<<<<<<< HEAD
-</div>
-
-Caso tenha interesse em ver a palestra do Linus no Google, segue o vídeo, ative as legendas caso necessário.
-
-## Fluxo
-
-Antes de ver na prática, é importante ver um pouco de teoria e como funciona o **Git**. Normalmente você não utiliza o **Git** sozinho, geralmente tem um servidor do qual você e seus colega baixam o código e enviam alterações, damos o nome de ****Remoto**** ou ****Repositório remoto****.
-
-Temos que saber que nosso código tem um ciclo de vida, o coração dele podemos dizer que é o ****Remoto****, mas em nossa máquina, ele tem outra vida, mas como assim?
-
-Separamos o código entre dois ambientes, **local** e **remoto**. Quando vamos começar a trabalhar com um projeto, realizamos um clone do remoto, e passamos a ter uma cópia local, e assim não precisamos estar conectados sempre com o ambiente remoto. Dentro do ambiente local, temos as seguintes separações:
-
-* **Diretório local**: Pasta na qual você utiliza para programar, onde seu projeto está. 
-* **Stage (INDEX)**: Arquivos modificados que foram indexados pelo **git**.
-* **Repositório Local (HEAD)**: Cópia do repositório remoto em seu dispositivo.
-
-Entender essa separação é fundamental, segue uma imagem com a representação do lado local e remoto.
-
-<div style={{textAlign: 'center'}}>
-
-![Fluxo](git-local-stage-remoto.png)
-
-</div>
-
-### *Branches*
-
-Antes de seguirmos para os demais comandos, temos que entender como o **Git** separa os arquivos em seu computador. Um projeto pode ter vários *branches*, geralmente o *branch* principal vai ser o ****master****, mas por causa do movimento BLM, pode ser que veja algum projeto com o *branch* principal sendo o ****main****, independente do nome, o que é isso, *branch*, por que ele é importante?
-
-***Branches*** são ramificações que você pode fazer em seu projeto, sempre em um projeto tem um *branch* que é o principal, e a partir dele, você pode criar outro *branch* que vai conter melhorias, correções, novas funções, etc. Dessa forma, você consegue desenvolver sem afetar o código que está correto (*branch* principal), basta criar um novo e fazer suas alterações.
-=======
 </Center>
 
 Caso tenha interesse em ver a palestra do Linus no Google, ela esta em inglês, mas você pode ativar as legendas caso necessário.
@@ -649,7 +552,6 @@ Fluxo de trabalho com _branches_ locais e remotas.
 - **Stage (INDEX)**: Arquivos modificados que foram indexados pelo **git**.
 - **Repositório Local (HEAD)**: Cópia do repositório remoto em seu dispositivo.
 - **Repositório Remoto**: Servidor onde o projeto está hospedado.
->>>>>>> origin/master
 
 ## CLI
 
@@ -659,34 +561,6 @@ O termo **CLI** significa **C**ommand-**L**ine **I**nterface (Interface de Linha
 Se você nunca teve experiência com Terminal (Linux/MacOS) ou CMD/Powershell (Windows), não tenha medo, é mais fácil do que parece.
 :::
 
-<<<<<<< HEAD
-### Instalação
-
-*** Vai ficar para depois, estou com preguiça de montar uma máquina virtual e tirar as prints, fica para depois. ***
-
-### Configuração
-
-Após instalar o **Git**, é preciso configurar um nome e um e-mail, dados que são anexados no commit, para identificar o autor. Para isso, rode os comandos abaixo:
-
-```bash
-git config --global user.name "Nome Sobrenome"
-git config --global user.email "exemplo@seuemail.com.br"
-```
-
-Um gosto meu particular é utilizar uma configuração que a solicitação de senha seja feita dentro do terminal.
-
-```bash
-git config --global core.askPass ""
-```
-
-:::note Dica
-Você pode configurar seu **Git** para não pedir nem usuário e nem senha.
-:::
-
-### Primeiros passos
-
-Não precisa decorar todos os comandos agora, basta saber o que dá para fazer com **Git**, eu mesmo tive por muito tempo um arquivo **.txt** com os comandos e a sequência que eu deveria utilizar eles, faça o mesmo, uma hora você vai perceber que tudo vai fluir naturalmente. 😀
-=======
 <Center>
 
 ![Harcker](https://media.giphy.com/media/YQitE4YNQNahy/giphy.gif)
@@ -700,7 +574,6 @@ Não precisa decorar todos os comandos agora, basta saber o que dá para fazer c
 ---
 
 ---
->>>>>>> origin/master
 
 ### `git init`
 
@@ -708,21 +581,6 @@ O comando `git init` é onde tudo começa, você precisa rodar esse comando em u
 
 Após rodar o comando `git init`, vai ser criada uma pasta chamada **.git**, dependendo da configuração do seu sistema operacional, você não vai ver esta pasta, mas basta rodar `ls -la`, que é o comando para listar arquivos ocultos.
 
-<<<<<<< HEAD
-<div style={{textAlign: 'center'}}>
-
-![Git logo](git-init.png)
-
-</div>
-
-* **Linha 2** - Comando `git init` rodado para iniciar o diretório para ser rastreado pelo **Git**.
-* **Linha 6** - Comando `ls -la` para listar os arquivos, a **linha 7 e 8** são padrão do sistema e **linha 9** é a pasta **.git** criada.
-
-:::caution Cuidado
-
-No geral, não mexa na pasta `.git`, dependendo do que mexer dentro desta pasta, você pode corromper a estrutura.
-
-=======
 <Center>
 
 ![Git logo](git-init-folder.png)
@@ -734,7 +592,6 @@ No geral, não mexa na pasta `.git`, dependendo do que mexer dentro desta pasta,
 
 :::caution Cuidado
 No geral, não mexa na pasta `.git`, dependendo do que mexer dentro desta pasta, você pode corromper a estrutura.
->>>>>>> origin/master
 :::
 
 ### `git status`
@@ -744,34 +601,17 @@ Agora que temos um diretório **.git**. Podemos rodar os outros comandos do **Gi
 Eu gosto de utilizar `git status -s` que traz de uma forma resumida, na minha visão é mais prático para identificar as alterações.
 
 Quando rodar esse comando, ele trará algumas informações sobre os arquivos:
-<<<<<<< HEAD
-* **Untracked** ou **U**: Arquivos novos que não estão indexados, o git ainda não tem conhecimento deles.
-* **New** ou **A**: Arquivo foi indexado, git passa a gerenciar suas alterações.
-* **Modified** ou **M**: Arquivo que já era indexado pelo git e foi modificado.
-* **Deleted** ou **D**: Arquivo que já era indexado pelo git e foi deletado.
-* **Renamed** ou **R**: Arquivo que já era indexado pelo git e foi renomeado.
-=======
 
 - **Untracked** ou **U**: Arquivos novos que não estão indexados, o git ainda não tem conhecimento deles.
 - **New** ou **A**: Arquivo foi indexado, git passa a gerenciar suas alterações.
 - **Modified** ou **M**: Arquivo que já era indexado pelo git e foi modificado.
 - **Deleted** ou **D**: Arquivo que já era indexado pelo git e foi deletado.
 - **Renamed** ou **R**: Arquivo que já era indexado pelo git e foi renomeado.
->>>>>>> origin/master
 
 ### `git add`
 
 Este comando tem o propósito de adicionar o arquivo ou pasta para o **stage**, isso significa que você quer salvar no **git** as alterações que foram feitas neste arquivo.
 
-<<<<<<< HEAD
-Esta ação sozinha não faz nada, mas sem ela, você não pode fazer um *commit*, então, após realizar as alterações que deseja no seu projeto (criar arquivos, renomear, alterar o conteúdo do arquivo), utilize `git add .` para adicionar todos os arquivos, ou `git add menu.txt` para adicionar o arquivo **menu.txt** no *stage*.
-
-### `git commit`
-
-No passo anterior vimos como adicionar um arquivo no *stage*, agora veremos como fazer com que essas alterações sejam enviadas para nosso repositório local. Para isso utilizamos `git commit`, a forma que gosto de explicar é *`"Pegar as alterações e adiciona numa caixinha(commit) que depois vai ser enviada para o remoto"`* .
-
-O commit tem a relação de quais arquivos tem que ser enviados, o que mudou entre a versão anterior e a atual, o autor das alterações, data, etc. Utilize `git commit -m "Primeiro Commit"`, O parâmetro **-m** é a mensagem que vai ser anexado ao commit. É uma boa prática adicionar uma descrição do que foi alterado. 
-=======
 Esta ação sozinha não faz nada, mas sem ela, você não pode fazer um _commit_, então, após realizar as alterações que deseja no seu projeto (criar arquivos, renomear, alterar o conteúdo do arquivo), utilize `git add .` para adicionar todos os arquivos, ou `git add menu.txt` para adicionar o arquivo **menu.txt** no _stage_.
 
 ### `git commit`
@@ -779,27 +619,18 @@ Esta ação sozinha não faz nada, mas sem ela, você não pode fazer um _commit
 No passo anterior vimos como adicionar um arquivo no _stage_, agora veremos como fazer com que essas alterações sejam enviadas para nosso repositório local. Para isso utilizamos `git commit`, a forma que gosto de explicar é _`"Pegar as alterações e adiciona numa caixinha(commit) que depois vai ser enviada para o remoto"`_ .
 
 O commit tem a relação de quais arquivos tem que ser enviados, o que mudou entre a versão anterior e a atual, o autor das alterações, data, etc. Utilize `git commit -m "Primeiro Commit"`, O parâmetro **-m** é a mensagem que vai ser anexado ao commit. É uma boa prática adicionar uma descrição do que foi alterado.
->>>>>>> origin/master
 
 ### `git push`
 
 Seguindo o que fizemos até agora, nós adicionamos uma alteração, criamos um commit, então falta enviar essa alteração para o repositório remoto, para isso utilizamos `git push`.
 
-<<<<<<< HEAD
-Para o comando funcionar corretamente, temos que falar qual repositório remoto vamos utilizar e para qual *branch* enviaremos.
-=======
 Para o comando funcionar corretamente, temos que falar qual repositório remoto vamos utilizar e para qual _branch_ enviaremos.
->>>>>>> origin/master
 
 ```bash
 git push origin master
 ```
 
-<<<<<<< HEAD
-O comando acima envia todos os commits do *branch* atual que estão em seu repositório local para o repositório remoto, nesse caso, o nome do repositório remoto é **origin**, e o *branch* é o **master**.
-=======
 O comando acima envia todos os commits do _branch_ atual que estão em seu repositório local para o repositório remoto, nesse caso, o nome do repositório remoto é **origin**, e o _branch_ é o **master**.
->>>>>>> origin/master
 
 ### `git fetch`
 
@@ -812,19 +643,11 @@ git fetch origin
 git fetch origin master
 ```
 
-<<<<<<< HEAD
-O comando acima puxa todos os commits do repositório remoto **origin**, e no segundo caso filtra somente alterações do *branch*.
-
-### `git merge`
-
-O comando `git fetch` busca as alterações remotas, mas para aplicá-las em seu diretório local, você tem que fazer o *merge* delas, para isso, utilize `git merge`. Você pode sincronizar alterações do *branch* atual que está ou outro *branch*.
-=======
 O comando acima puxa todos os commits do repositório remoto **origin**, e no segundo caso filtra somente alterações do _branch_.
 
 ### `git merge`
 
 O comando `git fetch` busca as alterações remotas, mas para aplicá-las em seu diretório local, você tem que fazer o _merge_ delas, para isso, utilize `git merge`. Você pode sincronizar alterações do _branch_ atual que está ou outro _branch_.
->>>>>>> origin/master
 
 ```bash
 git merge origin/master
@@ -832,11 +655,7 @@ git merge origin/master
 git merge master
 ```
 
-<<<<<<< HEAD
-Parece que os dois comandos são iguais, mas quando utilizamos **origin/master**, você está especificando que quer o *branch* **master** do repositório ****remoto****, que você fez o **fetch** anteriormente. Quando utilizamos **master**, você está especificando que quer o *branch* **master** do repositório ****local****.
-=======
 Parece que os dois comandos são iguais, mas quando utilizamos **origin/master**, você está especificando que quer o _branch_ **master** do repositório **remoto**, que você fez o **fetch** anteriormente. Quando utilizamos **master**, você está especificando que quer o _branch_ **master** do repositório **local**.
->>>>>>> origin/master
 
 ### `git pull`
 
@@ -853,34 +672,20 @@ Até o momento vimos o caminho perfeito, mas se fizer 💩, o que o **git** pode
 Vamos com calma nessa parte, pois dependendo dos parâmetros que utilizar com `git reset` você pode perder alterações em seu código, então vamos ver elas e entender melhor.
 
 Um dos parâmetros que temos é o **--soft**, ele vai voltar somente os commits do seu diretório local, mas vai manter as alterações nos arquivos.
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 ```bash
 git reset --soft origin/master
 # ou
 git reset origin/master
 ```
 
-<<<<<<< HEAD
-Mas se o que você quer é apagar tudo que fez, até mesmo os commits, utilize **--hard**, ele afeta seu diretório local e repositório local. 
-=======
 Mas se o que você quer é apagar tudo que fez, até mesmo os commits, utilize **--hard**, ele afeta seu diretório local e repositório local.
 
->>>>>>> origin/master
 ```bash
 git reset --hard origin/master
 ```
 
 ### `git checkout`
 
-<<<<<<< HEAD
-Muito utilizado no dia a dia, utilizamos `git checkout` para mudar o conteúdo do nosso diretório local. Imaginamos que eu tenho os seguintes *branches*: *master*, *dev* e *test*. Se eu quero mudar meu ambiente para fazer uma nova funcionalidade, e não quero afetar meu código no master, utilizar `git checkout dev` para mudar para um *branch* que já existe.
-
-Caso eu queira criar um novo branch, posso utilizar `git checkout -b fix1` para criar um branch novo chamado **fix1**.
-
-=======
 Muito utilizado no dia a dia, utilizamos `git checkout` para mudar o conteúdo do nosso diretório local. Imaginamos que eu tenho os seguintes _branches_: _master_, _dev_ e _test_. Se eu quero mudar meu ambiente para fazer uma nova funcionalidade, e não quero afetar meu código no master, utilizar `git checkout dev` para mudar para um _branch_ que já existe.
 
 Caso eu queira criar um novo branch, posso utilizar `git checkout -b fix1` para criar um branch novo chamado **fix1**.
@@ -915,7 +720,6 @@ git tag -a v1.0.0 -m "Versão 1.0.0"
 
 O comando acima vai criar uma tag chamada **v1.0.0** e vai adicionar uma mensagem **Versão 1.0.0**.
 
->>>>>>> origin/master
 ## Comandos utilizados com menos frequência
 
 ### `git clone`
@@ -947,22 +751,14 @@ Ações relacionadas ao seu repositório remoto.
 Para listar os repositórios que seu projeto tem. `git remote -v`, ele vai listar o repositório utilizado para **fetch** e para **push**.
 
 Para adicionar um novo repositório remoto, passe o nome e o url do repositório.
-<<<<<<< HEAD
-```
-=======
 
 ```bash
->>>>>>> origin/master
 git remote add origin1 https://github.com/microsoft/vscode.git
 ```
 
 Se quiser remover o repositório, passe o nome do repositório remoto.
-<<<<<<< HEAD
-```
-=======
 
 ```bash
->>>>>>> origin/master
 git remote remove origin1
 ```
 
@@ -977,10 +773,6 @@ Para listar todos os repositórios que o projeto tem, utilize `git branch -a`, o
 Deleta todos os arquivos que não estão indexados pelo git. Mesmo quando você dá um `git reset --hard`, arquivos que não tão indexados ficam. Utilize `git clean` para limpar esses arquivos.
 
 Eu gosto de utilizar os parâmetros **-d** e **-f**, que força apagar os arquivos e diretórios.
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 ```bash
 git clean -df
 ```
@@ -996,19 +788,11 @@ Esse é um comando mais avançado, se algum dia você perder parte do código qu
 ## Cuidados
 
 Às vezes pode ser que seu objetivo seja forçar o envio de uma alteração, mas esse comando pode causar a perda de código permanentemente. Geralmente quando vemos um parâmetro **-f** temos que tomar cuidado, pois existe uma grande chance de ser **F** de Forçar, no caso, forçar uma alteração.
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 ```bash
 git push -f origin master
 ```
 
 Um outro ponto para notar é que para deletarmos um branch local, utilizamos `git branch -d master`, entretanto, não dá para fazer push disso, então para deletar um branch remoto, basta colocar um **:** antes do seu nome, o que pode até acontecer por acidente na hora de digitar.
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 ```bash
 git push origin :master
 ```
@@ -1017,25 +801,6 @@ git push origin :master
 
 Alguns links que achei interessante, se tiver um tempo, dê uma olhada.
 
-<<<<<<< HEAD
-* [Git - Guia prático](http://rogerdudler.github.io/git-guide/index.pt_BR.html)
-* [Git Flow](https://danielkummer.github.io/git-flow-cheatsheet/index.pt_BR.html)
-* [Visualização interativa dos comandos](https://ndpsoftware.com/git-cheatsheet.html)
-
-Achei interessante a imagem, tem uma representação do fluxo de acordo com cada comando.  
-
-<div style={{textAlign: 'center', fontSize: '15px', color: '#999'}}>
-
-![Fluxo de trabalho](git-local-remote.png)
-
-<div style={{fontSize: '15px', color: '#999'}}>
-
-Fonte: https://greenido.wordpress.com/2014/08/03/git-101-part-2-a-bit-more-advance-commands/
-
-</div>
-
-</div>
-=======
 - [Git - Guia prático](http://rogerdudler.github.io/git-guide/index.pt_BR.html)
 - [Git Flow](https://danielkummer.github.io/git-flow-cheatsheet/index.pt_BR.html)
 - [Visualização interativa dos comandos](https://ndpsoftware.com/git-cheatsheet.html)
@@ -1059,4 +824,3 @@ Você chegou até aqui, espero que tenha gostado do conteúdo, e que tenha apren
 Parabéns, você aprendeu como trabalhar com o **Git**!
 
 </Center>
->>>>>>> origin/master

@@ -3,22 +3,14 @@ id: arara_gtech_site
 title: arara.gtech.site
 ---
 
-<<<<<<< HEAD
-**LINK:** [https://github.com/lucasbaccan/arara.gtech.site](https://github.com/lucasbaccan/arara.gtech.site)
-=======
 :::tip Projeto
 **Projeto privado de Lucas Baccan:** [https://github.com/lucasbaccan/arara.gtech.site](https://github.com/lucasbaccan/arara.gtech.site)
->>>>>>> origin/master
 :::
 
 ## Como clonar 
 
 ```
-<<<<<<< HEAD
-git clone URL
-=======
 git clone https://github.com/lucasbaccan/arara.gtech.site.git
->>>>>>> origin/master
 ```
 
 ## Requisitos
@@ -40,11 +32,7 @@ Esse projeto sobe alguns containers para o funcionamento do banco de dados. São
 - [Node Exporter](https://github.com/prometheus/node_exporter)
 
 
-<<<<<<< HEAD
-A imagem do PostgreSQL é a oficial do Docker Hub, na versão [postgres:11.16-alpine3.16](https://hub.docker.com/layers/library/postgres/11.16-alpine3.16/images/sha256-4ca9917323f3e0b0d9b721868a5af182040b840ab2968ab2439de546fa599024), o que significa que a versão do Postgres é a 11.16, que está rodando em um SO Alpine, que é extremamente robusto e minimalista. Já o PgAdmin é a imagem [dpage/pgadmin4:6.13](https://hub.docker.com/layers/dpage/pgadmin4/6.13/images/sha256-8f6a7197c89e4817669596b4edac8a21a8d087dadb2a7639ec99999b507f3052), que é a versão 6.13 do PgAdmin4, que está rodando em um SO Alpine.
-=======
 A imagem do PostgreSQL é a oficial do Docker Hub, na versão [postgres:11.16](https://hub.docker.com/layers/library/postgres/11.16/images/sha256-fdfb434d69d7884d6366840279dc3e721d1bd67cc1d02d51aeea7497f323fc5e?context=explore), o que significa que a versão do Postgres é a 11.16 e o SO é Debian. Já o PgAdmin é a imagem [dpage/pgadmin4:6.13](https://hub.docker.com/layers/dpage/pgadmin4/6.13/images/sha256-8f6a7197c89e4817669596b4edac8a21a8d087dadb2a7639ec99999b507f3052), que é a versão 6.13 do PgAdmin4, que está rodando em um SO Alpine.
->>>>>>> origin/master
 
 ### postgres_db
 
@@ -91,11 +79,7 @@ Esse container é o responsável por coletar as métricas dos bancos de dados e 
 
 Esse container é o responsável por exportar as métricas do banco de dados para o Prometheus. O padrão seria exportar a porta 9187, mas ela só é visível para os containers.
 
-<<<<<<< HEAD
-### node_exporter
-=======
 ### node_exporter (opcional)
->>>>>>> origin/master
 
 Esse container é o responsável por exportar as métricas do servidor para o Prometheus. O padrão seria exportar a porta 9100, mas ela só é visível para os containers.
 
@@ -103,20 +87,6 @@ Esse container é o responsável por exportar as métricas do servidor para o Pr
 
 Após o clone do projeto, vai existir alguns arquivos `.sh`, basta executar eles:
 * Configuração
-<<<<<<< HEAD
-    * `env.sh`: arquivo de configuração do ambiente do servidor
-    * `ssh_key_generate.sh`: script para gerar a chave SSH para o container `postgres_cron`
-
-* Status do servidor
-    * `start.sh`: script para iniciar o servidor (pode passar o parâmetro `true` para ver o log
-    * `stop.sh`: script para parar o servidor
-    * `restart.sh`: script para reiniciar o servidor
-
-* Restaurar backup
-    * `restore.sh`: script para restaurar os backups do S3
-    * `restore_stop.sh`: script para parar o script de restauração
-
-=======
     * `server_install.sh`: script para instalar o servidor, é resultado dos comandos utilizados na criação do servidor utilizando **AWS Linux**.
     * `env.sh`: arquivo de configuração do ambiente do servidor.
     * `ssh_key_generate.sh`: script para gerar a chave SSH para o container `postgres_cron`.
@@ -134,4 +104,3 @@ Após o clone do projeto, vai existir alguns arquivos `.sh`, basta executar eles
 
 * Outros
     *  `convert_unix.sh`: script para converter os arquivos da pasta atual para o formato UNIX, caso estejam no formato Windows. Requer o pacote `dos2unix` instalado.
->>>>>>> origin/master

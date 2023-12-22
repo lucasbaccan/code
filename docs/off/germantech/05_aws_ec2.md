@@ -9,11 +9,7 @@ title: AWS EC2
 
 Elastic Compute Cloud (EC2) é um serviço web que fornece capacidade de computação na nuvem de forma segura e escalável. É um serviço de computação em nuvem que permite que você aumente ou diminua a capacidade de computação de acordo com a demanda. O EC2 permite que você tenha controle total sobre a configuração de hardware do servidor, permitindo que você instale e configure o software que desejar, configure grupos de segurança e crie imagens de servidor que contenham o software e as configurações que você deseja.
 
-<<<<<<< HEAD
-Uma "alternativa" ao EC2 é o Lightsail, que é um serviço de computação em nuvem da Amazon que fornece servidores virtuais pré-configurados e gerenciados. O Lightsail é uma alternativa mais simples e mais barata ao EC2, mas não oferece a mesma flexibilidade e controle que o EC2.
-=======
 Uma *alternativa* ao EC2 é o Lightsail, que é um serviço de computação em nuvem da Amazon que fornece servidores virtuais pré-configurados e gerenciados. O Lightsail é uma alternativa mais simples e mais barata ao EC2, mas não oferece a mesma flexibilidade e controle que o EC2.
->>>>>>> origin/master
 
 :::tip LINK
 **LINK:** [https://aws.amazon.com/pt/lightsail/](https://aws.amazon.com/pt/lightsail/)

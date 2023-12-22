@@ -45,8 +45,6 @@ ls --help
 ```
 :::
 
-<<<<<<< HEAD
-=======
 ## Distribuições Linux
 
 Existem diversas distribuições Linux, cada uma com suas características e peculiaridades. Algumas das mais populares são:
@@ -69,7 +67,6 @@ Cada uma delas tem seu próprio gerenciador de pacotes, que é um programa que g
 
 Então antes de trabalhar com um servidor Linux, é importante saber qual distribuição está sendo utilizada e qual é o gerenciador de pacotes e em que versão está instalado.
 
->>>>>>> origin/master
 ## Manipulação de arquivos e diretórios
 
 Vamos ver alguns comandos para começar a mexer no Linux, começando pela manipulação de arquivos e diretórios. 
@@ -175,11 +172,7 @@ Caso você queira mover um diretório, basta adicionar o argumento `-r` (recursi
 
 ```bash title=/home/usuario/Documentos
 mv -r Projetos Projetos2
-<<<<<<< HEAD
-
-=======
 ```
->>>>>>> origin/master
 
 ### `rm` - Remove um arquivo ou diretório
 
@@ -385,8 +378,6 @@ Existem algumas opções para finalizar um processo, como `-9` que finaliza o pr
 ```bash
 kill -9 1234
 ```
-<<<<<<< HEAD
-=======
 
 ## Gerenciamento de serviços
 
@@ -482,4 +473,3 @@ service ssh --level 2345
 # or
 /etc/init.d ssh --level 2345
 ```
->>>>>>> origin/master

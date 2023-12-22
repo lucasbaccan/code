@@ -30,11 +30,7 @@ Abaixo é possível ver a diferença entre uma máquina virtual e um container:
 
 <div style={{textAlign: 'center', fontSize: '15px', color: '#999'}}>
 
-<<<<<<< HEAD
-![Diferença entre máquina virtual e container](./img_docker_vs_vm.jpg)
-=======
 ![Diferença entre máquina virtual e container](./img_docker_vs_vm.jpg)<br />
->>>>>>> origin/master
 Fonte: [https://www.sdxcentral.com/cloud/containers/definitions/containers-vs-vms/](https://www.sdxcentral.com/cloud/containers/definitions/containers-vs-vms/)
 
 </div>
@@ -137,8 +133,6 @@ Para criar um container a partir de uma imagem, execute o comando `docker run` s
 
 Se não existir nenhuma imagem com o nome `nginx` na máquina, o Docker irá baixar a imagem do repositório. Por padrão, as imagens são baixadas do `hub.docker.com`, na versão `latest`. Caso queira especificar a versão da imagem, basta adicionar o número da versão após o nome da imagem, por exemplo, para baixar a imagem `nginx` na versão `1.15.8`, execute o comando `docker run nginx:1.15.8`.
 
-<<<<<<< HEAD
-=======
 ### Dockerfile
 
 O Dockerfile é um arquivo de configuração que possui as instruções para criar uma imagem, ele é utilizado para automatizar a criação de imagens.
@@ -149,7 +143,6 @@ RUN apt-get update && apt-get install -y nginx
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
->>>>>>> origin/master
 ## Docker Compose
 
 O Docker Compose é uma ferramenta que permite criar e gerenciar vários containers ao mesmo tempo, ele é utilizado para criar ambientes de desenvolvimento, testes e produção.
@@ -184,11 +177,8 @@ O comando `docker-compose restart` é utilizado para reiniciar os containers.
 
 ## Exemplo
 
-<<<<<<< HEAD
-=======
 ### docker-compose.yml
 
->>>>>>> origin/master
 Para criar um ambiente de desenvolvimento com o Docker Compose, crie um arquivo chamado `docker-compose.yml` com o seguinte conteúdo:
 
 ```yml title="docker-compose.yml"
