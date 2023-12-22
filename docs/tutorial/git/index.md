@@ -567,14 +567,6 @@ Se você nunca teve experiência com Terminal (Linux/MacOS) ou CMD/Powershell (W
 
 </Center>
 
----
-
----
-
----
-
----
-
 ### `git init`
 
 O comando `git init` é onde tudo começa, você precisa rodar esse comando em um diretório para fazer com que o **Git** comece a gerenciar os arquivos, pastas e subpastas.
