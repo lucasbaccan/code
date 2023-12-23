@@ -3,6 +3,7 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 const sidebars: SidebarsConfig = {
   docs: [
     "index",
+    "dicionario/index",
     {
       type: "category",
       label: "Ferramentas online",
@@ -12,7 +13,6 @@ const sidebars: SidebarsConfig = {
         "ferramentas_online/gitignore_io/index",
       ],
     },
-    "programas/index",
   ],
 };
 

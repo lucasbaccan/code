@@ -3,8 +3,8 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 const sidebars: SidebarsConfig = {
   docs: [
     "index",
-    "git/guia_rapido",
     "git/index",
+    "git/guia_rapido",
     {
       type: "category",
       label: "Site com docusaurus",

@@ -1,17 +1,17 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
+import React from "react";
+import clsx from "clsx";
+import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Svg: React.ComponentType<React.ComponentProps<"svg">>;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Vá direto ao ponto',
-    Svg: require('@site/static/img/clock.svg').default,
+    title: "Vá direto ao ponto",
+    Svg: require("@site/static/img/clock.svg").default,
     description: (
       <>
         Pra que ler um monte de conteúdo se você pode ir direto no que precisa.
@@ -19,29 +19,29 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Não perca uma ideia',
-    Svg: require('@site/static/img/lightbulb.svg').default,
+    title: "Não perca uma ideia",
+    Svg: require("@site/static/img/lightbulb.svg").default,
     description: (
       <>
-        Ficar pesquisando material é mancada
-        Utilize dicas, truques, macetes ...
+        Ficar pesquisando material é mancada Utilize dicas, truques, macetes ...
       </>
     ),
   },
   {
-    title: 'Docusaurus: Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: "Docusaurus: Powered by React",
+    Svg: require("@site/static/img/undraw_docusaurus_react_no_bg.svg").default,
     description: (
       <>
-        <a href='https://docusaurus.io/'>Docusaurus</a>: Documentação feita de forma simples e rápida.
+        <a href="https://docusaurus.io/">Docusaurus</a>: Documentação feita de
+        forma simples e rápida.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
