@@ -3,33 +3,37 @@ id: setup
 title: Meu setup
 ---
 
-Em 2023 montei um [computador](#desktop), ele substituirá o meu [notebook](#notebook), que já está bem antigo, se tornando meu *setup* principal. Meu notebook ainda será utilizado para quando eu precisar de mobilidade.
+Em 2023 montei um [computador](#desktop), ele substituirá o meu [notebook](#notebook), que já está bem antigo, se tornando meu _setup_ principal. Meu notebook ainda será utilizado para quando eu precisar de mobilidade.
+
 ## Desktop
 
 É um computador que montei peça por peça, com o objetivo de ser um computador que consiga rodar tudo que for preciso, e que dure bastante tempo, sem precisar de upgrades. Então ele tem um processador e placa de vídeo bem potentes, além de bastante memória RAM e armazenamento.
 
 ### Configuração atual
+
 - **Sistema operacinal**: Windows 11 Pro
 - **Processador**: [AMD Ryzen 9 7900X](https://www.amd.com/pt/products/cpu/amd-ryzen-9-7900x)
-- **Placa de vídeo**: [Nvidea RTX 3070 8GB](https://www.galax.com/pt/graphics-card/geforce-rtx-3070ti-oc.html) (Galax)
+- **Placa de vídeo**: [Nvidea RTX 3070 Ti 8GB](https://www.galax.com/pt/graphics-card/geforce-rtx-3070ti-sg.html) (Galax)
 - **Placa mãe**: [Asrock X670E Steel Legend](https://www.asrock.com/mb/AMD/X670E%20Steel%20Legend/index.asp)
 - **RAM**: [32 GB (2x16 GB) 6000 mhz](https://www.gskill.com/product/165/390/1661410135/F5-6000J3038F16GX2-TZ5NR) (G.Skill Trident Z5 Neo)
-- **Armazenamento**: [2 TB SSD](https://www.kingspec.com/product/nx-series-106.html) (Kingspec NX)
+- **Armazenamento principal**: [2 TB SSD - WD_BLACK SN770](https://www.westerndigital.com/pt-br/products/internal-drives/wd-black-sn770-nvme-ssd?sku=WDS200T3X0E) (WD_BLACK)
+- **Armazenamento**: [2 TB SSD - NX-2TB 2280](https://www.kingspec.com/product/nx-series-106.html) (Kingspec NX)
 - **Fonte**: [Cooler Master MWE GOLD 750 V2](https://www.coolermaster.com/br/pt-br/catalog/power-supplies/mwe-series/mwe-gold-750-v2/)
-
 
 ## Notebook
 
-É um **HP Envy 15T-J100**, comprado em 2013, mesmo antigo, ele roda tudo que preciso.
+É um **HP Envy 15T-J100**, comprado em 2013, mesmo antigo, ele roda tudo que preciso. E o que não roda, eu acesso remotamente o meu computador principal.
 
 ### Configuração original
+
 - **Sistema operacinal**: Windows 8
 - **Processador**: [Intel i7-4702MQ](https://ark.intel.com/content/www/br/pt/ark/products/75119/intel-core-i7-4702mq-processor-6m-cache-up-to-3-20-ghz.html)
-- **RAM**: 8 GB (2x4 GB) 1600 mhz 
-- **Armazenamento**: 1 TB HDD 
+- **RAM**: 8 GB (2x4 GB) 1600 mhz
+- **Armazenamento**: 1 TB HDD
 - **Placa de vídeo**: [Nvidea 750M 4GB](https://www.nvidia.com/en-gb/geforce/gaming-laptops/geforce-gt-750m/specifications/) + HD Graphics 4600
 
 ### Configuração atual / Atualizações
+
 - **Sistema operacinal**: Windows 10 Pro
 - **RAM**: 16 GB (2x8 GB) 1600 mhz (Kingston)
 - **Armazenamento**: 480 SSD (Kingston)
@@ -60,4 +64,4 @@ Para comunicar com o computador, utilizo um adaptador **[Xbox One Wireless Adapt
 
 ### Roteador
 
-Atualmente tenho um plano de internet de 300 Mbps da **Vivo Fibra** (300 Mbps Down / 150 Mbps Up), e para poder utilizar essa velocidade, utilizo um roteador **[Asus RT-AX88U](https://www.asus.com/Networking/RT-AX88U/)**, que é bem rápido e tem um bom alcance, além de já ter suporte a Wi-Fi 6.
+Atualmente tenho um plano de internet de 530 Mbps da [Opção Telecom](https://vempraopcao.com.br/) (530 Mbps Down / 530 Mbps Up), e para poder utilizar essa velocidade, utilizo um roteador **[Asus RT-AX88U](https://www.asus.com/Networking/RT-AX88U/)**, que é bem rápido e tem um bom alcance, além de já ter suporte a Wi-Fi 6.
