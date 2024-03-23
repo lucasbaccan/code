@@ -2,11 +2,33 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://code.lucasbaccan.com.br/blog</id>
     <title>Code Blog</title>
-    <updated>2022-09-30T00:00:00.000Z</updated>
+    <updated>2023-12-23T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://code.lucasbaccan.com.br/blog"/>
     <subtitle>Code Blog</subtitle>
     <icon>https://code.lucasbaccan.com.br/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[#2 - Novo tutorial]]></title>
+        <id>https://code.lucasbaccan.com.br/blog/2</id>
+        <link href="https://code.lucasbaccan.com.br/blog/2"/>
+        <updated>2023-12-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Novo tutorial]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="novo-tutorial">Novo tutorial<a href="https://code.lucasbaccan.com.br/blog/2#novo-tutorial" class="hash-link" aria-label="Link direto para Novo tutorial" title="Link direto para Novo tutorial">​</a></h2>
+<p>Fala pessoal</p>
+<p>Depois de muito tempo sem postar nada, resolvi atualizar a documentação sobre Git que eu tinha feito aqui no site. Ela estava muito tecnica e com poucas imagens, então resolvi reescrever ela do zero, deixando mais simples, com mais imagens e mais fácil de entender.</p>
+<p>Acesse o tutorial <a href="https://code.lucasbaccan.com.br/tutorial/git/">clicando aqui</a>.</p>
+<p>Foi criado também um guia rápido de comandos do Git, que você pode acessar <a href="https://code.lucasbaccan.com.br/tutorial/git/guia_rapido">clicando aqui</a>.</p>
+<p>Espero que gostem, desejo a todos um feliz natal e um ótimo ano novo.</p>]]></content>
+        <author>
+            <name>Lucas Elias Baccan</name>
+            <uri>https://github.com/lucasbaccan</uri>
+        </author>
+        <category label="2023" term="2023"/>
+        <category label="12/2023" term="12/2023"/>
+        <category label="Lucas" term="Lucas"/>
+        <category label="Elias" term="Elias"/>
+        <category label="Baccan" term="Baccan"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[#1 - Primeiro post]]></title>
         <id>https://code.lucasbaccan.com.br/blog/1</id>

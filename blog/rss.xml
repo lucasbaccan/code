@@ -4,10 +4,28 @@
         <title>Code Blog</title>
         <link>https://code.lucasbaccan.com.br/blog</link>
         <description>Code Blog</description>
-        <lastBuildDate>Fri, 30 Sep 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 23 Dec 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>pt-BR</language>
+        <item>
+            <title><![CDATA[#2 - Novo tutorial]]></title>
+            <link>https://code.lucasbaccan.com.br/blog/2</link>
+            <guid>https://code.lucasbaccan.com.br/blog/2</guid>
+            <pubDate>Sat, 23 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Novo tutorial]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="novo-tutorial">Novo tutorial<a href="https://code.lucasbaccan.com.br/blog/2#novo-tutorial" class="hash-link" aria-label="Link direto para Novo tutorial" title="Link direto para Novo tutorial">​</a></h2>
+<p>Fala pessoal</p>
+<p>Depois de muito tempo sem postar nada, resolvi atualizar a documentação sobre Git que eu tinha feito aqui no site. Ela estava muito tecnica e com poucas imagens, então resolvi reescrever ela do zero, deixando mais simples, com mais imagens e mais fácil de entender.</p>
+<p>Acesse o tutorial <a href="https://code.lucasbaccan.com.br/tutorial/git/">clicando aqui</a>.</p>
+<p>Foi criado também um guia rápido de comandos do Git, que você pode acessar <a href="https://code.lucasbaccan.com.br/tutorial/git/guia_rapido">clicando aqui</a>.</p>
+<p>Espero que gostem, desejo a todos um feliz natal e um ótimo ano novo.</p>]]></content:encoded>
+            <category>2023</category>
+            <category>12/2023</category>
+            <category>Lucas</category>
+            <category>Elias</category>
+            <category>Baccan</category>
+        </item>
         <item>
             <title><![CDATA[#1 - Primeiro post]]></title>
             <link>https://code.lucasbaccan.com.br/blog/1</link>
