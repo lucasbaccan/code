@@ -2,7 +2,8 @@
 slug: "1"
 title: "#1 - Primeiro post"
 authors: [LucasEliasBaccan]
-tags: ['2022', '09/2022', 'Lucas', 'Elias', 'Baccan']
+tags: ["2022", "09/2022", "Lucas", "Elias", "Baccan"]
+hide_table_of_contents: true
 ---
 
 ## Primeiro post
@@ -13,6 +14,6 @@ La em outubro de 2020, eu criei esse site, com a intenção de colocar alguns co
 
 A intenção é tornar os site que eu favoritar, sugestões e solicitações de amigos em conteúdos aqui, conteúdos dos quais sejam uteis e facilitem no nosso dia a dia.
 
-Então seja bem vindo, adicione aos favoritos e se prepare para conteúdos incríveis. 
+Então seja bem vindo, adicione aos favoritos e se prepare para conteúdos incríveis.
 
 ![programmer.png](programmer.png)

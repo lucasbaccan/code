@@ -53,6 +53,19 @@ const config: Config = {
         showLastUpdateTime: true,
       } satisfies DocsOptions,
     ],
+    // Adicionar componente docs - /cursos
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "cursos",
+        path: "docs/cursos",
+        sidebarPath: "./sidebarsCursos.ts",
+        editUrl: "https://github.com/lucasbaccan/code/tree/master/",
+        routeBasePath: "cursos",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      } satisfies DocsOptions,
+    ],
     // Adicionar componente docs - /tutorial
     [
       "@docusaurus/plugin-content-docs",
@@ -122,7 +135,7 @@ const config: Config = {
     [
       "@easyops-cn/docusaurus-search-local",
       {
-        docsRouteBasePath: ["/docs", "/info", "/tutorial"],
+        docsRouteBasePath: ["/docs", "/cursos", "/info", "/tutorial"],
         blogRouteBasePath: ["/blog"],
         language: ["pt"],
         // highlightSearchTermsOnTargetPage: true,
@@ -157,6 +170,12 @@ const config: Config = {
           to: "docs/",
           activeBasePath: "docs",
           label: "Docs",
+          position: "left",
+        },
+        {
+          to: "cursos/",
+          activeBasePath: "cursos",
+          label: "Cursos",
           position: "left",
         },
         {

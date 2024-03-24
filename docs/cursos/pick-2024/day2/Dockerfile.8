@@ -1,0 +1,11 @@
+FROM golang:1.18 AS builder
+WORKDIR /app
+COPY ./hello.go ./
+RUN go mod init hello
+RUN go build -o /app/hello
+
+FROM alpine:3.19
+COPY --from=builder /app/hello /app/hello
+SHELL ["/bin/sh", "-c"]
+CMD ["/app/hello"]
+VOLUME /app/dados

@@ -3,6 +3,7 @@ slug: "2"
 title: "#2 - Novo tutorial"
 authors: [LucasEliasBaccan]
 tags: ["2023", "12/2023", "Lucas", "Elias", "Baccan"]
+hide_table_of_contents: true
 ---
 
 ## Novo tutorial
