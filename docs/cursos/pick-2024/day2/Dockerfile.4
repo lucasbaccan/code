@@ -1,0 +1,10 @@
+FROM ubuntu:22.04
+LABEL maintainer="@lucasbaccan.com.br"
+RUN apt-get update && apt-get install -y nginx curl && rm -rf /var/lib/apt/lists/*
+EXPOSE 80
+COPY index.html /var/www/html/index.html
+WORKDIR /var/www/html
+ENV APP_VERSION=1.0.0
+ENTRYPOINT [ "nginx" ]
+CMD ["-g", "daemon off;"]
+HEALTHCHECK --interval=5s --timeout=3s --start-period=5s --retries=3 CMD curl -f http://localhost/ || exit 1
