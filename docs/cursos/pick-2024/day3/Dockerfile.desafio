@@ -1,0 +1,26 @@
+FROM cgr.dev/chainguard/git:latest as source
+WORKDIR /app
+RUN git clone https://github.com/badtuxx/giropops-senhas.git /app && \
+    cd /app && git checkout 6bc55efe13dbafc38ee6c2ae4790d380f5f4c942 && \
+    rm -rf /app/.git
+RUN echo "Werkzeug==2.3.8" > /app/requirements.txt
+
+# FROM cgr.dev/chainguard/python:3.11-dev as builder # Somente latest é publico
+FROM cgr.dev/chainguard/python:latest-dev as builder
+WORKDIR /app
+COPY --from=source /app/requirements.txt .
+RUN python -m venv /app/venv && \
+    . /app/venv/bin/activate && \
+    pip install -r requirements.txt --no-cache-dir
+    
+
+# FROM cgr.dev/chainguard/python:3.11 # Somente latest é publico
+FROM cgr.dev/chainguard/python:latest
+WORKDIR /app
+COPY --from=builder /app/venv /app/venv
+COPY --from=source /app .
+ARG REDIS_HOST=localhost
+ENV REDIS_HOST=$REDIS_HOST
+ENV PATH="/app/venv/bin:$PATH"
+EXPOSE 5000
+ENTRYPOINT ["flask", "run", "--host=0.0.0.0"]

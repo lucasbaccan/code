@@ -1,0 +1,16 @@
+FROM alpine:3.19
+
+RUN apk add --no-cache python3 py3-pip git && \
+    git clone https://github.com/badtuxx/giropops-senhas.git /app && \
+    cd /app && git checkout 6bc55efe13dbafc38ee6c2ae4790d380f5f4c942 && \
+    rm -rf /app/.git
+
+WORKDIR /app
+
+RUN pip3 install --break-system-packages --no-cache-dir -r /app/requirements.txt && \
+    pip3 install --break-system-packages Werkzeug==2.2.2
+
+ARG REDIS_HOST=localhost
+ENV REDIS_HOST=$REDIS_HOST
+
+CMD ["flask", "run", "--host=0.0.0.0", "--port=80"]

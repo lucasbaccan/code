@@ -1,0 +1,4 @@
+FROM alpine:3.19
+ARG APP_VERSION
+ENV APP_VERSION=${APP_VERSION}
+CMD ["sh", "-c", "echo $APP_VERSION"]
