@@ -1,0 +1,38 @@
+
+
+## Overview
+
+                    │       Analyzed Image         
+────────────────────┼──────────────────────────────
+  Target            │  giropops-senhas:latest      
+    digest          │  b0799bc0fc2e                
+    platform        │ linux/amd64                  
+    vulnerabilities │    0C     1H     0M     0L   
+    size            │ 34 MB                        
+    packages        │ 35                           
+
+
+## Packages and Vulnerabilities
+
+   0C     1H     0M     0L  pip 24.0
+pkg:pypi/pip@24.0
+
+    ✗ HIGH CVE-2018-20225 [OWASP Top Ten 2017 Category A9 - Using Components with Known Vulnerabilities]
+      https://scout.docker.com/v/CVE-2018-20225?s=gitlab&n=pip&t=pypi&vr=%3E%3D0
+      Affected range : >=0                                           
+      Fixed version  : not fixed                                     
+      CVSS Score     : 7.8                                           
+      CVSS Vector    : CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  
+    
+
+
+1 vulnerability found in 1 package
+  LOW       0  
+  MEDIUM    0  
+  HIGH      1  
+  CRITICAL  0  
+
+
+What's Next?
+  View base image update recommendations → docker scout recommendations giropops-senhas:latest
+

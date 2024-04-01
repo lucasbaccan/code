@@ -505,7 +505,7 @@ Para esse desafio, criei o Dockerfile e o Makefile para facilitar a execução d
     run-dev: redis-run giropops-senhas-build giropops-senhas-run
 
     run-prod: redis-run giropops-senhas-remove
-      docker run -d --network giropops-senhas --name=giropops-senhas -p 8080:80 lucasbaccan/linuxtips-giropops-senhas:1.0
+      docker run -d --network giropops-senhas --name=giropops-senhas -p 5000:80 lucasbaccan/linuxtips-giropops-senhas:1.0
     ```
 
   </TabItem>
