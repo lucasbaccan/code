@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcode=self.webpackChunkcode||[]).push([[2548],{5401:e=>{e.exports=JSON.parse('{"blogBasePath":"/blog","blogTitle":"Blog"}')}}]);

@@ -4,10 +4,27 @@
         <title>Code Blog</title>
         <link>https://code.lucasbaccan.com.br/blog</link>
         <description>Code Blog</description>
-        <lastBuildDate>Sat, 23 Dec 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 23 Mar 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>pt-BR</language>
+        <item>
+            <title><![CDATA[#3 - Cursos]]></title>
+            <link>https://code.lucasbaccan.com.br/blog/3</link>
+            <guid>https://code.lucasbaccan.com.br/blog/3</guid>
+            <pubDate>Sat, 23 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Novo tutorial]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="novo-tutorial">Novo tutorial<a href="https://code.lucasbaccan.com.br/blog/3#novo-tutorial" class="hash-link" aria-label="Link direto para Novo tutorial" title="Link direto para Novo tutorial">​</a></h2>
+<p>Fala pessoal</p>
+<p>Criei um novo menu no site chamado <strong><a href="https://code.lucasbaccan.com.br/cursos">Cursos</a></strong>, onde vou colocar conteúdos de cursos que eu fiz e que acho interessante compartilhar com vocês. Atualmente eu estou fazendo o <a href="https://code.lucasbaccan.com.br/cursos/curso-dev">curso.dev</a> do Felipe Deschamps e o <a href="https://code.lucasbaccan.com.br/cursos/pick-2024">pick 2024</a> do Jeferson Fernando.</p>
+<p>Espero que gostem, e que aproveitem o conteúdo.</p>
+<p>Até a próxima.</p>]]></content:encoded>
+            <category>2023</category>
+            <category>03/2024</category>
+            <category>Lucas</category>
+            <category>Elias</category>
+            <category>Baccan</category>
+        </item>
         <item>
             <title><![CDATA[#2 - Novo tutorial]]></title>
             <link>https://code.lucasbaccan.com.br/blog/2</link>
@@ -37,7 +54,7 @@
 <p>La em outubro de 2020, eu criei esse site, com a intenção de colocar alguns conteúdos relacionados a tecnologia. A ideia veio, mas ficou parada. Agora quase 2 anos depois, vou voltar com a ideia, quem sabe agora de certo 😀.</p>
 <p>A intenção é tornar os site que eu favoritar, sugestões e solicitações de amigos em conteúdos aqui, conteúdos dos quais sejam uteis e facilitem no nosso dia a dia.</p>
 <p>Então seja bem vindo, adicione aos favoritos e se prepare para conteúdos incríveis.</p>
-<p><img loading="lazy" alt="programmer.png" src="https://code.lucasbaccan.com.br/assets/images/programmer-77bebd40c79e85f15938314a34cf8c13.png" width="512" height="512" class="img_ev3q"></p>]]></content:encoded>
+<p><img decoding="async" loading="lazy" alt="programmer.png" src="https://code.lucasbaccan.com.br/assets/images/programmer-77bebd40c79e85f15938314a34cf8c13.png" width="512" height="512" class="img_ev3q"></p>]]></content:encoded>
             <category>2022</category>
             <category>09/2022</category>
             <category>Lucas</category>
