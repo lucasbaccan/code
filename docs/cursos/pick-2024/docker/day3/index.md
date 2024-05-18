@@ -52,7 +52,7 @@ Jeferson começou fazendo o clone do repositório e explicando o que precisaria 
 
 Agora seguimos para a criação do Dockerfile. Criamos um Dockerfile com a seguinte estrutura:
 
-```Dockerfile showLineNumbers title="Dockerfile"
+```dockerfile showLineNumbers title="Dockerfile"
 FROM python:3.11
 WORKDIR /app
 COPY requirements.txt .
@@ -108,7 +108,7 @@ Isso já seria uma solução para o problema, mas ainda não é a melhor soluç�
 
 Ao rodar o comando `docker images` ou `docker image ls`, podemos ver que a imagem que criamos tem 1GB. Isso é muito grande para uma aplicação tão simples. Vamos então trocar a imagem base para `python:3.11-slim`:
 
-```Dockerfile showLineNumbers title="Dockerfile"
+```dockerfile showLineNumbers title="Dockerfile"
 FROM python:3.11-slim
 WORKDIR /app
 COPY requirements.txt .
@@ -142,7 +142,7 @@ Com isso você consegue verificar o tamanho de cada camada e ver o que está pes
 
 A imagem `python:3.11-slim` é menor, mas existe outra imagem menor ainda, que é a imagem baseada em `Alpine`. Vamos então trocar a imagem atual para a `python:3.11-alpine3.19`:
 
-```Dockerfile showLineNumbers title="Dockerfile"
+```dockerfile showLineNumbers title="Dockerfile"
 FROM python:3.11-alpine3.19
 WORKDIR /app
 COPY requirements.txt .
@@ -169,7 +169,7 @@ Distroless é uma imagem que não tem sistema operacional, ela é uma imagem mí
 
 Vamos então trocar a imagem atual para a `gcr.io/distroless/python3-debian11`:
 
-```Dockerfile showLineNumbers title="Dockerfile"
+```dockerfile showLineNumbers title="Dockerfile"
 FROM cgr.dev/chainguard/python:3.11
 WORKDIR /app
 COPY requirements.txt .
@@ -190,7 +190,7 @@ docker build --name giropops-senhas -t giropops-senhas:4.0 -f Dockerfile .
 
 Vamos então corrigir esse erro, para isso, temos que usar a imagem com `-dev` no final e por ela como builder e copiar o resultado para a imagem final:
 
-```Dockerfile showLineNumbers title="Dockerfile"
+```dockerfile showLineNumbers title="Dockerfile"
 # FROM cgr.dev/chainguard/python:3.11-dev as builder # Somente latest é publico
 FROM cgr.dev/chainguard/python:latest-dev as builder
 WORKDIR /app
@@ -277,6 +277,7 @@ Eu optei por fazer o checkout dentro do container, mas não é recomendado, foi 
 
 <Tabs>
   <TabItem value="dockerfile" label="Dockerfile" default>
+
     ```dockerfile showLineNumbers
     FROM cgr.dev/chainguard/git:latest as source
     WORKDIR /app
@@ -308,6 +309,7 @@ Eu optei por fazer o checkout dentro do container, mas não é recomendado, foi 
   </TabItem>
 
   <TabItem value="makefile" label="Makefile">
+  
     ```makefile showLineNumbers
     docker-login:
       docker login
