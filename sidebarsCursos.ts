@@ -39,6 +39,7 @@ const sidebars: SidebarsConfig = {
             "pick-2024/kubernets/day3/index",
             "pick-2024/kubernets/day4/index",
             "pick-2024/kubernets/day5/index",
+            "pick-2024/kubernets/day6/index",
           ],
         },
       ],

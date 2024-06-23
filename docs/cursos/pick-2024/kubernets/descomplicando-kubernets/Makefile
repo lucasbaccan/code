@@ -59,3 +59,9 @@ day4-get-deamonset:
 
 day4-desafio:
 	kubectl apply -f day4/desafio.yaml
+
+day6-create-storageclass:
+	kubectl apply -f day6/storageclass.yaml
+
+day6-create-pv:
+	kubectl apply -f day6/persistent-volume.yaml
