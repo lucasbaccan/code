@@ -65,3 +65,12 @@ day6-create-storageclass:
 
 day6-create-pv:
 	kubectl apply -f day6/persistent-volume.yaml
+
+day7-create-statefulset:
+	kubectl apply -f day7/statefullset-nginx.yaml
+
+day7-create-services-example:
+	kubectl apply -f day7/services-example.yaml
+
+day7-dever-de-casa:
+	kubectl apply -f day7/dever-de-casa.yaml
