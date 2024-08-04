@@ -13,7 +13,7 @@
         <link href="https://code.lucasbaccan.com.br/blog/3"/>
         <updated>2024-03-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Novo tutorial]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="novo-tutorial">Novo tutorial<a href="https://code.lucasbaccan.com.br/blog/3#novo-tutorial" class="hash-link" aria-label="Link direto para Novo tutorial" title="Link direto para Novo tutorial">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="novo-tutorial">Novo tutorial<a class="hash-link" aria-label="Link direto para Novo tutorial" title="Link direto para Novo tutorial" href="https://code.lucasbaccan.com.br/blog/3#novo-tutorial">​</a></h2>
 <p>Fala pessoal</p>
 <p>Criei um novo menu no site chamado <strong><a href="https://code.lucasbaccan.com.br/cursos">Cursos</a></strong>, onde vou colocar conteúdos de cursos que eu fiz e que acho interessante compartilhar com vocês. Atualmente eu estou fazendo o <a href="https://code.lucasbaccan.com.br/cursos/curso-dev">curso.dev</a> do Felipe Deschamps e o <a href="https://code.lucasbaccan.com.br/cursos/pick-2024">pick 2024</a> do Jeferson Fernando.</p>
 <p>Espero que gostem, e que aproveitem o conteúdo.</p>
@@ -34,7 +34,7 @@
         <link href="https://code.lucasbaccan.com.br/blog/2"/>
         <updated>2023-12-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Novo tutorial]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="novo-tutorial">Novo tutorial<a href="https://code.lucasbaccan.com.br/blog/2#novo-tutorial" class="hash-link" aria-label="Link direto para Novo tutorial" title="Link direto para Novo tutorial">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="novo-tutorial">Novo tutorial<a class="hash-link" aria-label="Link direto para Novo tutorial" title="Link direto para Novo tutorial" href="https://code.lucasbaccan.com.br/blog/2#novo-tutorial">​</a></h2>
 <p>Fala pessoal</p>
 <p>Depois de muito tempo sem postar nada, resolvi atualizar a documentação sobre Git que eu tinha feito aqui no site. Ela estava muito tecnica e com poucas imagens, então resolvi reescrever ela do zero, deixando mais simples, com mais imagens e mais fácil de entender.</p>
 <p>Acesse o tutorial <a href="https://code.lucasbaccan.com.br/tutorial/git/">clicando aqui</a>.</p>
@@ -56,7 +56,7 @@
         <link href="https://code.lucasbaccan.com.br/blog/1"/>
         <updated>2022-09-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Primeiro post]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="primeiro-post">Primeiro post<a href="https://code.lucasbaccan.com.br/blog/1#primeiro-post" class="hash-link" aria-label="Link direto para Primeiro post" title="Link direto para Primeiro post">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="primeiro-post">Primeiro post<a class="hash-link" aria-label="Link direto para Primeiro post" title="Link direto para Primeiro post" href="https://code.lucasbaccan.com.br/blog/1#primeiro-post">​</a></h2>
 <p>Fala pessoal</p>
 <p>La em outubro de 2020, eu criei esse site, com a intenção de colocar alguns conteúdos relacionados a tecnologia. A ideia veio, mas ficou parada. Agora quase 2 anos depois, vou voltar com a ideia, quem sabe agora de certo 😀.</p>
 <p>A intenção é tornar os site que eu favoritar, sugestões e solicitações de amigos em conteúdos aqui, conteúdos dos quais sejam uteis e facilitem no nosso dia a dia.</p>

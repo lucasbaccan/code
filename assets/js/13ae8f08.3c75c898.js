@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcode=self.webpackChunkcode||[]).push([[83],{7549:a=>{a.exports=JSON.parse('{"tag":{"label":"Lucas","permalink":"/blog/tags/lucas","allTagsPath":"/blog/tags","count":3,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/lucas","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
