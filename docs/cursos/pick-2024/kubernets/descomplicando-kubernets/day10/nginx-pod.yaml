@@ -1,0 +1,56 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx-pod
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.27
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - name: nginx-config
+      mountPath: /etc/nginx/conf.d/default.conf
+      subPath: nginx.conf
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+  - name: nginx-exporter
+    image: nginx/nginx-prometheus-exporter:1.1.2
+    args: 
+      - '-nginx.scrape-uri=http://localhost/metrics'
+    ports:
+    - containerPort: 9113
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+  volumes:
+  - name: nginx-config
+    configMap:
+      name: nginx-config
+      defaultMode: 420
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  labels:
+    app: nginx-pod
+  name: nginx-podmonitor
+spec:
+  podMetricsEndpoints:
+  - interval: 10s
+    port: metrics
+    targetPort: 9113
+  selector:
+    matchLabels:
+      app: nginx-pod
