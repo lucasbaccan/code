@@ -74,3 +74,13 @@ day7-create-services-example:
 
 day7-dever-de-casa:
 	kubectl apply -f day7/dever-de-casa.yaml
+
+day8-create-secret:
+	kubectl apply -f day8/secret.yaml
+
+day10-create-deployment:
+	kubectl apply -f day10/nginx-configmap.yaml
+	kubectl apply -f day10/nginx-deployment.yaml
+	kubectl apply -f day10/nginx-service.yaml
+	kubectl apply -f day10/nginx-servicemonitor.yaml
+	kubectl apply -f day10/prometheus-rule.yaml
