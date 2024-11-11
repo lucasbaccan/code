@@ -84,3 +84,6 @@ day10-create-deployment:
 	kubectl apply -f day10/nginx-service.yaml
 	kubectl apply -f day10/nginx-servicemonitor.yaml
 	kubectl apply -f day10/prometheus-rule.yaml
+
+day11-create-ingress:
+	kubectl apply -f day11/giropops-ingress.yaml
