@@ -137,7 +137,7 @@ const config: Config = {
       {
         docsRouteBasePath: ["/docs", "/cursos", "/info", "/tutorial"],
         blogRouteBasePath: ["/blog"],
-        language: ["pt"],
+        language: ["en"],
         // highlightSearchTermsOnTargetPage: true,
         docsPluginIdForPreferredVersion: "docs",
       },

@@ -42,7 +42,7 @@ Day 3, o treinamento continua com foco em otimizar a criação de imagens de con
 
 ### Solução do desafio do dia 2
 
-O [desafio do dia 2](../day2/index.md#desafio) era criar uma imagem da aplicação [giropops-senhas](https://github.com/badtuxx/giropops-senhas) e subir para o Docker Hub. A solução minha pode ser vista [aqui](../day2/index.md#solução).
+O [desafio do dia 2](../day2/index.md#desafio-2) era criar uma imagem da aplicação [giropops-senhas](https://github.com/badtuxx/giropops-senhas) e subir para o Docker Hub. A solução minha pode ser vista [aqui](../day2/index.md#solução).
 
 #### Rodando a aplicação localmente
 
