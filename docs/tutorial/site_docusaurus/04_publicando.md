@@ -30,7 +30,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - run: npm install
+      - run: npm clean-install
       - run: npm run build
       - uses: peaceiris/actions-gh-pages@v3
         with:

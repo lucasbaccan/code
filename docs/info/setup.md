@@ -3,16 +3,16 @@ id: setup
 title: Meu setup
 ---
 
-Em 2023 montei um [computador](#desktop), ele substituirá o meu [notebook](#notebook), que já está bem antigo, se tornando meu _setup_ principal. Meu notebook ainda será utilizado para quando eu precisar de mobilidade.
+No dia a dia eu utilizo um **[computador](#desktop)**, mas também tenho um **[notebook](#notebook)**, que utilizo para quando preciso de mobilidade. Além disso, tenho um **[home lab](#home-lab)**, que utilizo para testes, estudos e hospedagem de alguns serviços locais.
 
 ## Desktop
 
-É um computador que montei peça por peça, com o objetivo de ser um computador que consiga rodar tudo que for preciso, e que dure bastante tempo, sem precisar de upgrades. Então ele tem um processador e placa de vídeo bem potentes, além de bastante memória RAM e armazenamento.
+Esse é o meu computador principal, montei ele em 2023, comprando algumas peças no Paraguai e outras no Brasil. O objetivo era ter um computador que conseguisse rodar tudo que eu precisasse, e que durasse bastante tempo, sem precisar de upgrades. Então ele tem um processador e placa de vídeo bem potentes, além de bastante memória RAM e armazenamento.
 
 ### Configuração atual
 
 - **Sistema operacinal**: Windows 11 Pro
-- **Processador**: [AMD Ryzen 9 7900X](https://www.amd.com/pt/products/cpu/amd-ryzen-9-7900x)
+- **Processador**: [AMD Ryzen 9 7900X](https://www.amd.com/pt/products/processors/desktops/ryzen/7000-series/amd-ryzen-9-7900x.html) - 16 núcleos / 32 threads (4.7 GHz / 5.5 GHz)
 - **Placa de vídeo**: [Nvidea RTX 3070 Ti 8GB](https://www.galax.com/pt/graphics-card/geforce-rtx-3070ti-sg.html) (Galax)
 - **Placa mãe**: [Asrock X670E Steel Legend](https://www.asrock.com/mb/AMD/X670E%20Steel%20Legend/index.asp)
 - **RAM**: [32 GB (2x16 GB) 6000 mhz](https://www.gskill.com/product/165/390/1661410135/F5-6000J3038F16GX2-TZ5NR) (G.Skill Trident Z5 Neo)
@@ -22,12 +22,12 @@ Em 2023 montei um [computador](#desktop), ele substituirá o meu [notebook](#not
 
 ## Notebook
 
-É um **HP Envy 15T-J100**, comprado em 2013, mesmo antigo, ele roda tudo que preciso. E o que não roda, eu acesso remotamente o meu computador principal.
+É um **HP Envy 15T-J100**, comprado em 2013, mesmo antigo, ele roda tudo que preciso. E o que não roda, eu acesso remotamente o meu computador principal, geralmente utilizando [Parsec](https://parsec.app/).
 
 ### Configuração original
 
 - **Sistema operacinal**: Windows 8
-- **Processador**: [Intel i7-4702MQ](https://ark.intel.com/content/www/br/pt/ark/products/75119/intel-core-i7-4702mq-processor-6m-cache-up-to-3-20-ghz.html)
+- **Processador**: [Intel i7-4702MQ](https://ark.intel.com/content/www/br/pt/ark/products/75119/intel-core-i7-4702mq-processor-6m-cache-up-to-3-20-ghz.html) - 4 núcleos / 8 threads (2.2 GHz / 3.2 GHz)
 - **RAM**: 8 GB (2x4 GB) 1600 mhz
 - **Armazenamento**: 1 TB HDD
 - **Placa de vídeo**: [Nvidea 750M 4GB](https://www.nvidia.com/en-gb/geforce/gaming-laptops/geforce-gt-750m/specifications/) + HD Graphics 4600
@@ -38,11 +38,32 @@ Em 2023 montei um [computador](#desktop), ele substituirá o meu [notebook](#not
 - **RAM**: 16 GB (2x8 GB) 1600 mhz (Kingston)
 - **Armazenamento**: 480 SSD (Kingston)
 
+## Home Lab
+
+Em 2024 eu fui aos Estados Unidos, e aproveitei para comprar 3 Lenovo [ThinkCentre M900 Tiny](/files/m900_tiny_platform_spec.pdf), eu conto mais sobre como foi essa experiência no meu [blog](/blog/4).
+
+### Configuração
+
+- **Sistema operacinal**: Windows 10 Pro
+- **Processador**: [Intel i5-6500T](https://www.intel.com.br/content/www/br/pt/products/sku/88183/intel-core-i56500t-processor-6m-cache-up-to-3-10-ghz/specifications.html) - 4 núcleos / 4 threads (2.5 GHz / 3.1 GHz)
+- **RAM**: 16 GB (1x16 GB) 2133 mhz (Um deles é 2x8 GB)
+- **Armazenamento**: 512 GB NVMe (TeamGroup)
+
+### Configuração atual / Atualizações
+
+- **Sistema operacinal**: Proxmox VE 8.2
+- **Rede**: 2.5 Gbps (Realtek RTL8125) _Foi removido a placa de rede wi-fi._
+- **Armazenamento secundário**: 240 GB SSD sata (Kingston)
+
 ## Periféricos
 
 ### Monitor
 
 Além de utilizar a tela do notebook, também utilizo um monitor **[LG 29UM68-P](https://www.lg.com/br/monitores/lg-29UM68-P)** de 29 polegadas ultrawide, que é muito bom, tento bons angulos de visão e a resolução é ótima (2560x1080).
+
+### Monitor portátil
+
+Por trabalhar home office e as vezes viajar, eu utilizo um monitor portátil, pois acabei me acostumando com 2 monitores. O monitor que utilizo é o **[VCHANCE SF15T](https://pt.aliexpress.com/item/1005004664469106.html?spm=a2g0o.order_list.order_list_main.220.2912caa4RnUS0d&gatewayAdapt=glo2bra)**, que é um monitor de 15.6 polegadas, Full HD (1920x1080), touch screen. Funciona com USB-C, sem precisar de alimentação externa, até celular consegue alimentar ele.
 
 ### Teclado
 

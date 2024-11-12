@@ -129,6 +129,7 @@ const config: Config = {
         showReadingTime: true,
         blogSidebarCount: "ALL",
         postsPerPage: 10,
+        onUntruncatedBlogPosts: "ignore",
       } satisfies BlogOptions,
     ],
     // Adicionar componente search

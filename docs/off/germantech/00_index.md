@@ -5,7 +5,7 @@ slug: /germantech
 ---
 
 :::info Download do PDF
-<a href="pathname:///pdf/germantech.pdf" target="_blank" download>Clique aqui para baixar</a>
+<a href="/pdf/germantech.pdf" target="_blank" download>Clique aqui para baixar</a>
 :::
 
 Com a reestruturação do servidor de banco de dados `arara.gtech.site`, novas tecnologias foram implementadas, e o treinamento de novos colaboradores é necessário. Este tutorial tem como objetivo auxiliar no aprendizado das novas tecnologias.
