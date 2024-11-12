@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcode=self.webpackChunkcode||[]).push([[1577],{3085:t=>{t.exports=JSON.parse('{"tags":[{"label":"Tutorial","permalink":"/tutorial/tags/tutorial","count":2},{"label":"Git","permalink":"/tutorial/tags/git","count":2}]}')}}]);

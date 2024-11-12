@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcode=self.webpackChunkcode||[]).push([[3561],{4577:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"#3 - Cursos","permalink":"/blog/3","unlisted":false},{"title":"#2 - Novo tutorial","permalink":"/blog/2","unlisted":false},{"title":"#1 - Primeiro post","permalink":"/blog/1","unlisted":false}]}')}}]);
