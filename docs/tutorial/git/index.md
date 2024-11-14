@@ -820,3 +820,7 @@ Você chegou até aqui, espero que tenha gostado do conteúdo, e que tenha apren
 Parabéns, você aprendeu como trabalhar com o **Git**!
 
 </Center>
+
+
+https://ohmygit.org/
+https://learngitbranching.js.org/?locale=pt_BR
