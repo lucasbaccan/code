@@ -3,8 +3,8 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 const sidebars: SidebarsConfig = {
   docs: [
     "index",
-    "git/index",
     "git/guia_rapido",
+    "git/index",
     {
       type: "category",
       label: "Site com docusaurus",
@@ -18,6 +18,7 @@ const sidebars: SidebarsConfig = {
         "site_docusaurus/github_actions",
       ],
     },
+    "sql/index",
   ],
 };
 
