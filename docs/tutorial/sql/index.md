@@ -4,10 +4,17 @@ title: SQL
 ---
 
 import Center from '@site/src/components/Center';
+import SQL from '@site/src/components/SQL';
 
 :::caution Aviso
 🚧 Em construção 🚧
 :::
+
+<!-- <SQL></SQL> -->
+
+<!-- https://sql.js.org/examples/GUI/ -->
+<!-- Render as a iframe -->
+<!-- <iframe src="https://sql.js.org/examples/GUI/" width="100%" height="500px"></iframe> -->
 
 ## Introdução
 

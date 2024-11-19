@@ -40,6 +40,8 @@ const config: Config = {
   ],
 
   plugins: [
+    // [require.resolve("./webpack.config")],
+    ["./webpack.config", {}],
     // Adicionar componente docs - /docs
     [
       "@docusaurus/plugin-content-docs",
@@ -217,6 +219,11 @@ const config: Config = {
           "aria-label": "GitHub repository",
         },
       ],
+    },
+    docs: {
+      sidebar: {
+        hideable: true,
+      },  
     },
     footer: {
       style: "dark",

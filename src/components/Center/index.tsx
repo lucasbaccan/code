@@ -8,22 +8,29 @@ export default function Center({
   bgColor = null,
   bgColorDark = null,
 }) {
-  const { colorMode, setColorMode } = useColorMode();
+  // if (bgColor && !isDarkTheme) {
+  //   style.backgroundColor = bgColor;
+  // }
+
+  // if (bgColorDark && isDarkTheme) {
+  //   style.backgroundColor = bgColorDark;
+  // }
+
+  // Verificar qual o tema atual
+  const { colorMode } = useColorMode();
+  // Verificar se o tema atual é dark
   const isDarkTheme = colorMode === "dark";
 
-  let style = {
+  // Verificar se teve alteração no tema
+  const bgColorTheme = isDarkTheme ? bgColorDark : bgColor;
+
+  // Estilizar o componente
+  const style = {
     textAlign: "center",
     fontSize,
     color,
+    backgroundColor: bgColorTheme,
   };
-
-  if (bgColor && !isDarkTheme) {
-    style.backgroundColor = bgColor;
-  }
-
-  if (bgColorDark && isDarkTheme) {
-    style.backgroundColor = bgColorDark;
-  }
 
   return <div style={style}>{children}</div>;
 }
