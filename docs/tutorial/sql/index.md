@@ -782,7 +782,63 @@ Você foi avisado!
 
 </Center>
 
+### Item 8
 
+Como aqui é um tutorial, vamos errar sim, vamos rodar um `UPDATE sem WHERE` só para ver o que acontece.
+
+```sql showLineNumbers
+UPDATE livros
+SET
+  autor = 'George R.R. Martin';
+
+SELECT * FROM livros;
+```
+
+Na linha 1 é executado um `UPDATE` para a tabela `livros`, e na linha 2 é executado um `SET` para atualizar o campo `autor` para `George R.R. Martin` e **não informamos a condição de filtragem**, então todos os registros da tabela `livros` vão ser atualizados para o valor informado.
+
+<Center>
+
+![Resultado](./sql_item_5.png)  
+Resultado da consulta de livros do autor J.K. Rowling
+
+</Center>
+
+Se você rodar esse comando, vai ver que todos os autores dos livros da tabela `livros` vão ser atualizados para `George R.R. Martin`, o que é o que foi esperado para esse exemplo, mas que pode ser um problema em um ambiente de produção.
+
+### Item 9
+
+Vamos deletar o livro de ID 3 da tabela `livros`.
+
+```sql showLineNumbers
+DELETE FROM livros
+WHERE
+  id = 3;
+
+SELECT * FROM livros;
+```
+
+Na linha 1 é executado um `DELETE FROM` para a tabela `livros`, e na linha 2 é a condição de filtragem para deletar o livro de ID 3 da tabela `livros`.
+
+Se tudo estiver correto, vai aparecer uma tabela com os dados da tabela `livros`, e você vai ver que o livro de ID 3 foi deletado.
+
+### Item 10
+
+Vamos agora apagar todos os livros da tabela `livros` utilizando uma condição multipla na cláusula `WHERE`.
+
+```sql showLineNumbers
+DELETE FROM livros
+WHERE
+  titulo = 'Harry Potter e a Pedra Filosofal'
+  OR id = 2;
+
+SELECT * FROM livros;
+```
+
+Na linha 1 é executado um `DELETE FROM` para a tabela `livros`, e na linha 2 é a condição de filtragem para deletar os livros do titulo `Harry Potter e a Pedra Filosofal` **ou** o livro de ID 2 da tabela `livros`.
+
+Importante notar que a condição é `OR`, então se um dos valores for verdadeiro, o registro vai ser deletado, se fosse `AND`, os dois valores teriam que ser verdadeiros para o registro ser deletado.
+
+E assim nos temos nossa tabela `livros` vazia, passando pelos principais comandos de SQL.
 
 <!-- - [SQLZoo](https://sqlzoo.net/) -->
 <!-- - [SQLBolt](https://sqlbolt.com/) -->
@@ -797,6 +853,6 @@ Você foi avisado!
 
 ## Fontes
 
-https://www.w3schools.com/sql/sql_syntax.asp
-https://www.sqlitetutorial.net/
-https://www.sqlite.org/datatype3.html
+- https://www.w3schools.com/sql/sql_syntax.asp
+- https://www.sqlitetutorial.net/
+- https://www.sqlite.org/datatype3.html
