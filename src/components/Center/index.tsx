@@ -8,14 +8,6 @@ export default function Center({
   bgColor = null,
   bgColorDark = null,
 }) {
-  // if (bgColor && !isDarkTheme) {
-  //   style.backgroundColor = bgColor;
-  // }
-
-  // if (bgColorDark && isDarkTheme) {
-  //   style.backgroundColor = bgColorDark;
-  // }
-
   // Verificar qual o tema atual
   const { colorMode } = useColorMode();
   // Verificar se o tema atual é dark
@@ -31,6 +23,8 @@ export default function Center({
     color,
     backgroundColor: bgColorTheme,
   };
+
+  console.log("Current color mode:", colorMode);
 
   return <div style={style}>{children}</div>;
 }

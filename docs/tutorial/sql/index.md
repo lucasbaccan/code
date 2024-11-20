@@ -10,28 +10,49 @@ import SQL from '@site/src/components/SQL';
 🚧 Em construção 🚧
 :::
 
+<!-- Teste de terminal SQL embutido -->
 <!-- <SQL></SQL> -->
 
+<!-- Iframe de SQL terminal -->
 <!-- https://sql.js.org/examples/GUI/ -->
 <!-- Render as a iframe -->
 <!-- <iframe src="https://sql.js.org/examples/GUI/" width="100%" height="500px"></iframe> -->
 
 ## Introdução
 
-Seja bem vindo ao tutorial de SQL. Aqui você aprenderá os conceitos básicos de SQL, a linguagem de consulta estruturada, que é utilizada para manipular e consultar bancos de dados relacionais.
-
-Vamos ver onde podemos utilizar SQL e o que é possível fazer com ele. Assim você poderá aplicar esses conhecimentos em seus projetos e trabalhos.
+Seja bem vindo ao tutorial de SQL. Aqui você aprenderá os conceitos básicos de SQL, as principais instruções e como utilizá-las para manipular e consultar dados em um banco de dados.
 
 <Center>
 
-![Parabéns](https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif)  
+![Bons estudos](https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif)  
 Boa sorte e bons estudos!
 
 </Center>
 
+## Requisitos
+
+Esse tutorial pode ser feito em qualquer lugar, desde que você tenha acesso a um navegador e uma conexão com a internet. Vamos utilizar um site para praticar SQL, então você não precisa instalar nada em sua máquina.
+
+De preferencia, utilize um computador para fazer o tutorial, pois é mais fácil de praticar SQL em um computador do que em um celular. Mas se você só tiver um celular, não tem problema, você ainda pode aprender SQL.
+
+## Metodologia
+
+Existem vários bancos de dados, e cada banco de dados tem implementações levemente diferentes de SQL. Neste tutorial, vamos utilizar o [SQLite](https://www.sqlite.org/index.html), um banco de dados relacional super leve e fácil de usar, você consegue utilizá-lo sem precisar instalar nada em sua máquina, basta acessar o site [SQLite Online](https://www.convertcsv.com/sqlite-online.htm) e começar a praticar SQL.
+
+<Center>
+
+![SQLite Online](./imagem1.png)  
+Site utilizado para praticar SQL online
+
+</Center>
+
+:::info Observação
+Caso você queira instalar um banco de dados ou se já tiver um banco de dados instalado em sua máquina, você pode utilizar o banco de dados que preferir para praticar SQL. Mas para este tutorial, vamos utilizar o [SQLite Online](https://www.convertcsv.com/sqlite-online.htm) por questão de praticidade.
+:::
+
 ## O que é SQL?
 
-SQL (Structured Query Language) é uma linguagem de consulta estruturada que é utilizada para manipular e consultar bancos de dados relacionais. SQL é uma linguagem padrão para bancos de dados relacionais, e é utilizada para realizar operações como inserir, atualizar, deletar e consultar dados.
+**SQL** (**S**tructured **Q**uery **L**anguage ou Linguagem de Consulta Estruturada) é utilizada para manipular e consultar bancos de dados relacionais. SQL é uma linguagem padrão para bancos de dados relacionais, e é utilizada para realizar operações como inserir, atualizar, deletar e consultar dados.
 
 ## O que é um banco de dados relacional?
 
@@ -44,7 +65,7 @@ Em um banco de dados relacional, as tabelas são relacionadas entre si através 
 Não é o foco deste tutorial, mas existem outros tipos de bancos de dados, como os bancos de dados não relacionais, que armazenam dados de forma diferente dos bancos de dados relacionais. Bancos de dados não relacionais são utilizados para armazenar dados não estruturados ou semi-estruturados, e são utilizados em aplicações que requerem alta escalabilidade e flexibilidade.
 
 :::info Observação
-Se você está vendo bancos de dados pela primeira vez, não se preocupe qual tipo de banco de dados é melhor. Um banco de dados relacional é uma ótima escolha para a maioria dos casos, e é uma ótima forma de começar a aprender sobre bancos de dados.
+Se você está vendo bancos de dados pela primeira vez, não se preocupe qual tipo de banco de dados é melhor. Um banco de dados relacional é uma ótima escolha para a maioria dos casos, ele é uma ótima forma de começar sua jornada em bancos de dados. Com a prática, você vai entender melhor as diferenças entre os tipos de bancos de dados e quando utilizar cada um.
 :::
 
 ## Onde podemos utilizar SQL?
@@ -52,23 +73,6 @@ Se você está vendo bancos de dados pela primeira vez, não se preocupe qual ti
 Toda aplicação que precisa armazenar e consultar dados pode utilizar SQL. Se você está em uma aplicação web, pode ser que não precise escrever SQL diretamente, mas no backend da aplicação, o banco de dados estará lá, e SQL será utilizado para consultar e manipular os dados.
 
 Então toda aplicação que precisa armazenar e consultar dados, como um site de notícias, um sistema de gerenciamento de vendas, um aplicativo de delivery, entre outros, pode utilizar SQL em algum momento.
-
-## Primeiros passos
-
-Vamos utilizar um ambiente online para praticar SQL, e aprender os conceitos básicos da linguagem sem ter que instalar nada em sua máquina ou configurar um banco de dados.
-
-Vamos utilizar o site [SQLite Online](https://www.convertcsv.com/sqlite-online.htm) para praticar SQL. Acesse o site e siga as instruções para começar a praticar SQL.
-
-<Center>
-
-![SQLite Online](./imagem1.png)  
-Site SQLite Online
-
-</Center>
-
-:::info Observação
-SQLite é um banco de dados relacional super leve e fácil de usar, e é uma ótima escolha para quem está começando a aprender SQL.
-:::
 
 ## Recursos
 
@@ -100,6 +104,18 @@ Vamos ver um exemplo de uma tabela de usuários:
 - Cada **linha** é um registro na tabela, e representa um usuário, que contem dados.
 - Cada **coluna** é um dado do registro, e representa um campo de dados na tabela.
 
+### Chave primária
+
+A chave primária é um campo ou um conjunto de campos que identifica unicamente um registro em uma tabela. A chave primária é utilizada para garantir que cada registro seja único na tabela.
+
+No exemplo da tabela de usuários, a coluna `id` é a chave primária, e garante que cada usuário seja único na tabela. A chave primária é utilizada para identificar um registro de forma única, e é utilizada para relacionar tabelas entre si.
+
+### Chave estrangeira
+
+A chave estrangeira é um campo ou um conjunto de campos que estabelece uma relação entre duas tabelas. A chave estrangeira é utilizada para garantir a integridade referencial entre as tabelas.
+
+Mais para frente vamos ver como utilizar chaves estrangeiras para relacionar tabelas entre si. Por enquanto, vamos focar nos conceitos básicos de SQL.
+
 ## Próximos passos
 
 Quando utilizamos um banco de dados relacional, precisamos ter uma preocupação com as colunas que vamos criar e seus tipos, para que os dados sejam armazenados corretamente. Os bancos de dados validam os dados antes de inseri-los, então se você tentar salvar um texto em uma coluna de número, o banco de dados irá retornar um erro. Fique atento a isso quando estiver criando suas tabelas.
@@ -127,17 +143,20 @@ Para fins de legibilidade, vamos utilizar a formatação com letras maiúsculas 
 
 ### Ponto e vírgula
 
-Alguns bancos de dados requerem que os comandos SQL terminem com um ponto e vírgula `;`. Isso indica ao banco de dados que o comando terminou e que ele pode executá-lo. Alguns bancos de dados não requerem o ponto e vírgula, mas é uma boa prática sempre terminar os comandos com um ponto e vírgula.
+Alguns bancos de dados requerem que os comandos SQL terminem com um ponto e vírgula `;`. Isso indica ao banco de dados que o comando terminou. Alguns bancos de dados não requerem o ponto e vírgula ao final da instrução.
 
-Geralmente, se você não tem mais de um comando SQL em sequência, não precisa se preocupar com o ponto e vírgula, mas é uma boa prática sempre terminar os comandos com um ponto e vírgula.
+Se você tiver mais de um comando SQL em sequência, você precisa separar os comandos com um ponto e vírgula `;`. Isso indica ao banco de dados que um comando terminou e outro começou.
 
-Para fins de legibilidade, vamos utilizar o ponto e vírgula no final dos comandos, mas você pode utilizar a formatação que preferir.
+```sql showLineNumbers
+SELECT * FROM tabela1;
+SELECT * FROM tabela2;
+```
 
 ### Comentários
 
-Assim como em outras linguagens de programação, você pode adicionar comentários em SQL para documentar o código. Comentários são ignorados pelo banco de dados, e são utilizados para explicar o código e torná-lo mais compreensível.
+Assim como em outras linguagens de programação, você pode adicionar comentários no código. Comentários são ignorados pelo banco de dados, e são utilizados para explicar o código e torná-lo mais compreensível.
 
-Em SQL, você pode adicionar comentários de uma linha utilizando `--`, ou comentários de múltiplas linhas utilizando `/*` e `*/`.
+Em SQL, você pode adicionar comentários de uma linha utilizando `--` ou comentários de múltiplas linhas utilizando `/*` e `*/` no início e no final do comentário, respectivamente.
 
 Utilize sempre que achar necessário adicionar comentários ao seu código, para que outras pessoas possam entender o que você está fazendo ou para o seu eu do futuro.
 
@@ -155,7 +174,14 @@ de múltiplas linhas
 
 ## Comandos SQL
 
-Agora que já sabemos o que é SQL e onde podemos utilizá-lo, vamos ver os comandos básicos de SQL que vamos utilizar para manipular e consultar os dados. Depois de aprender esses comandos, vamos ter uma area de prática para você testar seus conhecimentos.
+Agora que já sabemos o que é SQL e onde podemos utilizá-lo, vamos ver os comandos básicos de SQL que vamos utilizar para manipular e consultar os dados. Depois de aprender esses comandos, vamos ter uma area de prática para você testar seus conhecimentos, então de uma lida em cada item, mas se não memorizar tudo, não tem problema, quando chegar na prática e não lembrar de algo, você pode voltar aqui e consultar.
+
+<Center>
+
+![Anotado](https://media.giphy.com/media/YS8c0Z7in21AM4A2AR/giphy.gif)  
+Anotado
+
+</Center>
 
 ### CREATE
 
@@ -339,9 +365,9 @@ Você pode utilizar operadores lógicos para melhorar a condição de filtragem,
 - `<` menor que um valor.
 - `>=` maior ou igual a um valor.
 - `<=` menor ou igual a um valor.
-- `AND` e lógico. Retorna verdadeiro se ambas as condições forem verdadeiras.
-- `OR` ou lógico. Retorna verdadeiro se uma das condições for verdadeira.
-- `NOT` negação lógica. Retorna verdadeiro se a condição for falsa.
+- `AND` "e lógico". Retorna verdadeiro se ambas as condições forem verdadeiras.
+- `OR` "ou lógico". Retorna verdadeiro se uma das condições for verdadeira.
+- `NOT` "negação lógica". Retorna verdadeiro se a condição for falsa.
 
 ```sql showLineNumbers
 SELECT
@@ -350,7 +376,8 @@ FROM
   tabela
 WHERE
   x > 10
-  AND y < 20;
+  AND y < 20
+  AND z IS NOT NULL;
 ```
 
 ### ORDER BY
@@ -585,13 +612,22 @@ FROM
   tabela;
 ```
 
-### ...
+### Etc...
 
 Existem muitas outras funções que você pode utilizar para fazer cálculos com os dados. Você pode consultar a documentação do seu banco de dados para ver todas as funções disponíveis.
 
 ## Prática
 
-Agora que você já aprendeu os conceitos básicos de SQL, vamos praticar o que aprendemos até agora. Vamos utilizar o site [SQLite Online](https://www.convertcsv.com/sqlite-online.htm) para praticar SQL.
+Antes de continuar, beba água, estique-se, faça uma pausa, e quando estiver pronto, vamos praticar o que aprendemos até agora.
+
+<Center>
+
+![Anotado](https://media.giphy.com/media/63whWnKaTj0Tm/giphy.gif)  
+Hidrate-se!
+
+</Center>
+
+Como já foi mencionado, vamos utilizar o site [SQLite Online](https://www.convertcsv.com/sqlite-online.htm) para praticar SQL. Vamos progredir passo a passo, então siga as instruções e pratique o que aprendeu até agora.
 
 ### Item 1
 
@@ -611,7 +647,7 @@ CREATE TABLE livros (
 );
 ```
 
-Na linha 1, estamos deletando a tabela `livros` se ela já existir, para que possamos criar uma nova tabela. Na linha 3, estamos criando a tabela `livros` com as colunas `id`, `titulo` e `autor`. É feito um `DROP TABLE` para garantir que a tabela não exista antes de criá-la, para que não haja erros.
+A linha 1 é executado um `DROP TABLE` para garantir que a tabela `livros` não exista antes de criá-la. A linha 3 é executado um `CREATE TABLE` para criar a tabela `livros` com as colunas `id` (linha 4), `titulo` (linha 5) e `autor` (linha 6).
 
 Ao executar, não vai aparecer nenhuma mensagem, mas no [item 2](#item-2) e [item 3](#item-3) vamos verificar se a tabela foi criada corretamente.
 
@@ -626,14 +662,21 @@ Vamos inserir um livro na tabela `livros` com os seguintes dados:
 ```sql showLineNumbers
 INSERT INTO livros (id, titulo, autor)
 VALUES
-(1, 'Harry Potter e a Pedra Filosofal', 'J.K. Rowling');
+(1, 'Harry Potter e a Pedra Filosofal', 'J.K. Rowling'),
+(2, 'O Senhor dos Anéis', 'J.R.R. Tolkien');
 ```
+
+A linha 1 é executado um `INSERT INTO`, do qual temos que informar a tabela que queremos inserir os dados (`livros`), as colunas que queremos inserir os dados (`id`, `titulo` e `autor`).
+
+A linha 2 indica que depois do `VALUES` vamos informar os valores que queremos inserir. Você poderia já nessa linha informar os valores, mas para ficar mais legível, separamos em várias linhas.
+
+A linha 3 e 4 são os valores que queremos inserir na tabela `livros`, na sequencia dos campos que foi informada na linha 1.
 
 Assim como no [item 1](#item-1), não vai aparecer nenhuma mensagem, mas no [item 3](#item-3) vamos verificar se o livro foi inserido corretamente.
 
 ### Item 3
 
-Vamos consultar os livros da tabela `livros` e verificar se o livro foi inserido corretamente.
+Vamos consultar os livros da tabela `livros` e verificar se os livros foi inserido corretamente.
 
 ```sql showLineNumbers
 SELECT
@@ -650,6 +693,96 @@ Se tudo estiver correto, vai aparecer uma tabela com os dados da tabela `livros`
 Resultado da consulta
 
 </Center>
+
+### Item 4
+
+Vamos ver outra forma de inserir um livro na tabela `livros` mas sem informar o `id`, pois o `id` é uma chave primária e é autoincrementável. Isso significa que o banco de dados vai gerar o `id` automaticamente para nós.
+
+```sql showLineNumbers
+INSERT INTO livros (autor, titulo)
+VALUES
+('George R.R. Martin', 'A Guerra das Cadeiras');
+
+SELECT * FROM livros;
+```
+
+Diferente do [item 2](#item-2), não informamos o `id`, e mudamos a ordem dos campos `autor` e `titulo`, mas o banco de dados vai gerar o `id` automaticamente para nós, e a ordem dos campos não importa, desde que os valores passados depois do `VALUES` estejam na mesma ordem dos campos informados na linha 1.
+
+Nesse exemplo após a inserção, vamos consultar os livros da tabela `livros` para verificar se o livro foi inserido corretamente. Então você vai ver na tabela os livros que inserimos.
+
+### Item 5
+
+Vamos filtrar os livros da tabela `livros` para mostrar somente os livros do autor `J.K. Rowling`.
+
+```sql showLineNumbers
+SELECT
+  *
+FROM
+  livros
+WHERE
+  autor = 'J.K. Rowling';
+```
+
+No [item 3](#item-3) vimos como consultar todos os livros da tabela `livros`, mas agora vamos filtrar os livros para mostrar somente os livros do autor `J.K. Rowling`.
+
+Então agora na linha 5 temos uma cláusula `WHERE` que é utilizada para filtrar os dados da tabela `livros`, e na linha 6 temos a condição que os dados devem atender para serem retornados (`autor = 'J.K. Rowling'`).
+
+Se tudo estiver correto, vai aparecer uma tabela com os dados da tabela `livros`, e você vai ver somente os livros do autor `J.K. Rowling`.
+
+<Center>
+
+![Resultado](./sql_item_5.png)  
+Resultado da consulta de livros do autor J.K. Rowling
+
+</Center>
+
+### Item 6
+
+Podemos filtrar não só as linhas, mas também as colunas que queremos mostrar. Vamos mostrar somente o `titulo` dos livros do autor `R.R. Tolkien`.
+
+```sql showLineNumbers
+SELECT
+  titulo
+FROM
+  livros
+WHERE
+  autor = 'J.R.R. Tolkien';
+```
+
+Assim como no [item 5](#item-5), temos uma cláusula `WHERE` na linha 5 para filtrar os dados da tabela `livros`, e na linha 6 temos a condição que os dados devem atender para serem retornados (`autor = 'J.R.R. Tolkien'`).
+
+Desta vez, só aparece como resultado o título dos livros do autor `J.R.R. Tolkien`.
+
+### Item 7
+
+Vamos atualizar o ultimo livro inserido na tabela `livros` para corrigir o título. Por engano o título foi inserido errado, então vamos corrigir o título do livro.
+
+Vamos precisar fazer um `UPDATE` para atualizar o título do livro de ID 3 de `A Guerra das Cadeiras` para `A Guerra dos Tronos`.
+
+```sql showLineNumbers
+UPDATE livros
+SET
+  titulo = 'A Guerra dos Tronos'
+WHERE
+  id = 3;
+
+SELECT * FROM livros;
+```
+
+Na linha 1 é executado um `UPDATE`, precisamos informar a tabela que queremos atualizar os dados (`livros`).
+
+Na linha 2 é executado um `SET`, onde informamos o campo que queremos atualizar (`titulo`) e o valor que queremos atualizar na linha 3 (`A Guerra dos Tronos`).
+
+Na linha 4 a condição de filtragem, **que é muito importante** quanto você estiver fazendo um `UPDATE`, pois se você não informar a condição, todos os registros da tabela serão atualizados para o valor informado, então tome cuidado ao fazer um `UPDATE`.
+
+<Center>
+
+![Anotado](https://media.giphy.com/media/XaoXAXCvwvAbQdYo7T/giphy.gif)  
+Você foi avisado!
+
+</Center>
+
+
 
 <!-- - [SQLZoo](https://sqlzoo.net/) -->
 <!-- - [SQLBolt](https://sqlbolt.com/) -->
