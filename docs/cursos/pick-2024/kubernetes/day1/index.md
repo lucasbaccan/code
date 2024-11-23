@@ -86,7 +86,7 @@ O principal projeto da OCI é o _runc_, que é um runtime de containers que impl
 
 ### O que é o Kubernetes?
 
-De forma rápida, o Kubernets é um orquestrador de containers. Ele é responsável por gerenciar containers em um ambiente distribuído, ou seja, ele é responsável por criar, iniciar, parar, remover e gerenciar containers em um ambiente distribuído.
+De forma rápida, o Kubernetes é um orquestrador de containers. Ele é responsável por gerenciar containers em um ambiente distribuído, ou seja, ele é responsável por criar, iniciar, parar, remover e gerenciar containers em um ambiente distribuído.
 
 A comunidade chama o Kubernetes de K8s (se fala 'kates'), que é a abreviação de Kubernetes, onde o 8 representa as 8 letras que estão entre o **K** e o **s**, que é o padrão [i18n](http://www.i18nguy.com/origini18n.html).
 

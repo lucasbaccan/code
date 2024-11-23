@@ -49,7 +49,7 @@ Quando observamos a sequência, podemos separar em 4 partes:
 4. Enviar as alterações para o repositório remoto.
    - `git push -u origin master`
 
-Nesse exemplo, você obrigatoriamente precisa que o **bloco 1** sejá o primeiro e o **bloco 4** seja o último. Mas os **blocos 2 e 3** podem ser alternados sem problemas.
+Nesse exemplo, você obrigatoriamente precisa que o **bloco 1** seja o primeiro e o **bloco 4** seja o último. Mas os **blocos 2 e 3** podem ser alternados sem problemas.
 Vale notar que os comandos do **bloco 2** podem ser executados em qualquer momento (após bloco 1 e antes do bloco 4) e podem ser separados. Porém, os comandos do **bloco 3** precisam ser executados em sequência e não podem ser separados.
 
 Então não se prenda em aprender a sequência de comandos, mas sim o que cada comando faz, isso vai te ajudar a entender melhor o Git e como ele pode te ajudar no dia a dia.

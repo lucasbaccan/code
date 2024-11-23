@@ -41,7 +41,7 @@ Atualmente trabalho como DevOps, e docker é uma das ferramentas que utilizo no 
 
 2. Qual é a sua experiência prévia com Kubernetes?
 
-Comecei a mexer com Kubernets nos últimos 4 meses, então já consigo fazer algumas coisas, mas ainda não domino todos os tipos de manifestos que tem e como lidar com o relacionamento de labels e seletores.
+Comecei a mexer com Kubernetes nos últimos 4 meses, então já consigo fazer algumas coisas, mas ainda não domino todos os tipos de manifestos que tem e como lidar com o relacionamento de labels e seletores.
 Sei um pouco como que funciona, mas é básico
 
 3. Qual é a sua experiência prévia com GitOps e ArgoCD?

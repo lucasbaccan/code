@@ -4,19 +4,9 @@ title: SQL
 ---
 
 import Center from '@site/src/components/Center';
-import SQL from '@site/src/components/SQL';
 
-:::caution Aviso
-🚧 Em construção 🚧
-:::
-
-<!-- Teste de terminal SQL embutido -->
+<!-- import SQL from '@site/src/components/SQL'; -->
 <!-- <SQL></SQL> -->
-
-<!-- Iframe de SQL terminal -->
-<!-- https://sql.js.org/examples/GUI/ -->
-<!-- Render as a iframe -->
-<!-- <iframe src="https://sql.js.org/examples/GUI/" width="100%" height="500px"></iframe> -->
 
 ## Introdução
 
@@ -310,7 +300,7 @@ SET
   coluna1 = valor1,
   coluna2 = valor2
 WHERE
-  condicao;
+  condição;
 ```
 
 :::info Observação
@@ -324,7 +314,7 @@ O comando `DELETE` é utilizado para deletar dados de uma tabela. Você precisa 
 ```sql showLineNumbers
 DELETE FROM nome_da_tabela
 WHERE
-  condicao;
+  condição;
 ```
 
 ## Cláusulas
@@ -696,7 +686,7 @@ Resultado da consulta
 
 ### Item 1.4
 
-Vamos ver outra forma de inserir um livro na tabela `livros` mas sem informar o `id`, pois o `id` é uma chave primária e é autoincrementável. Isso significa que o banco de dados vai gerar o `id` automaticamente para nós.
+Vamos ver outra forma de inserir um livro na tabela `livros` mas sem informar o `id`, pois o `id` é uma chave primária e é auto-incrementável. Isso significa que o banco de dados vai gerar o `id` automaticamente para nós.
 
 ```sql showLineNumbers
 INSERT INTO livros (autor, titulo)
@@ -823,7 +813,7 @@ Se tudo estiver correto, vai aparecer uma tabela com os dados da tabela `livros`
 
 ### Item 1.10
 
-Vamos agora apagar todos os livros da tabela `livros` utilizando uma condição multipla na cláusula `WHERE`.
+Vamos agora apagar todos os livros da tabela `livros` utilizando uma condição múltipla na cláusula `WHERE`.
 
 ```sql showLineNumbers
 DELETE FROM livros
@@ -1115,7 +1105,7 @@ Resultado da tabela autores e livros com os autores atualizados
 
 ### Item 2.12
 
-Imaginando que alguem nos pediu uma lista do autor e a quantidade de livros que ele escreveu, vamos fazer uma consulta para mostrar o nome do autor e a quantidade de livros que ele escreveu.
+Imaginando que alguém nos pediu uma lista do autor e a quantidade de livros que ele escreveu, vamos fazer uma consulta para mostrar o nome do autor e a quantidade de livros que ele escreveu.
 
 ```sql showLineNumbers
 SELECT

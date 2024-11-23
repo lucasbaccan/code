@@ -1,0 +1,35 @@
+$schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json
+version: "0.2"
+dictionaryDefinitions:
+  - name: project-words
+    path: "./project-words.txt"
+    addWords: true
+language: en,en_US,pt,pt_BR,k8s
+dictionaries:
+  - project-words
+  - pt-br
+  - pt_BR
+  - en_US
+  - k8s
+  - companies
+  - common-misspellings
+  - software-terms
+ignorePaths:
+  - "build"
+  - "docker"
+  - "node_modules"
+  - "project-words.txt"
+import:
+  - "@cspell/dict-en-common-misspellings/cspell-ext.json"
+  - "@cspell/dict-companies/cspell-ext.json"
+  - "@cspell/dict-pt-br/cspell-ext.json"
+  - "@cspell/dict-k8s/cspell-ext.json"
+  - "@cspell/dict-software-terms/cspell-ext.json"
+  - "@cspell/dict-en_us/cspell-ext.json"
+  - "@cspell/dict-companies/cspell-ext.json"
+caseSensitive: false
+languageSettings:
+  - languageId: pt_BR
+    caseSensitive: false
+  - languageId: project-words
+    caseSensitive: false

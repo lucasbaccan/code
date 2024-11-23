@@ -3,9 +3,10 @@ id: introducao
 title: Introdução
 ---
 
-Sejá bem vindo ao tutorial de como criar um site utilizando o [Docusaurus](https://docusaurus.io/). Vou mostrar o que tive que fazer para deixar o site com a aparência que você está vendo agora.
+Seja bem vindo ao tutorial de como criar um site utilizando o [Docusaurus](https://docusaurus.io/). Vou mostrar o que tive que fazer para deixar o site com a aparência que você está vendo agora.
 
 ## Requisitos
+
 Os principais recursos utilizados foram:
 
 - [Git](https://git-scm.com/)
