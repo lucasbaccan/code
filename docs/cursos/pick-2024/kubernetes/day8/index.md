@@ -48,7 +48,7 @@ Material complementar: [Leitura complementar do Day-8](https://livro.descomplica
 Secrets são objetos do Kubernetes que armazenam informações sensíveis, como senhas, tokens, chaves de acesso, etc. Por padrão o Kubernetes armazena os Secrets em base64, mas é importante saber que base64 não é uma forma segura de criptografar informações, é apenas uma forma de codificar.
 
 :::info
-Material complementar: [Kubernets: Secret](https://kubernetes.io/docs/concepts/configuration/secret/)
+Material complementar: [Kubernetes: Secret](https://kubernetes.io/docs/concepts/configuration/secret/)
 :::
 
 Temos 7 tipos de Secrets padrão no Kubernetes:

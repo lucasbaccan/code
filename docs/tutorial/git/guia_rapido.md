@@ -2,8 +2,10 @@
 id: guia_rapido
 title: Git - Guia rápido
 description: Guia de utilização rápida sobre o Git.
-tags: ['Tutorial', 'Git']
+tags: ["Tutorial", "Git"]
 ---
+
+import Center from "@site/src/components/Center";
 
 ## Introdução
 
@@ -37,25 +39,26 @@ Exemplo de sequência sugerida pelo GitHub.
 Quando observamos a sequência, podemos separar em 4 partes:
 
 1. Criar o repositório local.
-    - `git init`
+   - `git init`
 2. Vincular o repositório local com o repositório remoto.
-    - `git branch -M master`
-    - `git remote add origin https://github.com/usuario/projeto.git`
+   - `git branch -M master`
+   - `git remote add origin https://github.com/usuario/projeto.git`
 3. Adicionar os arquivos do projeto no repositório local.
-    - `git add README.md`
-    - `git commit -m "first commit"`
+   - `git add README.md`
+   - `git commit -m "first commit"`
 4. Enviar as alterações para o repositório remoto.
-    - `git push -u origin master`
+   - `git push -u origin master`
 
-Nesse exemplo, você obrigatoriamente precisa que o **bloco 1** sejá o primeiro e o **bloco 4** seja o último. Mas os **blocos 2 e 3** podem ser alternados sem problemas.
+Nesse exemplo, você obrigatoriamente precisa que o **bloco 1** seja o primeiro e o **bloco 4** seja o último. Mas os **blocos 2 e 3** podem ser alternados sem problemas.
 Vale notar que os comandos do **bloco 2** podem ser executados em qualquer momento (após bloco 1 e antes do bloco 4) e podem ser separados. Porém, os comandos do **bloco 3** precisam ser executados em sequência e não podem ser separados.
 
 Então não se prenda em aprender a sequência de comandos, mas sim o que cada comando faz, isso vai te ajudar a entender melhor o Git e como ele pode te ajudar no dia a dia.
 
 ### Termos
+
 - **Repositório:** É um local onde ficam armazenados os arquivos do seu projeto.
-    - **Repositório local:** É o repositório que fica no seu computador.
-    - **Repositório remoto:** É o repositório que fica em um servidor, como o GitHub, GitLab, etc.
+  - **Repositório local:** É o repositório que fica no seu computador.
+  - **Repositório remoto:** É o repositório que fica em um servidor, como o GitHub, GitLab, etc.
 - **Branch:** É uma ramificação do seu repositório. É uma forma de organizar o seu projeto em diferentes versões. Por padrão, o Git cria uma branch chamada `main` (ou `master`).
 - **Commit:** É uma alteração feita no seu repositório. É uma forma de organizar as alterações feitas no seu projeto.
 - **Push:** É o envio de alterações do seu repositório local para o repositório remoto.
@@ -80,9 +83,11 @@ Só utilize essa explicação se você estiver criando um repositório do zero e
 Você criou um repositório local e deseja enviar as alterações para o repositório remoto recém criado.
 
 **Pré-requisitos:**
+
 - Você já deve ter criado um repositório remoto no GitHub (ou similar).
 
 **Passos:**
+
 1. Acesse a pasta raiz do seu projeto.
 2. Abra o terminal na pasta e execute o comando abaixo para criar um repositório local.
 
@@ -139,10 +144,11 @@ git push -u origin main
 ```
 
 **Explicação:**
+
 - O comando `git init` cria um repositório local na pasta atual, adicionando uma pasta oculta `.git` na pasta onde o comando foi executado.
 - O comando `git add .` adiciona todas as alterações feitas no repositório local.
 - O comando `git commit -m "MENSAGEM_DE_COMMIT"` commita as alterações feitas no repositório local.
-- O comando `git branch -M BRANCH` cria uma branch com o nome `BRANCH` e o `-M` indica que vai renomear a branch atual para o nome `BRANCH`.	
+- O comando `git branch -M BRANCH` cria uma branch com o nome `BRANCH` e o `-M` indica que vai renomear a branch atual para o nome `BRANCH`.
 - O comando `git remote add origin https://github.com/usuario/projeto.git` vincula o repositório remoto ao repositório local.
 - O comando `git push -u origin BRANCH` envia as alterações do repositório local para o repositório remoto. O `-u` indica que a branch `BRANCH` será a branch padrão para o repositório remoto.
 
@@ -151,9 +157,11 @@ git push -u origin main
 Você tem seu código localmente e deseja criar um repositório Git para ele, para posteriormente enviar para um repositório remoto.
 
 **Pré-requisitos:**
+
 - Nenhum.
 
 **Passos:**
+
 1. Acesse a pasta raiz do seu projeto.
 2. Abra o terminal na pasta e execute o comando abaixo para iniciar o repositório local.
 
@@ -162,6 +170,7 @@ git init
 ```
 
 **Explicação:**
+
 - O comando `git init` cria um repositório local na pasta atual, adicionando uma pasta oculta `.git` na pasta onde o comando foi executado.
 
 ### Vincular um repositório remoto
@@ -169,10 +178,12 @@ git init
 Você tem um repositório remoto e deseja vincular ele ao seu repositório local.
 
 **Pré-requisitos:**
+
 - Você já deve ter criado um repositório local.
 - Você já deve ter criado um repositório remoto no GitHub (ou similar).
 
 **Passos:**
+
 1. Acesse a pasta raiz do seu projeto.
 2. Abra o terminal na pasta e execute o comando abaixo para vincular o repositório remoto.
 
@@ -187,6 +198,7 @@ git remote add origin https://github.com/usuario/projeto.git
 ```
 
 **Explicação:**
+
 - O comando `git remote add origin` vincula o repositório remoto ao repositório local. O nome `origin` é um apelido para o repositório remoto, você pode escolher qualquer nome para ele, mas por padrão é utilizado `origin`.
 
 ### Clonar um repositório remoto existente
@@ -194,9 +206,11 @@ git remote add origin https://github.com/usuario/projeto.git
 Você quer clonar um repositório remoto existente para o seu computador.
 
 **Pré-requisitos:**
+
 - Você já deve ter criado um repositório remoto no GitHub (ou similar).
 
 **Passos:**
+
 1. Acesse a pasta onde deseja clonar o repositório. Ao clonar uma nova pasta será criada com o nome do repositório.
 2. Abra o terminal na pasta e execute o comando abaixo para clonar o repositório.
 
@@ -211,6 +225,7 @@ git clone https://github.com/usuario/projeto.git
 ```
 
 **Explicação:**
+
 - O comando `git clone` clona o repositório remoto para o repositório local (sua maquina).
 
 ### Enviar alterações para o repositório remoto
@@ -218,10 +233,12 @@ git clone https://github.com/usuario/projeto.git
 Você fez alterações no seu repositório local e deseja enviar essas alterações para o repositório remoto.
 
 **Pré-requisitos:**
+
 - Você já deve ter criado um repositório local.
 - Você já deve ter criado um repositório remoto no GitHub (ou similar).
 
 **Passos:**
+
 1. Acesse a pasta raiz do seu projeto.
 2. Abra o terminal na pasta e execute o comando abaixo para adicionar as alterações.
 
@@ -248,19 +265,22 @@ git push origin main
 ```
 
 **Explicação:**
+
 - O comando `git add .` adiciona todas as alterações feitas no repositório local.
 - O comando `git commit -m "MENSAGEM_DE_COMMIT"` commita as alterações feitas no repositório local. A mensagem deve ser uma explicação do que foi alterado.
-- O comando `git push origin BRANCH` envia as alterações do repositório local para o repositório remoto. 
+- O comando `git push origin BRANCH` envia as alterações do repositório local para o repositório remoto.
 
 ### Atualizar repositório local com repositório remoto
 
 Você fez alterações no repositório remoto e deseja atualizar o repositório local com essas alterações.
 
 **Pré-requisitos:**
+
 - Você já deve ter criado um repositório local.
 - Você já deve ter criado um repositório remoto no GitHub (ou similar).
 
 **Passos:**
+
 1. Acesse a pasta raiz do seu projeto.
 2. Abra o terminal na pasta e execute o comando abaixo para atualizar o repositório local.
 
@@ -275,6 +295,7 @@ git pull origin main
 ```
 
 **Explicação:**
+
 - O comando `git pull origin BRANCH` atualiza o repositório local com as alterações do repositório remoto.
 
 ## Resumo dos comandos
@@ -283,21 +304,32 @@ Se você já conhece o Git e só precisa de uma referência rápida dos comandos
 
 ### Mais utilizados
 
-| Comando | Descrição |
-| --- | --- |
-| `git checkout -b BRANCH` | Cria uma branch com o nome `BRANCH` e muda para ela. |
-| `git checkout BRANCH` | Muda para a branch `BRANCH`. |
-| `git add .` | Adiciona todas as alterações feitas no repositório local. |
-| `git commit -m "MENSAGEM_DE_COMMIT"` | Commita as alterações feitas no repositório local. |
-| `git push origin BRANCH` | Envia as alterações do repositório local para o repositório remoto. |
-| `git pull origin BRANCH` | Atualiza o repositório local com as alterações do repositório remoto. |
+| Comando                              | Descrição                                                             |
+| ------------------------------------ | --------------------------------------------------------------------- |
+| `git checkout -b BRANCH`             | Cria uma branch com o nome `BRANCH` e muda para ela.                  |
+| `git checkout BRANCH`                | Muda para a branch `BRANCH`.                                          |
+| `git add .`                          | Adiciona todas as alterações feitas no repositório local.             |
+| `git commit -m "MENSAGEM_DE_COMMIT"` | Commita as alterações feitas no repositório local.                    |
+| `git push origin BRANCH`             | Envia as alterações do repositório local para o repositório remoto.   |
+| `git pull origin BRANCH`             | Atualiza o repositório local com as alterações do repositório remoto. |
 
 ### Menos utilizados
 
-| Comando | Descrição |
-| --- | --- |
-| `git init` | Inicia um repositório local. |
-| `git clone URL_DO_PROJETO` | Clona o repositório remoto para o repositório local (sua maquina). |
-| `git remote add origin URL` | Vincula o repositório remoto ao repositório local. |
-| `git branch -M BRANCH` | Cria uma branch com o nome `BRANCH` e o `-M` indica que vai renomear a branch atual para o nome `BRANCH`. |
+| Comando                     | Descrição                                                                                                                                               |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `git init`                  | Inicia um repositório local.                                                                                                                            |
+| `git clone URL_DO_PROJETO`  | Clona o repositório remoto para o repositório local (sua maquina).                                                                                      |
+| `git remote add origin URL` | Vincula o repositório remoto ao repositório local.                                                                                                      |
+| `git branch -M BRANCH`      | Cria uma branch com o nome `BRANCH` e o `-M` indica que vai renomear a branch atual para o nome `BRANCH`.                                               |
 | `git push -u origin BRANCH` | Envia as alterações do repositório local para o repositório remoto. O `-u` indica que a branch `BRANCH` será a branch padrão para o repositório remoto. |
+
+## Aprofundamento
+
+Se você deseja se aprofundar mais no Git, recomendo o [tutorial do Git](/tutorial/git) aqui do site. Nele você vai encontrar mais informações sobre o Git e outros comandos que podem te ajudar no dia a dia.
+
+<Center>
+
+![Level Up](https://media.giphy.com/media/tIeCLkB8geYtW/giphy.gif)  
+Continue evoluindo!
+
+</Center>

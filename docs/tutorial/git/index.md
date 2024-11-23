@@ -74,7 +74,7 @@ Todas essas palavras-chave foram requisitos mínimos impostos quando o projeto d
 Caso queira pular está parte histórica, pode ir direto para a [instalação](#instalação).
 :::
 
-Seu criador é nada menos que [Linus Torvalds](https://pt.wikipedia.org/wiki/Linus_Torvalds), criador do Kernel Linux, do qual utilizava um outro programa de SCM, antes de existir o **Git**, o _BitKeeper_. Pórem a empresa que criava o _BitKeeper_ decidiu mudar a licença desse programa, que era gratuito e passou a ser um programa pago. Linus se negou a ter que pagar por um programa, e foi em busca de um substituto. Em sua procura, todas as opções de programas não atendiam aos seguintes requisitos:
+Seu criador é nada menos que [Linus Torvalds](https://pt.wikipedia.org/wiki/Linus_Torvalds), criador do Kernel Linux, do qual utilizava um outro programa de SCM, antes de existir o **Git**, o _BitKeeper_. Porém a empresa que criava o _BitKeeper_ decidiu mudar a licença desse programa, que era gratuito e passou a ser um programa pago. Linus se negou a ter que pagar por um programa, e foi em busca de um substituto. Em sua procura, todas as opções de programas não atendiam aos seguintes requisitos:
 
 - Gratuito
 - Distribuído
@@ -104,7 +104,7 @@ Caso tenha interesse em ver a palestra do Linus no Google, ela esta em inglês, 
 
 ## Instalação
 
-Vamos começar a utilizar o **Git**, para isso, instale-o e sua máquina, acesse o site oficial do [Git](https://git-scm.com/), e baixe a versão para o seu sistema operacional. Não vou entrar em detalhes de como instalar, pois é bem simples, basta seguir o instalador. Caso tenha dúvidas, dê uma pesquisada no Google ou Youtube, que vai terão vários tutoriais.
+Vamos começar a utilizar o **Git**, para isso, instale-o e sua máquina, acesse o site oficial do [Git](https://git-scm.com/), e baixe a versão para o seu sistema operacional. Não vou entrar em detalhes de como instalar, pois é bem simples, basta seguir o instalador. Caso tenha dúvidas, dê uma pesquisada no Google ou YouTube, que vai terão vários tutoriais.
 
 Para verificar se foi instalado corretamente, abra o terminal, e digite o seguinte comando:
 
@@ -242,7 +242,7 @@ Anotado!
 
 </Center>
 
-<!-- Numeros Romandos: https://www.htmlsymbols.xyz/roman-symbols/roman-numerals -->
+<!-- Números Romandos: https://www.htmlsymbols.xyz/roman-symbols/roman-numerals -->
 
 ## Exemplo prático Ⅰ
 
@@ -366,7 +366,7 @@ Vimos na etapa [**3**](#3-adicionando-o-arquivo-para-ser-monitorado) que falamos
 <Center>
 
 ![git add](./git-status-exemplo2-parte2.png)  
-Agora a mensagem fala que tem um arquivo modificado, e que está pronto para ser comitado.
+Agora a mensagem fala que tem um arquivo modificado, e que está pronto para ser _comitado_.
 
 <!-- https://carbon.now.sh/?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=nord&wt=none&l=application%2Fx-sh&width=650&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=16px&ph=16px&ln=true&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%7E%252Fprojeto%2520%28master%29%250A%2524%2520git%2520status%250AOn%2520branch%2520master%250AChanges%2520to%2520be%2520committed%253A%250A%2520%2520%28use%2520%2522git%2520restore%2520--staged%2520%253Cfile%253E...%2522%2520to%2520unstage%29%250A%2520%2520%2520%2520%2520%2520%2520%2520modified%253A%2520%2520%2520index.html&tb=Terminal -->
 
@@ -563,7 +563,7 @@ Se você nunca teve experiência com Terminal (Linux/MacOS) ou CMD/Powershell (W
 
 <Center>
 
-![Harcker](https://media.giphy.com/media/YQitE4YNQNahy/giphy.gif)
+![Hacker](https://media.giphy.com/media/YQitE4YNQNahy/giphy.gif)
 
 </Center>
 
@@ -820,3 +820,6 @@ Você chegou até aqui, espero que tenha gostado do conteúdo, e que tenha apren
 Parabéns, você aprendeu como trabalhar com o **Git**!
 
 </Center>
+
+https://ohmygit.org/
+https://learngitbranching.js.org/?locale=pt_BR

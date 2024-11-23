@@ -24,7 +24,7 @@ import Center from "@site/src/components/Center";
 
 ## Descrição
 
-Acompanho o Jeferson Fernando a muito tempo, comecei pelos videos no YouTube sobre Docker e daquele momento em diante, sempre que posso, assisto os videos dele. Eu me inscrevi no curso Pick 2024 após o curso gratuito de Kubernets que ele fez pelo YouTube em Janeiro de 2024.
+Acompanho o Jeferson Fernando a muito tempo, comecei pelos videos no YouTube sobre Docker e daquele momento em diante, sempre que posso, assisto os videos dele. Eu me inscrevi no curso Pick 2024 após o curso gratuito de Kubernetes que ele fez pelo YouTube em Janeiro de 2024.
 
 <Center>
 

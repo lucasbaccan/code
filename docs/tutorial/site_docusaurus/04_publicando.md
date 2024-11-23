@@ -107,7 +107,7 @@ Insira o nome `GITHUB_TOKEN` e cole o token que você copiou no campo `Value` e 
 
 Fizemos tudo isso para dar permissão para o GitHub Actions fazer o deploy do site em nosso nome, sem precisarmos fazer isso manualmente.
 
-Agora vamos voltar para a página do repositório e vamos clicar em `Settings` e depois em `Pages` e depois em `Source` e selecione a opção `Deoloy from a branch` e selecione a branch `gh-pages` e depois clique em `Save`.
+Agora vamos voltar para a página do repositório e vamos clicar em `Settings` e depois em `Pages` e depois em `Source` e selecione a opção `Deploy from a branch` e selecione a branch `gh-pages` e depois clique em `Save`.
 
 Se tudo deu certo, você vai ver uma mensagem dizendo que o site foi publicado com sucesso. Agora você pode acessar o site pelo link que aparece na página.
 

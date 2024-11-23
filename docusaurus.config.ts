@@ -40,6 +40,8 @@ const config: Config = {
   ],
 
   plugins: [
+    // [require.resolve("./webpack.config")],
+    ["./webpack.config", {}],
     // Adicionar componente docs - /docs
     [
       "@docusaurus/plugin-content-docs",
@@ -143,9 +145,26 @@ const config: Config = {
         docsPluginIdForPreferredVersion: "docs",
       },
     ],
+    // Adicionar Image Zoom
+    [
+      "docusaurus-plugin-image-zoom",
+      {
+        include: ["docs/**/*.{md,mdx}", "blog/**/*.{md,mdx}"],
+      },
+    ],
   ],
 
   themeConfig: {
+    zoom: {
+      // selector: ".markdown :not(em) > img",
+      background: {
+        light: "rgb(255, 255, 255)",
+        dark: "rgb(50, 50, 50)",
+      },
+      config: {
+        margin: 15,
+      },
+    },
     colorMode: {
       defaultMode: "light",
       disableSwitch: false,
@@ -200,6 +219,11 @@ const config: Config = {
           "aria-label": "GitHub repository",
         },
       ],
+    },
+    docs: {
+      sidebar: {
+        hideable: true,
+      },  
     },
     footer: {
       style: "dark",
