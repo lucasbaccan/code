@@ -616,7 +616,7 @@ FROM
 
 Existem muitas outras funções que você pode utilizar para fazer cálculos com os dados. Você pode consultar a documentação do seu banco de dados para ver todas as funções disponíveis.
 
-## Prática
+## Prática 1
 
 Antes de continuar, beba água, estique-se, faça uma pausa, e quando estiver pronto, vamos praticar o que aprendemos até agora.
 
@@ -629,7 +629,7 @@ Hidrate-se!
 
 Como já foi mencionado, vamos utilizar o site [SQLite Online](https://www.convertcsv.com/sqlite-online.htm) para praticar SQL. Vamos progredir passo a passo, então siga as instruções e pratique o que aprendeu até agora.
 
-### Item 1
+### Item 1.1
 
 Criar uma tabela chamada `livros` com as seguintes colunas:
 
@@ -651,7 +651,7 @@ A linha 1 é executado um `DROP TABLE` para garantir que a tabela `livros` não 
 
 Ao executar, não vai aparecer nenhuma mensagem, mas no [item 2](#item-2) e [item 3](#item-3) vamos verificar se a tabela foi criada corretamente.
 
-### Item 2
+### Item 1.2
 
 Vamos inserir um livro na tabela `livros` com os seguintes dados:
 
@@ -674,7 +674,7 @@ A linha 3 e 4 são os valores que queremos inserir na tabela `livros`, na sequen
 
 Assim como no [item 1](#item-1), não vai aparecer nenhuma mensagem, mas no [item 3](#item-3) vamos verificar se o livro foi inserido corretamente.
 
-### Item 3
+### Item 1.3
 
 Vamos consultar os livros da tabela `livros` e verificar se os livros foi inserido corretamente.
 
@@ -689,12 +689,12 @@ Se tudo estiver correto, vai aparecer uma tabela com os dados da tabela `livros`
 
 <Center>
 
-![Resultado](./sql_item_3.png)  
+![Resultado](./sql_item_1_3.png)  
 Resultado da consulta
 
 </Center>
 
-### Item 4
+### Item 1.4
 
 Vamos ver outra forma de inserir um livro na tabela `livros` mas sem informar o `id`, pois o `id` é uma chave primária e é autoincrementável. Isso significa que o banco de dados vai gerar o `id` automaticamente para nós.
 
@@ -710,7 +710,7 @@ Diferente do [item 2](#item-2), não informamos o `id`, e mudamos a ordem dos ca
 
 Nesse exemplo após a inserção, vamos consultar os livros da tabela `livros` para verificar se o livro foi inserido corretamente. Então você vai ver na tabela os livros que inserimos.
 
-### Item 5
+### Item 1.5
 
 Vamos filtrar os livros da tabela `livros` para mostrar somente os livros do autor `J.K. Rowling`.
 
@@ -731,12 +731,12 @@ Se tudo estiver correto, vai aparecer uma tabela com os dados da tabela `livros`
 
 <Center>
 
-![Resultado](./sql_item_5.png)  
+![Resultado](./sql_item_1_5.png)  
 Resultado da consulta de livros do autor J.K. Rowling
 
 </Center>
 
-### Item 6
+### Item 1.6
 
 Podemos filtrar não só as linhas, mas também as colunas que queremos mostrar. Vamos mostrar somente o `titulo` dos livros do autor `R.R. Tolkien`.
 
@@ -753,7 +753,7 @@ Assim como no [item 5](#item-5), temos uma cláusula `WHERE` na linha 5 para fil
 
 Desta vez, só aparece como resultado o título dos livros do autor `J.R.R. Tolkien`.
 
-### Item 7
+### Item 1.7
 
 Vamos atualizar o ultimo livro inserido na tabela `livros` para corrigir o título. Por engano o título foi inserido errado, então vamos corrigir o título do livro.
 
@@ -782,7 +782,7 @@ Você foi avisado!
 
 </Center>
 
-### Item 8
+### Item 1.8
 
 Como aqui é um tutorial, vamos errar sim, vamos rodar um `UPDATE sem WHERE` só para ver o que acontece.
 
@@ -798,14 +798,14 @@ Na linha 1 é executado um `UPDATE` para a tabela `livros`, e na linha 2 é exec
 
 <Center>
 
-![Resultado](./sql_item_5.png)  
+![Resultado](./sql_item_1_5.png)  
 Resultado da consulta de livros do autor J.K. Rowling
 
 </Center>
 
 Se você rodar esse comando, vai ver que todos os autores dos livros da tabela `livros` vão ser atualizados para `George R.R. Martin`, o que é o que foi esperado para esse exemplo, mas que pode ser um problema em um ambiente de produção.
 
-### Item 9
+### Item 1.9
 
 Vamos deletar o livro de ID 3 da tabela `livros`.
 
@@ -821,7 +821,7 @@ Na linha 1 é executado um `DELETE FROM` para a tabela `livros`, e na linha 2 é
 
 Se tudo estiver correto, vai aparecer uma tabela com os dados da tabela `livros`, e você vai ver que o livro de ID 3 foi deletado.
 
-### Item 10
+### Item 1.10
 
 Vamos agora apagar todos os livros da tabela `livros` utilizando uma condição multipla na cláusula `WHERE`.
 
@@ -840,19 +840,339 @@ Importante notar que a condição é `OR`, então se um dos valores for verdadei
 
 E assim nos temos nossa tabela `livros` vazia, passando pelos principais comandos de SQL.
 
-<!-- - [SQLZoo](https://sqlzoo.net/) -->
-<!-- - [SQLBolt](https://sqlbolt.com/) -->
-<!-- - [SQLFiddle](https://sqlfiddle.com/) -->
-<!-- - [SQLPlayground](https://sqlplayground.app/) -->
-<!-- - [W3Schools](https://www.w3schools.com/sql/) -->
-<!-- - [Codecademy](https://www.codecademy.com/learn/learn-sql) -->
+### Finalização
 
-<!-- https://sqlbolt.com/ -->
-<!-- https://sqlfiddle.com/ -->
-<!-- https://sqlplayground.app/ -->
+Se chegou até aqui, parabéns! Você aprendeu os comandos básicos de SQL e como utilizá-los para manipular e consultar os dados. Agora você pode praticar o que aprendeu e se sentir mais confortável com SQL.
 
-## Fontes
+<Center>
 
-- https://www.w3schools.com/sql/sql_syntax.asp
-- https://www.sqlitetutorial.net/
-- https://www.sqlite.org/datatype3.html
+![Anotado](https://media.giphy.com/media/tIeCLkB8geYtW/giphy.gif)  
+Parabéns!
+
+</Center>
+
+## Pratica 2
+
+Agora que você já aprendeu os comandos básicos de SQL, vamos praticar um pouco mais para fixar o que aprendemos. Vamos ver como utilizar chaves estrangeiras para relacionar tabelas entre si.
+
+Assim como no exemplo anterior, vamos progredir passo a passo, então siga as instruções e pratique o que aprendeu até agora. Vamos criar duas tabelas, uma para os autores e outra para os livros, e vamos relacionar as duas tabelas utilizando chaves estrangeiras.
+
+### Item 2.1
+
+Criar uma tabela chamada `autores` com as seguintes colunas:
+
+- `id` do tipo `INTEGER` e chave primária.
+- `nome` do tipo `TEXT`.
+
+```sql showLineNumbers
+DROP TABLE IF EXISTS autores;
+
+CREATE TABLE autores (
+  id INTEGER PRIMARY KEY,
+  nome TEXT
+);
+```
+
+Linha 1 é executado um `DROP TABLE` para garantir que a tabela `autores` não exista antes de criá-la. Linha 3 é executado um `CREATE TABLE` para criar a tabela `autores` com as colunas `id` (linha 4) e `nome` (linha 5).
+
+### Item 2.2
+
+Criar uma tabela chamada `livros` com as seguintes colunas:
+
+- `id` do tipo `INTEGER` e chave primária.
+- `titulo` do tipo `TEXT`.
+- `autor_id` do tipo `INTEGER` e chave estrangeira para a tabela `autores`.
+
+```sql showLineNumbers
+DROP TABLE IF EXISTS livros;
+
+CREATE TABLE livros (
+  id INTEGER PRIMARY KEY,
+  titulo TEXT,
+  autor_id INTEGER,
+  FOREIGN KEY (autor_id) REFERENCES autores(id)
+);
+```
+
+Agora estamos vendo algo diferente. Na linha 6 estamos criando uma chave estrangeira para a coluna `autor_id` que referencia a coluna `id` da tabela `autores`. Isso significa que a coluna `autor_id` da tabela `livros` vai conter somente valores que existem na coluna `id` da tabela `autores`.
+
+Geralmente a coluna que salva uma `chave estrangeira` tem o `o nome da tabela` seguido de `_` e o `nome da coluna` que ela referencia. Então se a tabela `autores` tem a coluna `id`, a tabela `livros` vai ter a coluna `autor_id` que referencia a coluna `id` da tabela `autores`.
+
+### Item 2.3
+
+Vamos inserir alguns dados na tabela `autores`.
+
+```sql showLineNumbers
+INSERT INTO autores (nome)
+VALUES
+('J.K. Rowling'),
+('J.R.R. Tolkien'),
+('George R.R. Martin');
+
+SELECT * FROM autores;
+```
+
+Na linha 1 é executado um `INSERT INTO` para a tabela `autores`, e na linha 2 são os valores que queremos inserir na tabela `autores`.
+
+Se tudo estiver correto, vai aparecer uma tabela com os dados da tabela `autores`, e você vai ver os autores que inserimos.
+
+### Item 2.4
+
+Vamos inserir alguns dados na tabela `livros`.
+
+```sql showLineNumbers
+INSERT INTO livros (titulo, autor_id)
+VALUES
+('A Guerra dos Tronos', 3),
+('O Senhor dos Anéis', 2),
+('Harry Potter e a Pedra Filosofal', 1);
+
+SELECT * FROM livros;
+```
+
+Na linha 1 é executado um `INSERT INTO` para a tabela `livros`, e na linha 2 são os valores que queremos inserir na tabela `livros`.
+
+Se tudo estiver correto, vai aparecer uma tabela com os dados da tabela `livros`, e você vai ver os livros que inserimos.
+
+<!-- sql_item_2_4.png -->
+<Center>
+
+![Resultado](./sql_item_2_4.png)  
+Resultado da tabela livros
+
+</Center>
+
+### Item 2.5
+
+Mas agora tem um problema, quando consultamos os livros da tabela `livros`, não conseguimos ver o nome do autor, só o `id` do autor. Vamos fazer um `JOIN` para combinar os dados das tabelas `livros` e `autores` e mostrar o nome do autor.
+
+```sql showLineNumbers
+SELECT
+  *
+FROM
+  livros
+  JOIN autores ON livros.autor_id = autores.id;
+```
+
+Isso vai trazer um retorno com todos os livros da tabela `livros` e o nome do autor da tabela `autores`. Se tudo estiver correto, vai aparecer uma tabela com os dados da tabela `livros` e o nome do autor e seus `id`.
+
+| id  | titulo                           | autor_id | id  | nome               |
+| --- | -------------------------------- | -------- | --- | ------------------ |
+| 1   | A Guerra dos Tronos              | 3        | 3   | George R.R. Martin |
+| 2   | O Senhor dos Anéis               | 2        | 2   | J.R.R. Tolkien     |
+| 3   | Harry Potter e a Pedra Filosofal | 1        | 1   | J.K. Rowling       |
+
+### Item 2.6
+
+Vamos agora selecionar somente o `titulo` do livro e o `nome` do autor.
+
+```sql showLineNumbers
+SELECT
+  tabela_livros.titulo,
+  autores.nome AS autor
+FROM
+  livros AS tabela_livros
+  JOIN autores ON tabela_livros.autor_id = autores.id;
+```
+
+Na linha 1 estamos selecionando somente o `titulo` do livro e o `nome` do autor. No nome do autor estamos utilizando `AS autor` para renomear a coluna `nome` para `autor` quando for exibida, isso é opcional, mas pode ser útil para deixar o resultado mais legível, e não afeta a tabela, só o resultado da consulta.
+
+Na linha 3 estamos utilizando `AS tabela_livros` para renomear a tabela `livros` para `tabela_livros`, isso é opcional, mas pode ser útil para deixar o código mais legível. Aqui é só um exemplo, mas as vezes lidamos com tabelas com nomes muito grandes, e renomear a tabela pode ser útil para deixar o código mais legível. Isso não afeta a tabela, só funciona esse nome na consulta.
+
+Para dar nome a uma tabela ou coluna, você pode utilizar `AS` seguido do nome que você quer dar a tabela ou coluna. Se tiver espaço no nome, você pode utilizar aspas simples `'` entre o nome.
+
+Se tudo estiver correto, vai aparecer uma tabela com o `titulo` do livro e o `nome` do autor.
+
+Esse é um exemplo de [`JOIN`](#joins-junções) do tipo `INNER JOIN`, que é utilizado para combinar os dados de duas ou mais tabelas onde a condição é verdadeira.
+
+### Item 2.7
+
+Vamos agora inserir mais 2 autores na tabela `autores` e mais 2 livros na tabela `livros`. Mas só vamos inserir os autores e os livros, não vamos relacionar os autores com os livros.
+
+```sql showLineNumbers
+INSERT INTO autores (nome)
+VALUES
+('Stephen King'),
+('Agatha Christie');
+
+INSERT INTO livros (titulo)
+VALUES
+('It'),
+('Assassinato no Expresso do Oriente');
+
+SELECT * FROM autores;
+SELECT * FROM livros;
+```
+
+Podemos notar que os livros foram inseridos, mas não temos o `autor_id`, isso deixa a coluna com o valor `NULL`, pois não tem um autor relacionado com o livro.
+
+<Center>
+
+![Resultado](./sql_item_2_7.png)  
+Resultado da tabela autores e livros
+
+</Center>
+
+### Item 2.8
+
+Agora vamos rodar a mesma consulta do [item 2.5](#item-5) para ver os livros e os autores relacionados.
+
+```sql showLineNumbers
+SELECT
+  tabela_livros.titulo,
+  autores.nome AS autor
+FROM
+  livros AS tabela_livros
+  JOIN autores ON tabela_livros.autor_id = autores.id;
+```
+
+Se tudo estiver correto, vai aparecer uma tabela com o `titulo` do livro e o `nome` do autor, mas só vai aparecer os livros que tem um autor relacionado. Os livros que não tem um autor relacionado não vão aparecer.
+
+Isso acontece porque estamos utilizando um `INNER JOIN`, que é utilizado para combinar os dados de duas ou mais tabelas onde a condição é verdadeira (`tabela_livros.autor_id = autores.id`). Se a condição não for verdadeira, o registro não vai ser retornado.
+
+### Item 2.9
+
+Vamos agora mudar o `INNER JOIN` para um `LEFT JOIN` para mostrar todos os livros, mesmo os que não tem um autor relacionado.
+
+```sql showLineNumbers
+SELECT
+  tabela_livros.titulo,
+  COALESCE(autores.nome, 'Sem autor') AS autor
+FROM
+  livros AS tabela_livros
+  LEFT JOIN autores ON tabela_livros.autor_id = autores.id;
+```
+
+Se tudo estiver correto, vai aparecer uma tabela com o `titulo` do livro e o `nome` do autor, e você vai ver todos os livros, mesmo os que não tem um autor relacionado.
+
+O `LEFT JOIN` é utilizado para combinar os dados da tabela da esquerda (`livros`) com os dados da tabela da direita (`autores`), mesmo que a condição não seja verdadeira.
+
+Utilizamos a função `COALESCE` para retornar o `nome` do autor, mas se o `nome` for `NULL`, retornar `Sem autor`. A função `COALESCE` é utilizada para retornar o primeiro valor não nulo de uma lista de valores, então se o `nome` for `NULL`, vai retornar `Sem autor`, pois é o primeiro valor não nulo da lista.
+
+### Item 2.10
+
+Vamos agora inserir as coleções de livros dos autores na tabela `livros`.
+
+```sql showLineNumbers
+INSERT INTO livros (titulo, autor_id)
+VALUES
+('Harry Potter e a Câmara Secreta', 1),
+('Harry Potter e o Prisioneiro de Azkaban', 1),
+('Harry Potter e o Cálice de Fogo', 1),
+('O Senhor dos Anéis: A Sociedade do Anel', 2),
+('O Senhor dos Anéis: As Duas Torres', 2),
+('O Senhor dos Anéis: O Retorno do Rei', 2),
+('As Crônicas de Gelo e Fogo: A Fúria dos Reis', 3),
+('As Crônicas de Gelo e Fogo: A Tormenta de Espadas', 3),
+('As Crônicas de Gelo e Fogo: O Festim dos Corvos', 3);
+
+SELECT * FROM livros LEFT JOIN autores ON livros.autor_id = autores.id;
+```
+
+O benefício de utilizar um **banco de dados relacional** é que podemos relacionar as tabelas entre si, e isso é muito útil quando temos tabelas que tem uma relação entre si, como a tabela `livros` e a tabela `autores`, pois não precisamos repetir os dados de um autor em cada livro, só precisamos relacionar o autor com o livro.
+
+Se tudo estiver correto, vai aparecer uma tabela com os dados da tabela `livros` e o nome do autor relacionado com o livro.
+
+<Center>
+
+![Lord of The Rings](https://media.giphy.com/media/TcdpZwYDPlWXC/giphy.gif)  
+Nice!
+
+</Center>
+
+### Item 2.11
+
+E por ser um banco de dados relacional, se você alterar o nome de um autor na tabela `autores`, o nome do autor vai ser alterado em todos os livros relacionados com o autor. No caso a tabela `livros` não vai ter nenhum dado alterado, mas quando for feita uma consulta, o nome do autor vai ser o novo nome.
+
+```sql showLineNumbers
+UPDATE autores
+SET
+  nome = 'J.K Rowling (Joanne Rowling)'
+WHERE
+  id = 2;
+
+UPDATE autores
+SET
+  nome = 'J.R.R. Tolkien (John Ronald Reuel Tolkien)'
+WHERE
+  id = 2;
+
+SELECT * FROM livros LEFT JOIN autores ON livros.autor_id = autores.id;
+```
+
+Na linha 1 é executado um `UPDATE` para a tabela `autores`, e na linha 2 é executado um `SET` para atualizar o campo `nome` para `J.K Rowling (Joanne Rowling)`.
+Na linha 4 é executado um `UPDATE` para a tabela `autores`, e na linha 5 é executado um `SET` para atualizar o campo `nome` para `J.R.R. Tolkien (John Ronald Reuel Tolkien)`.
+Na linha 7 é executado um `UPDATE` para a tabela `autores`, e na linha 8 é executado um `SET` para atualizar o campo `nome` para `George R.R. Martin (George Raymond Richard Martin)`.
+
+Se tudo estiver correto, vai aparecer uma tabela com os dados da tabela `livros` e o nome do autor relacionado com o livro, e você vai ver que o nome do autor foi alterado em todos os livros relacionados com o autor tem o novo nome.
+
+<Center>
+
+![Resultado](./sql_item_2_11.png)  
+Resultado da tabela autores e livros com os autores atualizados
+
+</Center>
+
+### Item 2.12
+
+Imaginando que alguem nos pediu uma lista do autor e a quantidade de livros que ele escreveu, vamos fazer uma consulta para mostrar o nome do autor e a quantidade de livros que ele escreveu.
+
+```sql showLineNumbers
+SELECT
+  autores.nome,
+  COUNT(livros.id) AS quantidade_livros
+FROM
+  autores
+  LEFT JOIN livros ON autores.id = livros.autor_id
+GROUP BY
+  autores.id;
+```
+
+Quando utilizamos a função `COUNT` (linha3) em uma consulta, temos que agrupar os dados com a cláusula `GROUP BY`, então na linha 8 estamos agrupando os dados por `autores.id`.
+
+Se tudo estiver correto, vai aparecer uma tabela com o `nome` do autor e a `quantidade de livros` que ele escreveu.
+
+| nome               | quantidade_livros |
+| ------------------ | ----------------- |
+| J.K. Rowling       | 4                 |
+| J.R.R. Tolkien     | 4                 |
+| George R.R. Martin | 4                 |
+| Stephen King       | 0                 |
+| Agatha Christie    | 0                 |
+
+### Item 2.13
+
+Vamos agora deletar o autor `George R.R. Martin`.
+
+```sql showLineNumbers
+DELETE FROM autores
+WHERE
+  id = 3;
+
+SELECT * FROM livros LEFT JOIN autores ON livros.autor_id = autores.id;
+```
+
+Na linha 1 é executado um `DELETE FROM` para a tabela `autores`, e na linha 2 é a condição de filtragem para deletar o autor de ID 3 da tabela `autores`.
+
+Se tudo estiver correto, vai aparecer uma tabela com os dados da tabela `livros` e o nome do autor relacionado com o livro, e você vai ver que o autor de ID 3 foi deletado e os livros relacionados com o autor estão com o `autor_id` `NULL`.
+
+Dependendo da configuração do banco de dados, ele pode não permitir dados que estão relacionados com outros dados serem deletados, então você pode ter que deletar os dados relacionados antes de deletar os dados principais ou alterar a configuração do banco de dados para permitir a deleção em cascata.
+
+### Finalização
+
+Se chegou até aqui, parabéns! Você aprendeu como utilizar chaves estrangeiras para relacionar tabelas entre si e como utilizar `JOIN` para combinar os dados de duas ou mais tabelas. Agora você pode praticar o que aprendeu e se sentir mais confortável com SQL.
+
+<Center>
+
+![Finish](https://media.giphy.com/media/3o6Mbnll2gudglC3HG/giphy.gif)  
+Fim
+
+</Center>
+
+## Conclusão
+
+Você passou pelos principais comandos de SQL e como utilizá-los para manipular e consultar os dados. Mas lembre-se, SQL é uma linguagem muito poderosa e tem muitos comandos e funções que você pode utilizar para fazer cálculos com os dados. Além disso, cada banco de dados tem suas particularidades, então é importante consultar a documentação do seu banco de dados para ver todas as funções disponíveis.
+
+Se você quiser aprender mais sobre SQL, existem muitos sites que você pode utilizar para praticar SQL, como [SQLZoo](https://sqlzoo.net/), [SQLBolt](https://sqlbolt.com/), [SQLFiddle](https://sqlfiddle.com/), [SQLPlayground](https://sqlplayground.app/), [W3Schools](https://www.w3schools.com/sql/), [Codecademy](https://www.codecademy.com/learn/learn-sql), e muitos outros.
+
+Boa sorte e sucesso na na jornada!
