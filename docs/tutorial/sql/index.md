@@ -649,7 +649,7 @@ CREATE TABLE livros (
 
 A linha 1 é executado um `DROP TABLE` para garantir que a tabela `livros` não exista antes de criá-la. A linha 3 é executado um `CREATE TABLE` para criar a tabela `livros` com as colunas `id` (linha 4), `titulo` (linha 5) e `autor` (linha 6).
 
-Ao executar, não vai aparecer nenhuma mensagem, mas no [item 2](#item-2) e [item 3](#item-3) vamos verificar se a tabela foi criada corretamente.
+Ao executar, não vai aparecer nenhuma mensagem, mas no [item 1.2](#item-11) e [item 1.3](#item-13) vamos verificar se a tabela foi criada corretamente.
 
 ### Item 1.2
 
@@ -672,7 +672,7 @@ A linha 2 indica que depois do `VALUES` vamos informar os valores que queremos i
 
 A linha 3 e 4 são os valores que queremos inserir na tabela `livros`, na sequencia dos campos que foi informada na linha 1.
 
-Assim como no [item 1](#item-1), não vai aparecer nenhuma mensagem, mas no [item 3](#item-3) vamos verificar se o livro foi inserido corretamente.
+Assim como no [item 1.1](#item-11), não vai aparecer nenhuma mensagem, mas no [item 1.3](#item-13) vamos verificar se o livro foi inserido corretamente.
 
 ### Item 1.3
 
@@ -685,7 +685,7 @@ FROM
   livros;
 ```
 
-Se tudo estiver correto, vai aparecer uma tabela com os dados da tabela `livros`, e você vai ver o livro que inserimos no [item 2](#item-2).
+Se tudo estiver correto, vai aparecer uma tabela com os dados da tabela `livros`, e você vai ver o livro que inserimos no [item 1.2](#item-12).
 
 <Center>
 
@@ -706,7 +706,7 @@ VALUES
 SELECT * FROM livros;
 ```
 
-Diferente do [item 2](#item-2), não informamos o `id`, e mudamos a ordem dos campos `autor` e `titulo`, mas o banco de dados vai gerar o `id` automaticamente para nós, e a ordem dos campos não importa, desde que os valores passados depois do `VALUES` estejam na mesma ordem dos campos informados na linha 1.
+Diferente do [item 1.2](#item-12), não informamos o `id`, e mudamos a ordem dos campos `autor` e `titulo`, mas o banco de dados vai gerar o `id` automaticamente para nós, e a ordem dos campos não importa, desde que os valores passados depois do `VALUES` estejam na mesma ordem dos campos informados na linha 1.
 
 Nesse exemplo após a inserção, vamos consultar os livros da tabela `livros` para verificar se o livro foi inserido corretamente. Então você vai ver na tabela os livros que inserimos.
 
@@ -723,7 +723,7 @@ WHERE
   autor = 'J.K. Rowling';
 ```
 
-No [item 3](#item-3) vimos como consultar todos os livros da tabela `livros`, mas agora vamos filtrar os livros para mostrar somente os livros do autor `J.K. Rowling`.
+No [item 1.3](#item-13) vimos como consultar todos os livros da tabela `livros`, mas agora vamos filtrar os livros para mostrar somente os livros do autor `J.K. Rowling`.
 
 Então agora na linha 5 temos uma cláusula `WHERE` que é utilizada para filtrar os dados da tabela `livros`, e na linha 6 temos a condição que os dados devem atender para serem retornados (`autor = 'J.K. Rowling'`).
 
@@ -749,7 +749,7 @@ WHERE
   autor = 'J.R.R. Tolkien';
 ```
 
-Assim como no [item 5](#item-5), temos uma cláusula `WHERE` na linha 5 para filtrar os dados da tabela `livros`, e na linha 6 temos a condição que os dados devem atender para serem retornados (`autor = 'J.R.R. Tolkien'`).
+Assim como no [item 1.5](#item-15), temos uma cláusula `WHERE` na linha 5 para filtrar os dados da tabela `livros`, e na linha 6 temos a condição que os dados devem atender para serem retornados (`autor = 'J.R.R. Tolkien'`).
 
 Desta vez, só aparece como resultado o título dos livros do autor `J.R.R. Tolkien`.
 
@@ -1015,7 +1015,7 @@ Resultado da tabela autores e livros
 
 ### Item 2.8
 
-Agora vamos rodar a mesma consulta do [item 2.5](#item-5) para ver os livros e os autores relacionados.
+Agora vamos rodar a mesma consulta do [item 2.5](#item-25) para ver os livros e os autores relacionados.
 
 ```sql showLineNumbers
 SELECT
