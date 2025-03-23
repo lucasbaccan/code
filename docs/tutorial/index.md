@@ -11,3 +11,4 @@ Conforme mencionado na página **[sobre o site](/info/)**, esse site surgiu da i
 - [Git](/tutorial/git/)
 - [Site com Docusaurus](/tutorial/site_docusaurus/introducao)
 - [SQL](/tutorial/sql/)
+- [Terraform](/tutorial/terraform/)

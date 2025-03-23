@@ -19,8 +19,8 @@
     "scw": "cspell --config cspell.yaml --words-only --show-suggestions --unique \"**/docs/**/*.{md,mdx}\" | tee cspell.log"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.6.2",
-    "@docusaurus/preset-classic": "^3.6.2",
+    "@docusaurus/core": "^3.7.0",
+    "@docusaurus/preset-classic": "^3.7.0",
     "@easyops-cn/docusaurus-search-local": "^0.44.4",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
@@ -39,9 +39,9 @@
     "@cspell/dict-k8s": "^1.0.9",
     "@cspell/dict-pt-br": "^2.3.3",
     "@cspell/dict-software-terms": "^4.1.17",
-    "@docusaurus/module-type-aliases": "^3.6.2",
-    "@docusaurus/tsconfig": "^3.6.2",
-    "@docusaurus/types": "^3.6.2",
+    "@docusaurus/module-type-aliases": "^3.7.0",
+    "@docusaurus/tsconfig": "^3.7.0",
+    "@docusaurus/types": "^3.7.0",
     "cspell": "^8.16.0",
     "typescript": "~5.2.2"
   },
