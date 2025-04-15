@@ -4,9 +4,9 @@ title: Sobre o site
 slug: /
 ---
 
-Seja bem-vindo ao meu site! 🥳
+Olá, seja bem vindo ao meu site! 🥳
 
-Este site surgiu da ideia de salvar os principais conteúdos que eu me deparo durante o meu dia a dia, uma alternativa ao **favoritos do navegador**. Além disso, ele também serve para compartilhar um pouco do meu conhecimento e experiências com vocês.
+Este site surgiu da ideia de salvar os principais conteúdos que eu me deparo durante o meu dia a dia, uma alternativa ao **favoritos do navegador**. Além disso, ele também serve para compartilhar um pouco do meu conhecimento e experiência com vocês.
 
 O projeto começou em 2020, fiz um piloto, testei algumas ferramentas, mas deixei ele de lado por um tempo. Agora em 2022 eu resolvi retomar o projeto e colocar ele no ar. O site é uma mistura de blog, portfólio e repositório de links úteis.
 
