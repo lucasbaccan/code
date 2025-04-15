@@ -19,6 +19,8 @@ const sidebars: SidebarsConfig = {
       ],
     },
     "sql/index",
+    "docker/index",
+    "terraform/index",
   ],
 };
 

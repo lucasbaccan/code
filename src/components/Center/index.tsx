@@ -24,7 +24,5 @@ export default function Center({
     backgroundColor: bgColorTheme,
   };
 
-  console.log("Current color mode:", colorMode);
-
   return <div style={style}>{children}</div>;
 }

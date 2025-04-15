@@ -63,11 +63,15 @@ Além de utilizar a tela do notebook, também utilizo um monitor **[LG 29UM68-P]
 
 ### Monitor portátil
 
-Por trabalhar home office e as vezes viajar, eu utilizo um monitor portátil, pois acabei me acostumando com 2 monitores. O monitor que utilizo é o **[VCHANCE SF15T](https://pt.aliexpress.com/item/1005004664469106.html?spm=a2g0o.order_list.order_list_main.220.2912caa4RnUS0d&gatewayAdapt=glo2bra)**, que é um monitor de 15.6 polegadas, Full HD (1920x1080), touch screen. Funciona com USB-C, sem precisar de alimentação externa, até celular consegue alimentar ele.
+Em algumas situações que preciso viajar e estar longe do meu home office, eu gosto de ter um monitor extra, pois me ajuda a ter mais produtividade. O monitor que utilizo é o **[VCHANCE SF15T](https://pt.aliexpress.com/item/1005004664469106.html?spm=a2g0o.order_list.order_list_main.220.2912caa4RnUS0d&gatewayAdapt=glo2bra)**, que é um monitor de 15.6 polegadas, Full HD (1920x1080), touch screen. Funciona com USB-C, sem precisar de alimentação externa, até celular consegue alimentar ele.
 
 ### Teclado
 
 Uitlizo um teclado de membrana da Microsoft, o **[Microsoft Wired 600](https://www.microsoft.com/accessories/pt-br/products/keyboards/wired-keyboard-600/anb-00005)**, que é bem confortável e silencioso, além de conter teclas multimídia, que eu gosto.
+
+### Teclado portátil
+
+Assim como o monitor, tenho um teclado mais compacto que levo quando viajo, o **[Logitech k400](https://www.logitech.com/pt-br/products/keyboards/k400-plus-touchpad-keyboard.920-007125.html)**. Ele é um teclado sem fio, com touchpad, que funciona com USB e acaba sendo mais confortável do que o teclado do notebook.
 
 ### Mouse
 

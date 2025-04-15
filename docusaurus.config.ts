@@ -223,7 +223,7 @@ const config: Config = {
     docs: {
       sidebar: {
         hideable: true,
-      },  
+      },
     },
     footer: {
       style: "dark",
@@ -274,7 +274,14 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       // https://prismjs.com/#supported-languages
-      additionalLanguages: ["docker", "json", "makefile"],
+      additionalLanguages: [
+        "docker",
+        "json",
+        "makefile",
+        "hcl",
+        "bash",
+        "yaml",
+      ],
     },
   } satisfies Preset.ThemeConfig,
 };
