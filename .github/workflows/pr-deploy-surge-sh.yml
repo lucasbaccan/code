@@ -4,7 +4,7 @@ on:
   pull_request:
     branches:
       - main
-      - master 
+      - master
     types:
       - opened
       - synchronize
@@ -21,14 +21,16 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          path: 
-            ~/.npm
+          path: ~/.npm
           key: npm-${{ runner.os }}-${{ hashFiles('package.json') }}
           restore-keys: |
             ${{ hashFiles('package.json') }}
             npm-${{ runner.os }}-
             npm-
+
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Clone all history for 'last-update' to work on the pages
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -52,6 +54,10 @@ jobs:
       - name: Copy pdf files to build/pdf folder
         run: cp -R pdf build/pdf
 
+      - name: Copy gource.mp4
+        run: |
+          wget https://github.com/lucasbaccan/code/raw/refs/heads/gource/gource.mp4 -O build/assets/gource.mp4
+
       - name: Install Surge.sh
         run: npm install -g surge
 
@@ -61,7 +67,7 @@ jobs:
       - name: Comment on pull request
         uses: mshick/add-pr-comment@v1
         with:
-          message: 'Uma nova versão está disponível em [https://pull-request-${{ github.event.pull_request.number }}-code.surge.sh](https://pull-request-${{ github.event.pull_request.number }}-code.surge.sh)/'
+          message: "Uma nova versão está disponível em [https://pull-request-${{ github.event.pull_request.number }}-code.surge.sh](https://pull-request-${{ github.event.pull_request.number }}-code.surge.sh)/"
           repo-token: ${{ secrets.ACCESS_TOKEN  }}
           repo-token-user-login: "github-actions[bot]"
           allow-repeats: true
