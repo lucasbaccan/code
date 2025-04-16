@@ -20,7 +20,7 @@ jobs:
         uses: nbprojekt/gource-action@v1
         with:
           gource_title: "${{ github.event.repository.name }}"
-          gource_fps: 60
+          gource_fps: 30
           gource_max_user_speed: 100
           gource_time_scale: 1
           gource_seconds_per_day: 0.5
@@ -31,7 +31,7 @@ jobs:
           name: Gource
           path: ./gource/gource.mp4
 
-      - name: Commit files
+      - name: Commit files to gource
         run: |
           mv ./gource/gource.mp4 ./gource.mp4
           find . ! -name 'gource.mp4' -type f -exec rm -f {} +
@@ -40,25 +40,30 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add . 
-          git commit -m "Add changes" -a
+          git commit -m "Add gource video"
 
-      - name: Push changes
+      - name: Push to gource branch
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
           branch: gource
           force: true
 
-      - name: Prepare gh-pages
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Download gource.mp4 file
+        run: wget https://github.com/lucasbaccan/code/raw/refs/heads/gource/gource.mp4
+
+      - name: Commit files to gh-pages
         run: |
-          git checkout --orphan gh-pages
-          find . ! -name 'gource.mp4' -type f -exec rm -f {} +
-          git add gource.mp4
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git commit -m "Update gource visualization"
+          git add .
+          git commit -m "Update gh-pages with gource video"
 
-      - name: Push changes to gh-pages
+      - name: Push to gh-pages branch
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
