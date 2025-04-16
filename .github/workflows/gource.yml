@@ -39,7 +39,7 @@ jobs:
           git remote add origin "https://github.com/${{ github.repository }}.git"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add .
+          git add . 
           git commit -m "Add changes" -a
 
       - name: Push changes
@@ -49,9 +49,14 @@ jobs:
           branch: gource
           force: true
 
-      - name: Copy gource.mp4
+      - name: Prepare gh-pages
         run: |
-          wget https://github.com/lucasbaccan/code/raw/refs/heads/gource/gource.mp4 -O assets/gource.mp4
+          git checkout --orphan gh-pages
+          find . ! -name 'gource.mp4' -type f -exec rm -f {} +
+          git add gource.mp4
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Update gource visualization"
 
       - name: Push changes to gh-pages
         uses: ad-m/github-push-action@master
