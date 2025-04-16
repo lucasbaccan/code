@@ -1,41 +1,40 @@
-# Website
+# Code
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+Seja bem vindo ao meu projeto 🥳, se não viu o site, aproveite e acesse o URL abaixo  
+[code.lucasbaccan.com.br](https://code.lucasbaccan.com.br)
 
-### Installation
+## Sobre o projeto e o autor
 
-```
-$ yarn
-```
+Você vai encontrar essas informações no site, mas aqui vai um resumo:
 
-### Local Development
+Esse projeto é uma mistura de portfólio e blog, um lugar para eu compartilhar meus conhecimentos e experiências, além de mostrar um pouco do meu trabalho.
 
-```
-$ yarn start
-```
+## Tecnologias utilizadas
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+- [Docusaurus](https://docusaurus.io/) - O gerador de sites estáticos que estou usando para criar o site.
+- [Node.js](https://nodejs.org/en/) - O ambiente de execução JavaScript que estou usando para rodar o Docusaurus.
+- [GitHub Pages](https://pages.github.com/) - O serviço de hospedagem que estou usando para hospedar o site.
 
-### Build
+### Como rodar o projeto localmente
 
-```
-$ yarn build
-```
+Para rodar o projeto localmente, você vai precisar ter o Node.js instalado na sua máquina. Você pode baixar a versão mais recente do Node.js [aqui](https://nodejs.org/en/download/).
+Depois de instalar o Node.js, você pode clonar o repositório e instalar as dependências do projeto. Para isso, siga os passos abaixo:
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+1. Clone o repositório:
+   ```bash
+   git clone <repository-url>
+   ```
+2. Instale as dependências:
+   ```bash
+   cd <repository-name>
+   npm install # ou yarn
+   ```
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm start # ou yarn start
+   ```
+4. Abra o navegador e acesse `http://localhost:3000` para ver o site em execução.
 
-### Deployment
+## Contribuindo
 
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Até o momento, não penso em aceitar contribuições externas, mas se você tiver alguma sugestão ou feedback, fique à vontade para entrar em contato comigo através do meu e-mail ou redes sociais ou abrir uma issue aqui no repositório.

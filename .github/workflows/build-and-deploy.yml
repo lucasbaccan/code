@@ -15,14 +15,16 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          path: 
-            ~/.npm
+          path: ~/.npm
           key: npm-${{ runner.os }}-${{ hashFiles('package.json') }}
           restore-keys: |
             ${{ hashFiles('package.json') }}
             npm-${{ runner.os }}-
             npm-
+
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Clone all history for 'last-update' to work on the pages
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -39,7 +41,7 @@ jobs:
         run: docker compose -f ./docker/docker-compose.yml up --build
         env:
           BASE_URL: "https://code.lucasbaccan.com.br"
-        
+
       - name: Change owner of build folder
         run: sudo chown -R $USER:$USER build
 

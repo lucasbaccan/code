@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 'Checkout'
-        uses: actions/checkout@v2
+      - name: "Checkout"
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-        
-      - name: 'Gource Action'
+
+      - name: "Gource Action"
         uses: nbprojekt/gource-action@v1
         with:
           gource_title: "${{ github.event.repository.name }}"
@@ -25,12 +25,12 @@ jobs:
           gource_time_scale: 1
           gource_seconds_per_day: 0.5
 
-      - name: 'Upload gource video'
-        uses: actions/upload-artifact@v2
+      - name: "Upload gource video"
+        uses: actions/upload-artifact@v4
         with:
           name: Gource
           path: ./gource/gource.mp4
-          
+
       - name: Commit files
         run: |
           mv ./gource/gource.mp4 ./gource.mp4
@@ -41,10 +41,21 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add .
           git commit -m "Add changes" -a
-          
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
           branch: gource
+          force: true
+
+      - name: Copy gource.mp4
+        run: |
+          wget https://github.com/lucasbaccan/code/raw/refs/heads/gource/gource.mp4 -O assets/gource.mp4
+
+      - name: Push changes to gh-pages
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          branch: gh-pages
           force: true
