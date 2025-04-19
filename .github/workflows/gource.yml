@@ -54,7 +54,7 @@ jobs:
           ref: gh-pages
 
       - name: Download gource.mp4 file
-        run: wget https://github.com/lucasbaccan/code/raw/refs/heads/gource/gource.mp4
+        run: wget https://github.com/lucasbaccan/code/raw/refs/heads/gource/gource.mp4 -O ./assets/gource.mp4
 
       - name: Commit files to gh-pages
         run: |
