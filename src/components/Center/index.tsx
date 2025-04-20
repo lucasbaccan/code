@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useColorMode } from "@docusaurus/theme-common";
 
 export default function Center({
@@ -8,20 +8,22 @@ export default function Center({
   bgColor = null,
   bgColorDark = null,
 }) {
-  // Verificar qual o tema atual
   const { colorMode } = useColorMode();
-  // Verificar se o tema atual é dark
-  const isDarkTheme = colorMode === "dark";
+  const [bgThemeColor, setBgColor] = useState(null);
 
-  // Verificar se teve alteração no tema
-  const bgColorTheme = isDarkTheme ? bgColorDark : bgColor;
+  useEffect(() => {
+    if (colorMode === "dark") {
+      setBgColor(bgColorDark || null);
+    } else {
+      setBgColor(bgColor || null);
+    }
+  }, [colorMode]);
 
-  // Estilizar o componente
   const style = {
     textAlign: "center",
     fontSize,
     color,
-    backgroundColor: bgColorTheme,
+    backgroundColor: bgThemeColor,
   };
 
   return <div style={style}>{children}</div>;

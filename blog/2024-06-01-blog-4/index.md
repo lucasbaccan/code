@@ -2,7 +2,8 @@
 slug: "4"
 title: "#4 - Home Lab"
 authors: [LucasEliasBaccan]
-tags: ["2023", "06/2024", "Lucas", "Elias", "Baccan"]
+tags:
+  ["2024", "06/2024", "Lucas", "Elias", "Baccan", "Home Lab", "Viagem", "Ebay"]
 hide_table_of_contents: false
 ---
 
@@ -47,7 +48,6 @@ Fiz o contato ainda no Brasil, falei que iria viajar, que ainda não tinha o nom
 ![Ebay](./imagem1.png)  
 Anúncio no Ebay
 
-
 </Center>
 
 ## Entrega
@@ -58,7 +58,7 @@ Corri então pra rua a procura da placa do carro dele, estava a alguns metros do
 
 ## Computadores
 
-Comprei 3 Lenovo [ThinkCentre M900 Tiny](/files/m900_tiny_platform_spec.pdf), que são computadores pequenos, que tem um processador [Intel i5-6500T](https://www.intel.com.br/content/www/br/pt/products/sku/88183/intel-core-i56500t-processor-6m-cache-up-to-3-10-ghz/specifications.html) - 4 núcleos / 4 threads (2.5 GHz / 3.1 GHz), 16 GB de RAM (1x16 GB) 2133 mhz (Um deles é 2x8 GB) e 512 GB NVMe (TeamGroup). 
+Comprei 3 Lenovo [ThinkCentre M900 Tiny](/files/m900_tiny_platform_spec.pdf), que são computadores pequenos, que tem um processador [Intel i5-6500T](https://www.intel.com.br/content/www/br/pt/products/sku/88183/intel-core-i56500t-processor-6m-cache-up-to-3-10-ghz/specifications.html) - 4 núcleos / 4 threads (2.5 GHz / 3.1 GHz), 16 GB de RAM (1x16 GB) 2133 mhz (Um deles é 2x8 GB) e 512 GB NVMe (TeamGroup).
 
 <Center>
 
