@@ -2,7 +2,7 @@
 slug: "3"
 title: "#3 - Cursos"
 authors: [LucasEliasBaccan]
-tags: ["2023", "03/2024", "Lucas", "Elias", "Baccan"]
+tags: ["2024", "03/2024", "Lucas", "Elias", "Baccan"]
 hide_table_of_contents: true
 ---
 
