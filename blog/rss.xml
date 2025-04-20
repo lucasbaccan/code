@@ -4,10 +4,107 @@
         <title>Code Blog</title>
         <link>https://code.lucasbaccan.com.br/blog</link>
         <description>Code Blog</description>
-        <lastBuildDate>Sat, 01 Jun 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 19 Apr 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>pt-BR</language>
+        <item>
+            <title><![CDATA[#5 - Home Lab - Parte 2]]></title>
+            <link>https://code.lucasbaccan.com.br/blog/5</link>
+            <guid>https://code.lucasbaccan.com.br/blog/5</guid>
+            <pubDate>Sat, 19 Apr 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Home Lab]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="home-lab">Home Lab<a href="https://code.lucasbaccan.com.br/blog/5#home-lab" class="hash-link" aria-label="Link direto para Home Lab" title="Link direto para Home Lab">​</a></h2>
+<p>No post <a href="https://code.lucasbaccan.com.br/blog/4">anterior</a>, eu comentei que comprei alguns computadores para montar meu Home Lab. Agora quero dar uma atualização de como está o projeto e o que eu fiz até agora.</p>
+<p>Eu comprei 3 unidades pensando em montar um cluster, para aprender mais sobre Kubernetes, alta disponibilidade, balanceamento de carga, etc. Para funcionar melhor, eu precisava fazer alguns upgrades, então fiz o seguinte:</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="upgrades">Upgrades<a href="https://code.lucasbaccan.com.br/blog/5#upgrades" class="hash-link" aria-label="Link direto para Upgrades" title="Link direto para Upgrades">​</a></h2>
+<p>Depois de comprar, eu fiz algumas mudanças para atender melhor as minhas necessidades. O foco principal era ter um cluster de alta disponibilidade, então eu precisava de mais armazenamento e uma rede mais rápida entre os nós.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="upgrade-armazenamento">Upgrade armazenamento<a href="https://code.lucasbaccan.com.br/blog/5#upgrade-armazenamento" class="hash-link" aria-label="Link direto para Upgrade armazenamento" title="Link direto para Upgrade armazenamento">​</a></h3>
+<p>Logo que cheguei de viagem, uma das primeiras coisas que fiz foi adicionar mais armazenamento, tinha em casa já 3 SSDs SATA de 240GB Kingston, então coloquei um em cada, já que eles vieram com NVMe, assim o SSD SATA ficava como armazenamento pro host e o SSD NVMe para as maquinas virtuais/Ceph.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="upgrade-rede">Upgrade rede<a href="https://code.lucasbaccan.com.br/blog/5#upgrade-rede" class="hash-link" aria-label="Link direto para Upgrade rede" title="Link direto para Upgrade rede">​</a></h3>
+<p>Para melhorar a alta disponibilidade, eu precisava que a comunicação entre os nós fosse rápida, e o que estava dentro do orçamento era fazer upgrade para 2.5Gbps, isso iria ajudar com o armazenamento Ceph.</p>
+<p>Nessas horas que o Aliexpress nos salva, la eu encontrei tudo que precisava, iria precisar de placas de rede, switch e cabos de rede.</p>
+<div style="text-align:center;font-size:15px;color:#999"><p><img decoding="async" loading="lazy" alt="Rede 2.5Gbps" src="https://code.lucasbaccan.com.br/assets/images/imagem1-6a2d94ec59bc850055865ea90f0f6f62.png" width="962" height="242" class="img_ev3q"><br>
+<a href="https://pt.aliexpress.com/item/1005004171201464.html" target="_blank" rel="noopener noreferrer">link</a></p></div>
+<p>A intenção seria trocar a placa wi-fi e colocar a nova placa de rede, assim os computadores iriam ter 2 placas de rede cabeada.</p>
+<p>Além disso, eu precisa de um switch 2.5Gbps para poder fazer a comunicação entre os nós, então comprei um switch também que suporta 2.5Gbps.</p>
+<div style="text-align:center;font-size:15px;color:#999"><p><img decoding="async" loading="lazy" alt="Switch 2.5Gbps" src="https://code.lucasbaccan.com.br/assets/images/imagem2-50b2035a2399d0f8cc029853954e532e.png" width="964" height="244" class="img_ev3q">
+<a href="https://pt.aliexpress.com/item/1005006102676363.html" target="_blank" rel="noopener noreferrer">link</a></p></div>
+<p>E cabos de rede, e nesse item, minha preocupação era ter cabos finos e pequenos, e a opção que achei acabou sendo Cat6a, mas pelo tamanho, acredito que não importaria muito a categoria do cabo.</p>
+<div style="text-align:center;font-size:15px;color:#999"><p><img decoding="async" loading="lazy" alt="Cabos de rede" src="https://code.lucasbaccan.com.br/assets/images/imagem3-d82314785b636598fed3e730aab1ff2b.png" width="962" height="753" class="img_ev3q">
+<a href="https://pt.aliexpress.com/item/33026678139.html" target="_blank" rel="noopener noreferrer">link</a></p></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sistema-operacional">Sistema operacional<a href="https://code.lucasbaccan.com.br/blog/5#sistema-operacional" class="hash-link" aria-label="Link direto para Sistema operacional" title="Link direto para Sistema operacional">​</a></h3>
+<p>Os computadores vieram com Windows 10, mas para criar um cluster, eu precisava de um sistema operacional que suportasse isso, então instalei o <a href="https://proxmox.com/" target="_blank" rel="noopener noreferrer">Proxmox</a>, que é um sistema operacional baseado em Debian, voltado para virtualização e gerenciamento de containers.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="rack">Rack<a href="https://code.lucasbaccan.com.br/blog/5#rack" class="hash-link" aria-label="Link direto para Rack" title="Link direto para Rack">​</a></h2>
+<p>Eu queria organizar os computadores de uma forma prática, então queria colocar eles em um rack, mas por causa do tamanho, é difícil achar um rack para mini computadores, então eu fiz uma versão caseira utilizando blocos de montar estilo Lego.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="versão-1">Versão 1<a href="https://code.lucasbaccan.com.br/blog/5#vers%C3%A3o-1" class="hash-link" aria-label="Link direto para Versão 1" title="Link direto para Versão 1">​</a></h3>
+<p>Comprei 1000 peças misturadas, e fiz um suporte para os computadores.</p>
+<div style="text-align:center;font-size:15px;color:#999"><p><img decoding="async" loading="lazy" alt="Rack 1" src="https://code.lucasbaccan.com.br/assets/images/imagem4-4ea27e788f1304fbd81110a8d3c45b2d.png" width="962" height="240" class="img_ev3q"><br>
+<a href="https://pt.aliexpress.com/item/1005006641465763.html" target="_blank" rel="noopener noreferrer">link</a></p></div>
+<p>Só que esse kit de 1000 peças não veio muitas peças grandes, teve varias que era finas ou 1x1, então não ficou como imaginava.</p>
+<div style="text-align:center;font-size:15px;color:#999"><p><img decoding="async" loading="lazy" alt="Rack 1" src="https://code.lucasbaccan.com.br/assets/images/imagem5-6bcd30347db0c32560816ceadd6f5eb0.png" width="2160" height="2101" class="img_ev3q"></p></div>
+<p>Essa versão só tinha as laterais, e sustentava cada computador, deixando um espaço entre eles, isso foi o que deu para fazer com as peças, pois o restante era muito pequenas.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="versão-2">Versão 2<a href="https://code.lucasbaccan.com.br/blog/5#vers%C3%A3o-2" class="hash-link" aria-label="Link direto para Versão 2" title="Link direto para Versão 2">​</a></h3>
+<p>Pensando em melhorar o rack, comprei mais peças para fazer uma versão melhorada, e la vamos nós de novo para o Aliexpress.</p>
+<div style="text-align:center;font-size:15px;color:#999"><p><img decoding="async" loading="lazy" alt="Placa 32x32" src="https://code.lucasbaccan.com.br/assets/images/imagem6-00c6eb63cf43681914ce63fd5e5b2090.png" width="962" height="237" class="img_ev3q"><br>
+<!-- -->2X - Placa 32x32 - <a href="https://pt.aliexpress.com/item/1005006208979309.html" target="_blank" rel="noopener noreferrer">link</a></p></div>
+<div style="text-align:center;font-size:15px;color:#999"><p><img decoding="async" loading="lazy" alt="Placa 16x16" src="https://code.lucasbaccan.com.br/assets/images/imagem7-be3292fa52ec18ba5f4006cdb58db09e.png" width="961" height="244" class="img_ev3q"><br>
+<!-- -->4X - Placa 16x32 - <a href="https://pt.aliexpress.com/item/1005006208979309.html" target="_blank" rel="noopener noreferrer">link</a></p></div>
+<div style="text-align:center;font-size:15px;color:#999"><p><img decoding="async" loading="lazy" alt="Bloco 2x4" src="https://code.lucasbaccan.com.br/assets/images/imagem8-e3d145b63881f915d151adea7dd9d370.png" width="963" height="242" class="img_ev3q"><br>
+<!-- -->200X - Blocos 2x4 - <a href="https://pt.aliexpress.com/item/1005006264266270.html" target="_blank" rel="noopener noreferrer">link</a></p></div>
+<div style="text-align:center;font-size:15px;color:#999"><p><img decoding="async" loading="lazy" alt="Bloco 2x6" src="https://code.lucasbaccan.com.br/assets/images/imagem10-54ec96d2a5a87e495100012d01a72c72.png" width="964" height="245" class="img_ev3q"><br>
+<!-- -->300X - Blocos 2x4 - <a href="https://pt.aliexpress.com/item/1005006943625796.html" target="_blank" rel="noopener noreferrer">link</a></p></div>
+<div style="text-align:center;font-size:15px;color:#999"><p><img decoding="async" loading="lazy" alt="Bloco 2x6" src="https://code.lucasbaccan.com.br/assets/images/imagem9-8881ba10e7db68f16a3ed3eeebc0b93a.png" width="963" height="240" class="img_ev3q"><br>
+<!-- -->100X - Blocos 2x6 - <a href="https://pt.aliexpress.com/item/1005006220254389.html" target="_blank" rel="noopener noreferrer">link</a></p></div>
+<div style="text-align:center;font-size:15px;color:#999"><p><img decoding="async" loading="lazy" alt="Bloco 2x4 Finos e Lisos" src="https://code.lucasbaccan.com.br/assets/images/imagem11-9c8babe52fcadea1f269115f3181d0c6.png" width="962" height="240" class="img_ev3q"><br>
+<!-- -->80X - Blocos 2x4 - Finos - Lisos - <a href="https://pt.aliexpress.com/item/32963973002.html" target="_blank" rel="noopener noreferrer">link</a></p></div>
+<div style="text-align:center;font-size:15px;color:#999"><p><img decoding="async" loading="lazy" alt="Bloco 2x4 Finossos" src="https://code.lucasbaccan.com.br/assets/images/imagem12-14c3dd559091e556778ad35bee4cb1db.png" width="965" height="242" class="img_ev3q"><br>
+<!-- -->60X - Blocos 2x4 - Finos - <a href="https://pt.aliexpress.com/item/1005003305079557.html" target="_blank" rel="noopener noreferrer">link</a></p></div>
+<p>No total foram mais 740 peças compradas, somadas com as 1000 que já tinha, totalizando peças mais do que suficiente para fazer o rack. Aproveitei as duas placas 32x32 para fazer uma caixa, onde tem um filtro de linha e a fonte dos computadores, essa parte é a que fica mais abaixo. No fundo, eu fiz um suporte para o switch. Essa parte fica aberta para poder mexer nos cabos e melhorar a ventilação.</p>
+<div style="text-align:center;font-size:15px;color:#999"><p><img decoding="async" loading="lazy" alt="Frente" src="https://code.lucasbaccan.com.br/assets/images/imagem13-6c49f6758122823e478f530c14eb747c.jpg" width="2849" height="2616" class="img_ev3q"><br>
+<!-- -->Imagem da frente do rack</p></div>
+<div style="text-align:center;font-size:15px;color:#999"><p><img decoding="async" loading="lazy" alt="Frente" src="https://code.lucasbaccan.com.br/assets/images/imagem14-098fe4117c370d433c70790fb85de9b3.jpg" width="3024" height="2908" class="img_ev3q"><br>
+<!-- -->Imagem da lateral do rack</p></div>
+<div style="text-align:center;font-size:15px;color:#999"><p><img decoding="async" loading="lazy" alt="Frente" src="https://code.lucasbaccan.com.br/assets/images/imagem15-2ab1c0d588b254ee581bc03ebbacd64e.jpg" width="3024" height="3352" class="img_ev3q"><br>
+<!-- -->Imagem de trás do rack</p></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="custo--investimento">Custo / Investimento<a href="https://code.lucasbaccan.com.br/blog/5#custo--investimento" class="hash-link" aria-label="Link direto para Custo / Investimento" title="Link direto para Custo / Investimento">​</a></h2>
+<p>Até o momento a conta do home lab está assim:</p>
+<p><strong>Hardware</strong>:</p>
+<ul>
+<li>3 computadores: R$ 1.545,00 (R$ 545,00 cada / $100,00 cada cotação de R$ 5,15)</li>
+<li>3 SSDs SATA: R$ 0,00 (Peças que já tinha em casa)</li>
+<li>3 Placas de rede: R$ 276,53</li>
+<li>1 Switch: R$ 306,88</li>
+<li>6 Cabos de rede: R$ 56,89</li>
+<li>1 Filtro de linha: R$ 0,00 (Peça que já tinha em casa)</li>
+<li><strong>Total</strong>: R$ 2.185,20</li>
+</ul>
+<p><strong>Rack</strong>:</p>
+<ul>
+<li>1000 peças aleatórias: R$ 101,71</li>
+<li>2x Placas 32x32: R$ 48,80</li>
+<li>4x Placas 16x32: R$ 64,56</li>
+<li>200X Blocos 2x4: R$ 129,15</li>
+<li>300X Blocos 2x4: R$ 156,48</li>
+<li>100X Blocos 2x6: R$ 97,26</li>
+<li>80X Blocos 2x4 finos e lisos: R$ 24,76</li>
+<li>60X Blocos 2x4 finos: R$ 87,27</li>
+<li><strong>Total</strong>: R$ 709,99</li>
+</ul>
+<p>Total geral: R$ 2.895,19</p>
+<p>Parece muito, mas uma maquina na AWS semelhante (t3a.xlarge / 4vCPU / 16GB RAM / 240GB SSD) custa cerca de $200,00 por mês, cerca de R$ 1.160,00 na cotação de hoje (R$ 5,80), isso para um nó. Então pra mim acabou sendo um bom custo-benefício, já que o cluster tem 3 nós, e ainda posso usar para outras coisas.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusão">Conclusão<a href="https://code.lucasbaccan.com.br/blog/5#conclus%C3%A3o" class="hash-link" aria-label="Link direto para Conclusão" title="Link direto para Conclusão">​</a></h2>
+<p>Esse é o projeto até agora, ainda falta fazer algumas coisas, como por exemplo, colocar um cooler para melhorar a ventilação. Todo o conjunto tem 7Kg, e só precisa ligar 1 cabo de energia e 1 cabo de rede.</p>
+<p>Estou contente com a evolução do projeto, aprendi muito até o momento e continuarei aprendendo mais.</p>]]></content:encoded>
+            <category>2025</category>
+            <category>04/2025</category>
+            <category>Lucas</category>
+            <category>Elias</category>
+            <category>Baccan</category>
+            <category>Home Lab</category>
+            <category>Proxmox</category>
+            <category>Rack</category>
+        </item>
         <item>
             <title><![CDATA[#4 - Home Lab]]></title>
             <link>https://code.lucasbaccan.com.br/blog/4</link>
@@ -55,11 +152,14 @@
 <p>Várias vezes eu ficava pensando se iria dar certo ou não a compra, se iria ser enganado ou roubado, mas no final deu tudo certo, e isso não tirou o brilho da viagem que foi incrível. Deu para conhecer várias cidades, várias culturas e se divertir muito. Já estou ansioso para a próxima viagem.</p>
 <div style="text-align:center;font-size:15px;color:#999"><p><img decoding="async" loading="lazy" alt="Computadores" src="https://code.lucasbaccan.com.br/assets/images/imagem4-c4be0ae6d76de7f837e20d415e1794aa.jpg" width="3024" height="4032" class="img_ev3q"><br>
 <!-- -->Central Park, Nova York - 31/05/2024</p></div>]]></content:encoded>
-            <category>2023</category>
+            <category>2024</category>
             <category>06/2024</category>
             <category>Lucas</category>
             <category>Elias</category>
             <category>Baccan</category>
+            <category>Home Lab</category>
+            <category>Viagem</category>
+            <category>Ebay</category>
         </item>
         <item>
             <title><![CDATA[#3 - Cursos]]></title>
@@ -72,7 +172,7 @@
 <p>Criei um novo menu no site chamado <strong><a href="https://code.lucasbaccan.com.br/cursos">Cursos</a></strong>, onde vou colocar conteúdos de cursos que eu fiz e que acho interessante compartilhar com vocês. Atualmente eu estou fazendo o <a href="https://code.lucasbaccan.com.br/cursos/curso-dev">curso.dev</a> do Felipe Deschamps e o <a href="https://code.lucasbaccan.com.br/cursos/pick-2024">pick 2024</a> do Jeferson Fernando.</p>
 <p>Espero que gostem, e que aproveitem o conteúdo.</p>
 <p>Até a próxima.</p>]]></content:encoded>
-            <category>2023</category>
+            <category>2024</category>
             <category>03/2024</category>
             <category>Lucas</category>
             <category>Elias</category>

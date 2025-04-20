@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcode=self.webpackChunkcode||[]).push([[2731],{6613:a=>{a.exports=JSON.parse('{"authors":[{"name":"Lucas Elias Baccan","title":"Autor do Site","url":"https://github.com/lucasbaccan","imageURL":"https://github.com/lucasbaccan.png","key":"LucasEliasBaccan","page":null,"count":4}]}')}}]);
