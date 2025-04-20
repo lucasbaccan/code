@@ -459,7 +459,7 @@ Baixando as alterações do repositório remoto.
 
 No exemplo acima, o comando `git pull origin master` baixou as alterações da _branch_ `master` do repositório remoto `origin` e colocou na _branch_ `master` local.
 
-:::caution Atenção
+:::warning Atenção
 O comando `git pull` é uma junção dos comandos `git fetch` e `git merge`, então ele baixa as alterações do repositório remoto, e faz o _merge_ com a _branch_ local.
 Você pode utilizar os comandos `git fetch` e `git merge` separadamente sem problemas, mas o `git pull` é mais prático.
 :::
@@ -582,7 +582,7 @@ Após rodar o comando `git init`, vai ser criada uma pasta chamada **.git**, dep
 - **Linha 2** - Comando `git init` rodado para iniciar o diretório para ser rastreado pelo **Git**.
 - **Linha 6** - Comando `ls -la` para listar os arquivos, a **linha 7 e 8** são padrão do sistema e **linha 9** é a pasta **.git** criada.
 
-:::caution Cuidado
+:::warning Cuidado
 No geral, não mexa na pasta `.git`, dependendo do que mexer dentro desta pasta, você pode corromper a estrutura.
 :::
 

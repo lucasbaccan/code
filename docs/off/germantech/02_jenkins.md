@@ -23,13 +23,13 @@ No primeiro acesso, o Jenkins solicitará a criação de um usuário administrad
 
 O Jenkins possui uma grande quantidade de plugins, que podem ser utilizados para automatizar tarefas específicas. Para instalar um plugin, basta acessar a página de gerenciamento de plugins, e pesquisar pelo plugin desejado. Para instalar um plugin, basta clicar no botão `Install without restart`.
 
-:::caution Atenção
+:::warning Atenção
 Os plugins ajudam muito no dia a dia, mas com o tempo, isso pode impactar no servidor, tanto em performance, quanto na manutenção. Por isso, é importante avaliar se o plugin é realmente necessário, e se ele não pode ser substituído por uma configuração simples.
 :::
 
 ## Configurações gerais
 
-Para o melhor funcionamento do Jenkins, deve ser verificado as configurações gerais do sistema. Esses ajustem tem que ser feitos atendendo as necessidades de cada empresa. 
+Para o melhor funcionamento do Jenkins, deve ser verificado as configurações gerais do sistema. Esses ajustem tem que ser feitos atendendo as necessidades de cada empresa.
 
 ## Estrutura
 
@@ -38,7 +38,6 @@ Segue abaixo os principais itens da estrutura do Jenkins:
 ### Jobs
 
 O Jenkins é composto por jobs, que são as tarefas que serão executadas. Para criar um job, basta clicar no botão `New Item`, e preencher as informações do job.
-
 
 Ao clicar em novo, selecione o tipo de job que deseja criar e seguir com as configurações que vão ser solicitadas. Os tipos de jobs mais comuns são:
 
