@@ -18,7 +18,7 @@ import Center from "@site/src/components/Center";
 **Instrutor**: [Jeferson Fernando](https://www.youtube.com/@linuxtips)
 :::
 
-:::caution Requer autenticação
+:::warning Requer autenticação
 **Link aluno**: [https://www.linuxtips.io/course/programa-intensivo-em-containers-e-kubernetes-2024](https://www.linuxtips.io/course/programa-intensivo-em-containers-e-kubernetes-2024)
 :::
 

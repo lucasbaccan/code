@@ -9,17 +9,18 @@ title: AWS EC2
 
 Elastic Compute Cloud (EC2) é um serviço web que fornece capacidade de computação na nuvem de forma segura e escalável. É um serviço de computação em nuvem que permite que você aumente ou diminua a capacidade de computação de acordo com a demanda. O EC2 permite que você tenha controle total sobre a configuração de hardware do servidor, permitindo que você instale e configure o software que desejar, configure grupos de segurança e crie imagens de servidor que contenham o software e as configurações que você deseja.
 
-Uma *alternativa* ao EC2 é o Lightsail, que é um serviço de computação em nuvem da Amazon que fornece servidores virtuais pré-configurados e gerenciados. O Lightsail é uma alternativa mais simples e mais barata ao EC2, mas não oferece a mesma flexibilidade e controle que o EC2.
+Uma _alternativa_ ao EC2 é o Lightsail, que é um serviço de computação em nuvem da Amazon que fornece servidores virtuais pré-configurados e gerenciados. O Lightsail é uma alternativa mais simples e mais barata ao EC2, mas não oferece a mesma flexibilidade e controle que o EC2.
 
 :::tip LINK
 **LINK:** [https://aws.amazon.com/pt/lightsail/](https://aws.amazon.com/pt/lightsail/)
 :::
 
-:::caution Atenção
+:::warning Atenção
+
 - O Lightsail não é uma alternativa ao EC2, mas sim uma alternativa mais simples e mais barata ao EC2.
 - Não é possível migrar um servidor EC2 para o Lightsail e vice-versa.
 - Enquanto o Lightsail tem um preço fixo, o EC2 tem um preço variável dependendo da quantidade de recursos que você está usando.
-:::
+  :::
 
 ## Instâncias EC2
 
@@ -43,12 +44,11 @@ Os snapshots de volumes EC2 são cópias de segurança de volumes EC2. Você pod
 
 ## Network Interfaces EC2
 
-As instâncias EC2 possuem uma ou mais interfaces de rede, que são usadas para se comunicar com a internet e com outras instâncias EC2. As interfaces de rede EC2 podem ser configuradas para usar endereços IP públicos ou privados, e podem ser configuradas para usar endereços IP estáticos ou dinâmicos. 
+As instâncias EC2 possuem uma ou mais interfaces de rede, que são usadas para se comunicar com a internet e com outras instâncias EC2. As interfaces de rede EC2 podem ser configuradas para usar endereços IP públicos ou privados, e podem ser configuradas para usar endereços IP estáticos ou dinâmicos.
 
 ### Security Groups EC2
 
 Os security groups EC2 são grupos de regras de firewall que podem ser aplicadas a uma ou mais interfaces de rede EC2. Os security groups EC2 podem ser usados para permitir ou bloquear o tráfego de entrada e saída para uma instância EC2. Os security groups EC2 podem ser aplicados a uma instância EC2 quando a instância é iniciada, ou podem ser aplicados a uma instância EC2 que já está em execução.
-
 
 ## Regiões EC2
 

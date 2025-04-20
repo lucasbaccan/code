@@ -76,7 +76,7 @@ Então não se prenda em aprender a sequência de comandos, mas sim o que cada c
 
 ### Primeiro commit
 
-:::caution Atenção
+:::warning Atenção
 Só utilize essa explicação se você estiver criando um repositório do zero e deseja enviar as alterações para o repositório remoto recém criado.
 :::
 

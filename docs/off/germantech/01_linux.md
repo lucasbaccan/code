@@ -21,16 +21,18 @@ Quando falamos de servidores, a grande maioria roda Linux. Por isso, é importan
 Uma forma fácil de aprender é através do [copy.sh](https://copy.sh/v86/?profile=linux26), um emulador de Linux que roda no navegador, então você pode testar os comandos sem precisar instalar nada.
 
 Além disso, utilize **Cheatsheets** para consultar os comandos mais utilizados, aqui abaixo temos alguns exemplos:
+
 - [Lista 1](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
 - [Lista 2](https://www.linuxtrainingacademy.com/linux-commands-cheat-sheet/)
 - [Lista 3](https://www.guru99.com/linux-commands-cheat-sheet.html)
 
-
 :::note Importante
 Abaixo você pode encontrar alguns comandos básicos para começar a utilizar o Linux, nos exemplos você pode ver o comando e em que pasta ele foi executado.
+
 ```bash title="Pasta em que o comando foi executado"
 Comando que foi executado
 ```
+
 :::
 
 :::tip Dica
@@ -39,10 +41,13 @@ Os comandos abaixo são um pequeno resumo dos comandos mais utilizados, para mai
 ```bash
 comando --help
 ```
+
 Exemplo:
+
 ```bash
 ls --help
 ```
+
 :::
 
 ## Distribuições Linux
@@ -69,7 +74,7 @@ Então antes de trabalhar com um servidor Linux, é importante saber qual distri
 
 ## Manipulação de arquivos e diretórios
 
-Vamos ver alguns comandos para começar a mexer no Linux, começando pela manipulação de arquivos e diretórios. 
+Vamos ver alguns comandos para começar a mexer no Linux, começando pela manipulação de arquivos e diretórios.
 
 O sistema de arquivos do Linux segue uma hierarquia, onde o diretório raiz é representado por `/`, e todos os outros diretórios são filhos dele. Todos os arquivos e diretórios são organizados em uma árvore, onde cada nó é um diretório e cada folha é um arquivo. Vamos ver alguns comandos para manipular os arquivos e diretórios.
 
@@ -88,14 +93,17 @@ ls /home/usuario/Documentos
 ```
 
 :::note Argumentos
+
 - `-a` - Lista todos os arquivos e pastas, inclusive os que começam com `.` (ponto).
 - `-l` - Lista os arquivos e pastas com mais detalhes.
 - `-h` - Lista os arquivos e pastas com o tamanho em formato legível.
 
 Exemplo:
+
 ```bash
 ls -lah
 ```
+
 :::
 
 ### `cd` - Muda o diretório atual
@@ -188,7 +196,7 @@ Para remover um diretório, você precisa passar o parâmetro `-r` para o comand
 rm -r Projetos
 ```
 
-:::caution Atenção
+:::warning Atenção
 Você pode utilizar `rm -rf` para remover um diretório e todos os seus arquivos e subdiretórios, mas tome cuidado ao utilizar esse comando, pois ele não pede confirmação.
 :::
 
@@ -254,9 +262,9 @@ sudo apt install pacote
 
 O comando `chmod` é usado para alterar as permissões de um arquivo ou diretório. Para alterar as permissões de um arquivo, basta passar o caminho do arquivo como parâmetro.
 
-As permissões são representadas por três números, sendo o primeiro número para o dono do arquivo, o segundo número para o grupo do arquivo e o terceiro número para os outros usuários. Cada número representa as permissões de leitura, escrita e execução. 
+As permissões são representadas por três números, sendo o primeiro número para o dono do arquivo, o segundo número para o grupo do arquivo e o terceiro número para os outros usuários. Cada número representa as permissões de leitura, escrita e execução.
 
-As permissões são números que vão de 0 a 7. 
+As permissões são números que vão de 0 a 7.
 O número 0 representa que o usuário não tem permissão de leitura, escrita e execução.
 O número 1 representa que o usuário tem permissão de execução.
 O número 2 representa que o usuário tem permissão de escrita.
@@ -267,6 +275,7 @@ O número 6 representa que o usuário tem permissão de leitura e escrita.
 O número 7 representa que o usuário tem permissão de leitura, escrita e execução.
 
 Em resumo:
+
 - 0 = Sem permissão
 - **1 = Execução** `(x)`
 - **2 = Escrita** `(w)`
@@ -289,7 +298,7 @@ Na duvida, utilize sites para converter as permissões.
 
 O comando `chown` é usado para alterar o dono de um arquivo ou diretório. Para alterar o dono de um arquivo, basta passar o caminho do arquivo como parâmetro.
 
-```bash 
+```bash
 chown root /home/root/file.txt
 ```
 
@@ -313,7 +322,7 @@ df /home/root
 
 ### `du` - Exibir tamanho de arquivo ou diretório
 
-O comando `du` é usado para exibir o tamanho de um arquivo ou diretório. 
+O comando `du` é usado para exibir o tamanho de um arquivo ou diretório.
 
 ```bash
 du

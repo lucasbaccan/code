@@ -29,7 +29,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: "16"
       - run: npm clean-install
       - run: npm run build
       - uses: peaceiris/actions-gh-pages@v3
@@ -39,7 +39,7 @@ jobs:
           branch: gh-pages
 ```
 
-:::caution Atenção
+:::warning Atenção
 Você precisa criar a pasta `.github` e dentro dela a pasta `workflows` para que o GitHub Actions funcione. A pasta `.github` é uma pasta oculta e você precisa habilitar a opção de mostrar pastas ocultas para que ela apareça no seu sistema operacional
 :::
 
@@ -135,4 +135,3 @@ O GitHub Pages pode demorar alguns minutos para atualizar o site, então se voc�
 ## Conclusão
 
 Nesse tutorial, você aprendeu como criar um site com o Docusaurus e como fazer o deploy do site para o GitHub Pages.
-

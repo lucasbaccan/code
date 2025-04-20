@@ -9,7 +9,7 @@ title: AWS S3
 
 Simple Storage Service (S3) é um serviço de armazenamento de objetos na nuvem da Amazon Web Services (AWS). O S3 armazena qualquer tipo de arquivo, desde imagens e vídeos até documentos e dados de aplicativos. O S3 é um serviço altamente escalável, seguro e confiável, projetado para fazer com que os desenvolvedores de aplicativos e as empresas armazenem e recuperem qualquer quantidade de dados de qualquer lugar na web.
 
-:::caution Custos
+:::warning Custos
 Você não paga nada para enviar os dados para o S3, mas você paga por armazenamento e transferência de dados. Para mais informações, consulte [https://aws.amazon.com/pt/s3/pricing/](https://aws.amazon.com/pt/s3/pricing/).
 :::
 

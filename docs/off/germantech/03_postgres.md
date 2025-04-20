@@ -17,7 +17,7 @@ Cada sistema operacional possui uma forma diferente de instalar o PostgreSQL, pa
 
 Quando é feita a instalação do PostgreSQL, é recomendado que seja modificado os arquivos de configuração, para que o banco de dados seja acessado de qualquer lugar.
 
-:::caution Atenção
+:::warning Atenção
 Não é recomendado deixar o banco de dados aberto para qualquer IP, apenas para o IP da sua máquina ou da sua rede.
 :::
 
