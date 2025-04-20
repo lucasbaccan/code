@@ -5,9 +5,6 @@ title: SQL
 
 import Center from '@site/src/components/Center';
 
-<!-- import SQL from '@site/src/components/SQL'; -->
-<!-- <SQL></SQL> -->
-
 ## Introdução
 
 Seja bem vindo ao tutorial de SQL. Aqui você aprenderá os conceitos básicos de SQL, as principais instruções e como utilizá-las para manipular e consultar dados em um banco de dados.
@@ -23,11 +20,11 @@ Boa sorte e bons estudos!
 
 Esse tutorial pode ser feito em qualquer lugar, desde que você tenha acesso a um navegador e uma conexão com a internet. Vamos utilizar um site para praticar SQL, então você não precisa instalar nada em sua máquina.
 
-De preferencia, utilize um computador para fazer o tutorial, pois é mais fácil de praticar SQL em um computador do que em um celular. Mas se você só tiver um celular, não tem problema, você ainda pode aprender SQL.
+De preferencia, utilize um computador para fazer o tutorial, pois é mais fácil de praticar SQL em um computador do que em um celular. Mas se você só tiver um celular, não tem problema, você ainda pode aprender SQL, só vai ser mais difícil de praticar.
 
 ## Metodologia
 
-Existem vários bancos de dados, e cada banco de dados tem implementações levemente diferentes de SQL. Neste tutorial, vamos utilizar o [SQLite](https://www.sqlite.org/index.html), um banco de dados relacional super leve e fácil de usar, você consegue utilizá-lo sem precisar instalar nada em sua máquina, basta acessar o site [SQLite Online](https://www.convertcsv.com/sqlite-online.htm) e começar a praticar SQL.
+Existem vários bancos de dados, e cada banco de dados tem implementações levemente diferentes de SQL. Neste tutorial, vamos utilizar o [SQLite](https://www.sqlite.org/index.html), que é um banco de dados relacional super leve e fácil de usar, e para deixar ainda mais fácil, vamos utilizar o site [SQLite Online](https://www.convertcsv.com/sqlite-online.htm) para praticar SQL, assim você não precisa instalar nada em sua máquina, basta acessar o site e começar a praticar SQL.
 
 <Center>
 
@@ -370,6 +367,10 @@ WHERE
   AND z IS NOT NULL;
 ```
 
+:::info Observação
+As vezes pode parecer confuso a utilização de `AND`, `OR` e `NOT`, mas com a prática você vai entender melhor como utilizá-los. Vou deixar mais adiante explicações sobre operadores lógicos, mas por enquanto, não se preocupe com isso.
+:::
+
 ### ORDER BY
 
 A cláusula `ORDER BY` é utilizada para ordenar os dados de uma tabela. Com a cláusula `ORDER BY`, você pode especificar a ordem em que os dados devem ser retornados.
@@ -444,7 +445,7 @@ A cláusula `JOIN` é utilizada para combinar os dados de duas ou mais tabelas. 
 
 O `INNER JOIN` é utilizado para combinar os dados de duas ou mais tabelas onde a condição é verdadeira. O termo `JOIN` é equivalente a `INNER JOIN`, então você pode utilizar `JOIN` em vez de `INNER JOIN`.
 
-<Center bgColorDark="#333" >
+<Center bgColorDark="#333333" >
 
 ![INNER JOIN](./img_inner_join.png)  
 https://www.w3schools.com/sql/img_innerjoin.gif
@@ -470,7 +471,7 @@ FROM
 
 O `LEFT JOIN` é utilizado para combinar os dados da tabela da esquerda com os dados da tabela da direita, mesmo que a condição não seja verdadeira.
 
-<Center bgColorDark="#333" >
+<Center bgColorDark="#333333" >
 
 ![LEFT JOIN](./img_left_join.png)  
 https://www.w3schools.com/sql/img_leftjoin.gif
@@ -489,7 +490,7 @@ FROM
 
 O `RIGHT JOIN` é utilizado para combinar os dados da tabela da direita com os dados da tabela da esquerda, mesmo que a condição não seja verdadeira.
 
-<Center bgColorDark="#333" >
+<Center bgColorDark="#333333" >
 
 ![RIGHT JOIN](./img_right_join.png)  
 https://www.w3schools.com/sql/img_rightjoin.gif
@@ -508,7 +509,7 @@ FROM
 
 O `FULL OUTER JOIN` é utilizado para combinar os dados da tabela da esquerda com os dados da tabela da direita, mesmo que a condição não seja verdadeira.
 
-<Center bgColorDark="#333" >
+<Center bgColorDark="#333333" >
 
 ![FULL OUTER JOIN](./img_full_outer_join.png)  
 https://www.w3schools.com/sql/img_fulljoin.gif
@@ -605,6 +606,215 @@ FROM
 ### Etc...
 
 Existem muitas outras funções que você pode utilizar para fazer cálculos com os dados. Você pode consultar a documentação do seu banco de dados para ver todas as funções disponíveis.
+
+## Tabela verdade
+
+Tabela verdade é um termo utilizado em lógica para representar todas as combinações possíveis de valores de verdade (verdadeiro ou falso) para uma expressão lógica. A tabela verdade é utilizada para representar o resultado de uma expressão lógica em função dos valores de verdade das variáveis que a compõem.
+
+Em SQL vamos ver essa utilização em 3 operadores lógicos:
+
+- `AND` (e lógico)
+- `OR` (ou lógico)
+- `NOT` (negação lógica)
+
+Cada um desses operadores lógicos tem uma tabela verdade que representa todas as combinações possíveis de valores de verdade para a expressão lógica.
+
+Vamos ver alguns exemplos para deixar mais claro o que são os operadores lógicos e como utilizá-los.
+
+:::info Observação
+Os exemplos a seguir vamos utilizar os símbolos `✔️` e `❌`.
+
+- O símbolo `✔️` representa **verdadeiro**.
+- O símbolo `❌` representa **falso**.
+
+Além disso vamos utilizar os símbolos `A` e `B` para representar as variáveis que estamos utilizando.
+
+- A variável `A` representa a primeira variável.
+- A variável `B` representa a segunda variável.
+
+  :::
+
+### AND (E lógico)
+
+A tabela verdade do operador `AND` é a seguinte:
+
+| A   | B   | A AND B |
+| --- | --- | ------- |
+| ❌  | ❌  | ❌      |
+| ❌  | ✔️  | ❌      |
+| ✔️  | ❌  | ❌      |
+| ✔️  | ✔️  | ✔️      |
+
+Ok, mas o que isso significa?
+
+Vamos converter essa tabela em uma frase do mundo real:
+
+Se tiver calor (A) e (AND) não chover (B), então vamos tomar sorvete (A AND B).
+
+Nesse caso temos a seguinte tabela verdade:
+
+| Tiver calor (A) | Não chover (B) | Tomar sorvete (A AND B) |
+| --------------- | -------------- | ----------------------- |
+| ❌❄️            | ❌☔️          | ❌                      |
+| ❌❄️            | ✔️☀️           | ❌                      |
+| ✔️🔥            | ❌☔️          | ❌                      |
+| ✔️🔥            | ✔️☀️           | ✔️🍨                    |
+
+Olhando a tabela, podemos ver claramente qual a condição que precisamos para tomar sorvete. No dia a dia `tomar sorvete` é o resultado que você quer buscar baseado em duas ou mais condições.
+
+**Exemplo SQL:**
+
+Buscar todos os livros do autor `J.K. Rowling` e que são anteriores a `2020`.
+
+```sql showLineNumbers
+SELECT
+  *
+FROM
+  livros
+WHERE
+  autor = 'J.K. Rowling' AND ano < 2020;
+```
+
+### OR (Ou lógico)
+
+A tabela verdade do operador `OR` é a seguinte:
+
+| A   | B   | A OR B |
+| --- | --- | ------ |
+| ❌  | ❌  | ❌     |
+| ❌  | ✔️  | ✔️     |
+| ✔️  | ❌  | ✔️     |
+| ✔️  | ✔️  | ✔️     |
+
+Ok, mas o que isso significa?
+
+Vamos converter essa tabela em uma frase do mundo real:
+
+Se tiver calor (A) ou (OR) não chover (B), então vamos tomar sorvete (A OR B).
+
+Nesse caso temos a seguinte tabela verdade:
+
+| Tiver calor (A) | Não chover (B) | Tomar sorvete (A OR B) |
+| --------------- | -------------- | ---------------------- |
+| ❌❄️            | ❌☔️          | ❌                     |
+| ❌❄️            | ✔️☀️           | ✔️🍨                   |
+| ✔️🔥            | ❌☔️          | ✔️🍨                   |
+| ✔️🔥            | ✔️☀️           | ✔️🍨                   |
+
+Olhando a tabela, podemos ver claramente qual a condição que precisamos para tomar sorvete. No dia a dia `tomar sorvete` é o resultado que você quer buscar baseado em duas ou mais condições.
+
+**Exemplo SQL:**
+Buscar todos os livros do autor `J.K. Rowling` ou que são anteriores a `2020`.
+
+```sql showLineNumbers
+SELECT
+  *
+FROM
+  livros
+WHERE
+  autor = 'J.K. Rowling' OR ano < 2020;
+```
+
+### NOT (Negações lógicas)
+
+A tabela verdade do operador `NOT` é a seguinte:
+
+| A   | NOT A |
+| --- | ----- |
+| ❌  | ✔️    |
+| ✔️  | ❌    |
+
+Ok, mas o que isso significa?
+
+Vamos entender melhor a aplicação prática dos operadores lógicos.
+
+Se tiver calor (A), então não vamos ficar em casa (NOT A).
+
+| Tiver calor (A) | Não ficar em casa (NOT A) |
+| --------------- | ------------------------- |
+| ❌❄️            | ✔️🏠                      |
+| ✔️🔥            | ❌🏠                      |
+
+Olhando a tabela, podemos ver claramente qual a condição que precisamos para não ficar em casa. No dia a dia `não ficar em casa` é o resultado que você quer buscar baseado em uma ou mais condições.
+
+**Exemplo SQL:**
+
+Buscar todos os livros que não são do autor `J.K. Rowling`.\*
+
+```sql showLineNumbers
+SELECT
+  *
+FROM
+  livros
+WHERE
+  NOT autor = 'J.K. Rowling';
+```
+
+### Mais do que duas condições
+
+Em consultas mais complexas, pode ser que precise de mais do que duas condições para chegar ao resultado desejado, mas isso pode ser complicado para algumas pessoas entenderem, então a dica que dou é agrupar as condições em pares, e depois ir agrupando os pares em grupos maiores.
+
+Exemplo de 3 condições:
+
+Se tiver calor (A) e não chover (B) e tiver dinheiro (C), então vamos tomar sorvete (A AND B AND C).
+
+| Tiver calor (A) | Não chover (B) | Tiver dinheiro (C) | Tomar sorvete (A AND B AND C) |
+| --------------- | -------------- | ------------------ | ----------------------------- |
+| ❌❄️            | ❌☔️          | ❌💸               | ❌                            |
+| ❌❄️            | ❌☔️          | ✔️💰               | ❌                            |
+| ❌❄️            | ✔️☀️           | ❌💸               | ❌                            |
+| ❌❄️            | ✔️☀️           | ✔️💰               | ❌                            |
+| ✔️🔥            | ❌☔️          | ❌💸               | ❌                            |
+| ✔️🔥            | ❌☔️          | ✔️💰               | ❌                            |
+| ✔️🔥            | ✔️☀️           | ❌💸               | ❌                            |
+| ✔️🔥            | ✔️☀️           | ✔️💰               | ✔️🍨                          |
+
+É muito mais complicado fazer essa tabela com 3 elementos, mas você pode fazer isso com 2 elementos, e depois ir agrupando os pares em grupos maiores.
+
+| Tiver calor (A) | Não chover (B) | A AND B |
+| --------------- | -------------- | ------- |
+| ❌❄️            | ❌☔️          | ❌      |
+| ❌❄️            | ✔️☀️           | ❌      |
+| ✔️🔥            | ❌☔️          | ❌      |
+| ✔️🔥            | ✔️☀️           | ✔️      |
+
+Agora combinamos com a condição C
+
+| A AND B       | Tiver dinheiro (C) | Tomar sorvete ((A AND B) AND C) |
+| ------------- | ------------------ | ------------------------------- |
+| ✔️🔥 AND ✔️☀️ | ❌💸               | ❌                              |
+| ✔️🔥 AND ✔️☀️ | ✔️💰               | ✔️🍨                            |
+
+Na segunda tabela, você já sabe qual é a condição verdadeira que precisa informar, só precisa testar os valores da condição C para ver se é verdadeiro ou falso.
+
+É como fazer contas matemáticas utilizando parênteses, você pode fazer isso com 2 elementos, e depois ir agrupando os pares em grupos maiores.
+
+**\*Exemplo SQL:**
+
+Buscar todos os livros do autor `J.K. Rowling` e que são anteriores a `2020` e que tem mais de `300` páginas.
+
+```sql showLineNumbers
+SELECT
+  *
+FROM
+  livros
+WHERE
+  autor = 'J.K. Rowling' AND ano < 2020 AND paginas > 300;
+```
+
+O mesmo pode ser feito com parênteses:
+
+```sql showLineNumbers
+SELECT
+  *
+FROM
+  livros
+WHERE
+  -- Essa alternativa faz o mesmo que a anterior, mas tem pessoas que preferem
+  (autor = 'J.K. Rowling' AND ano < 2020) AND paginas > 300;
+```
+
+O mesmo funciona para `OR` e `NOT`, você pode agrupar as condições em pares, e depois ir agrupando os pares em grupos maiores.
 
 ## Prática 1
 
@@ -1152,14 +1362,167 @@ Dependendo da configuração do banco de dados, ele pode não permitir dados que
 
 Se chegou até aqui, parabéns! Você aprendeu como utilizar chaves estrangeiras para relacionar tabelas entre si e como utilizar `JOIN` para combinar os dados de duas ou mais tabelas. Agora você pode praticar o que aprendeu e se sentir mais confortável com SQL.
 
+## Prática 3
+
+Vamos ver agora algumas consultas mais complexas utilizando `AND`, `OR` e `NOT`.
+
+### Item 3.1
+
+Vamos criar uma tabela chamada `livros` com as seguintes colunas:
+
+- `id` do tipo `INTEGER` e chave primária.
+- `titulo` do tipo `VARCHAR(255)`.
+- `ano` do tipo `INTEGER`.
+- `paginas` do tipo `INTEGER`.
+
+E vamos inserir alguns dados na tabela `livros`.
+
+```sql showLineNumbers
+DROP TABLE IF EXISTS livros;
+
+CREATE TABLE livros (
+  id INTEGER PRIMARY KEY,
+  titulo VARCHAR(255),
+  ano INTEGER,
+  paginas INTEGER
+);
+
+INSERT INTO livros (id, titulo, ano, paginas)
+VALUES
+(1, 'Harry Potter e a Pedra Filosofal', 1997, 223),
+(2, 'Harry Potter e a Câmara Secreta', 1998, 251),
+(3, 'Harry Potter e o Prisioneiro de Azkaban', 1999, 317),
+(4, 'Harry Potter e o Cálice de Fogo', 2000, 636),
+(5, 'Harry Potter e a Ordem da Fênix', 2003, 766),
+(6, 'Harry Potter e o Enigma do Príncipe', 2005, 607),
+(7, 'Harry Potter e as Relíquias da Morte', 2007, 607),
+(8, 'O Senhor dos Anéis: A Sociedade do Anel', 1954, 423),
+(9, 'O Senhor dos Anéis: As Duas Torres', 1954, 352),
+(10, 'O Senhor dos Anéis: O Retorno do Rei', 1955, 416);
+
+SELECT * FROM livros;
+```
+
+O SQL acima vai deletar a tabela `livros` se ela existir, criar a tabela `livros` com as colunas `id`, `titulo`, `ano` e `paginas`, e inserir alguns dados na tabela `livros`. Depois disso, vai consultar todos os livros da tabela `livros`.
+
+sql_item_3_1.png
+
+<Center>
+
+![Resultado](./sql_item_3_1.png)  
+Resultado da tabela livros com os livros inseridos
+
+</Center>
+
+### Item 3.2
+
+Agora vamos buscar todos os livros com menos de 300 páginas e que foram lançados antes de 2000. Isso é uma condição múltipla, então vamos utilizar `AND` para combinar as duas condições.
+
+```sql showLineNumbers
+SELECT * FROM livros
+WHERE paginas < 300 AND ano < 2000;
+```
+
+Linha 1 é executado um `SELECT` para a tabela `livros`, e na linha 2 é a condição de filtragem para buscar os livros com menos de 300 páginas e que foram lançados antes de 2000.
+
+Isso tem que retornar 2 livros, o `Harry Potter e a Pedra Filosofal` e o `Harry Potter e a Câmara Secreta`, pois são os únicos livros que atendem a condição.
+
+<Center>
+
+![Resultado](./sql_item_3_2.png)  
+Resultado dos livros com menos de 300 páginas e que foram lançados antes de 2000
+
+</Center>
+
+### Item 3.3
+
+Agora vamos buscar todos os livros com menos de 300 páginas ou que foram lançados antes de 2000. Isso é uma condição múltipla, então vamos utilizar `OR` para combinar as duas condições.
+
+```sql showLineNumbers
+SELECT * FROM livros
+WHERE paginas < 300 OR ano < 2000;
+```
+
+Linha 1 é executado um `SELECT` para a tabela `livros`, e na linha 2 é a condição de filtragem para buscar os livros com menos de 300 páginas ou que foram lançados antes de 2000.
+
+Isso tem que retornar 6 livros, sendo qeu tem casos de livros que tem mais que 300 páginas, mas foram lançados antes de 2000.
+
+<Center>
+
+![Resultado](./sql_item_3_3.png)  
+Resultado dos livros com menos de 300 páginas ou que foram lançados antes de 2000
+
+</Center>
+
+### Item 3.4
+
+Vamos fazer uma condição tripla, onde vamos buscar todos os livros que tem "Harry Potter" no título, foram lançados depois de 2000 e tem mais de 600 páginas.
+
+```sql showLineNumbers
+SELECT * FROM livros
+WHERE titulo LIKE '%Harry Potter%' AND ano > 2000 AND paginas > 600;
+```
+
+Aqui todas as condições têm que ser verdadeiras para o livro ser retornado, então temos o seguinte resultado:
+
+<Center>
+
+![Resultado](./sql_item_3_4.png)  
+Resultado dos livros com "Harry Potter" no título, lançados depois de 2000 e com mais de 600 páginas
+
+</Center>
+
+### Item 3.5
+
+Vamos ver um exemplo utilizando `OR` e `AND` juntos. Vamos buscar todos os livros que tem "Harry Potter" e foram lançados antes de 2000 ou que tem mais de 700 páginas.
+
+```sql showLineNumbers
+SELECT * FROM livros
+WHERE (titulo LIKE '%Harry Potter%' AND ano < 2000) OR paginas > 700;
+```
+
+Na linha 1 é executado um `SELECT` para a tabela `livros`, e na linha 2 é a condição de filtragem para buscar os livros que tem "Harry Potter" e foram lançados antes de 2000 ou que tem mais de 700 páginas.
+
+Nesse caso, temos que colocar os parênteses para deixar claro qual condição deve ser avaliada primeiro. Se não colocássemos os parênteses, o SQL poderia interpretar a condição de forma diferente.
+
+<Center>
+
+![Resultado](./sql_item_3_5.png)  
+Resultado dos livros com "Harry Potter" e lançados antes de 2000 ou que tem mais de 700 páginas
+
+</Center>
+
+### Item 3.6
+
+Vamos ver um exemplo utilizando `NOT` para buscar todos os livros que não tem "Harry Potter" no título.
+
+```sql showLineNumbers
+SELECT * FROM livros
+WHERE NOT titulo LIKE '%Harry Potter%';
+```
+
+Essa consulta vai retornar todos os livros que não tem "Harry Potter" no título.
+Na linha 1 é executado um `SELECT` para a tabela `livros`, e na linha 2 é a condição de filtragem para buscar os livros que não tem "Harry Potter" no título.
+
+<Center>
+
+![Resultado](./sql_item_3_6.png)  
+Resultado dos livros que não tem "Harry Potter" no título
+
+</Center>
+
+### Finalização
+
+Se chegou até aqui, parabéns! Você aprendeu como utilizar `AND`, `OR` e `NOT` para fazer condições múltiplas em SQL. Agora você pode praticar o que aprendeu e se sentir mais confortável com SQL.
+
+## Conclusão
+
 <Center>
 
 ![Finish](https://media.giphy.com/media/3o6Mbnll2gudglC3HG/giphy.gif)  
 Fim
 
 </Center>
-
-## Conclusão
 
 Você passou pelos principais comandos de SQL e como utilizá-los para manipular e consultar os dados. Mas lembre-se, SQL é uma linguagem muito poderosa e tem muitos comandos e funções que você pode utilizar para fazer cálculos com os dados. Além disso, cada banco de dados tem suas particularidades, então é importante consultar a documentação do seu banco de dados para ver todas as funções disponíveis.
 
