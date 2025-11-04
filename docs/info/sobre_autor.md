@@ -14,7 +14,7 @@ Olá, seja bem vindo ao meu site! 🥳
 
 ## Quem sou eu?
 
-Meu nome é **Lucas Elias Baccan**, tenho <CalcularAno ano='1995' mes='9' dia='30'/> anos, moro no oeste do Paraná. Gosto de tecnologia, programação, automação e infraestrutura. Minha carreira começou com programação, mas agora estou focando em DevOps.
+Meu nome é **Lucas Elias Baccan**, tenho <CalcularAno ano='1995' mes='9' dia='30'/> anos, moro no Oeste do Paraná. Gosto de tecnologia, programação, automação e infraestrutura. Minha carreira começou com programação, mas agora estou focando em DevOps.
 
 <Center>
   <img src="https://avatars1.githubusercontent.com/u/2676484?s=300&amp;v=4" />
@@ -44,7 +44,7 @@ Além disso, sempre busco aprender coisas novas. Caso queira saber mais os curso
 **Tamanho**: Pequena empresa (menos de 40 funcionários)
 :::
 
-A Germantech foi minha primeira experiência profissional. Entrei como **estagiário** e por la fiquei quase **8 anos**. Passei por diversos times e áreas, o que me proporcionou uma visão ampla de como funciona a empresa, isso foi fundamental para meu crescimento profissional.
+A Germantech foi minha primeira experiência profissional. Entrei como **estagiário** e por lá fiquei quase **8 anos**. Passei por diversos times e áreas, o que me proporcionou uma visão ampla de como funciona a empresa, isso foi fundamental para meu crescimento profissional.
 
 A empresa atua em algumas áreas, como:
 
@@ -53,7 +53,7 @@ A empresa atua em algumas áreas, como:
 - Gestão para escolas (controle de alunos, professores, notas, etc)
 - Gestão para contabilidades (contabilidade, folha de pagamento, impostos, honorários, etc)
 
-Com o tempo de casa, fui aprendendo os processos existentes e como funcionavam, sabendo disso, consegui identificar problemas e propor soluções, principalmente na automação de processos. O fato de ser uma empresa pequena ajudou, pois eu tinha liberdade para assumir a responsabilidade de criar e implementar soluções. Essas soluções eram bem vistas por todos, pois facilitavam ou otimizavam o trabalho de todos em diversas áreas.
+Com o tempo de casa, fui aprendendo os processos existentes e como funcionavam. Sabendo disso, consegui identificar problemas e propor soluções, principalmente na automação de processos. O fato de ser uma empresa pequena ajudou, pois eu tinha liberdade para assumir a responsabilidade de criar e implementar soluções. Essas soluções eram bem vistas por todos, pois facilitavam ou otimizavam o trabalho de todos em diversas áreas.
 
 #### Aprendizados
 
@@ -134,7 +134,7 @@ Ele suportava diversos bancos:
 - Sicredi (748)
 - Sicoob (756)
 
-Os arquivos de remessa e retorno eram gerados no padrão CNAB 240 e CNAB 400. A biblioteca foi um sucesso, pois conseguimos atender a demanda de todos os clientes que precisavam de boletos sem ter um custo extra para a empresa ou depender de serviços externos. Ele emitia pelo sistema, e caia direto na conta do cliente, sem precisar de intermediários.
+Os arquivos de remessa e retorno eram gerados nos padrões CNAB 240 e CNAB 400. A biblioteca foi um sucesso: conseguimos atender a demanda de clientes que precisavam de boletos sem custo extra para a empresa nem dependência de serviços externos. Os boletos eram emitidos pelo sistema e caíam diretamente na conta do cliente, sem intermediários.
 
 ### Processo de integração contínua
 
@@ -148,7 +148,7 @@ Vendo isso e querendo me aventurar a aprender mais, implantei no Jenkins novos j
 
 Quando precisava fazer o fechamento de uma versão, era executado as seguintes etapas:
 
-- O Jenkins copiava o código da branch de desenvolvimento (develop) e copiava para a branch de produção (master).
+- O Jenkins copiava o código da branch de desenvolvimento (develop) para a branch de produção (master).
 - Era criada uma tag com o número da versão do sistema.
 - O Jenkins gerava os artefatos do sistema (.jar, .exe, .war, etc).
 - O Jenkins copiava os artefatos para a AWS S3.
@@ -181,12 +181,12 @@ Projeto que eu criei para ajudar principalmente os desenvolvedores e QAs a ident
 
 Ao identificar um problema, ele já mostra onde aconteceu, uma possível causa e uma possível solução do problema. Em cerca de 6 meses, ele já identificou mais de 1000 problemas, em 300 jobs em 5 milhões de linhas de logs.
 
-Ele não resolve o problema, mas da liberdade para os times e otimiza o tempo do DevOps em resolver problemas.
+Ele não resolve o problema, mas dá autonomia aos times e otimiza o tempo do DevOps para resolver problemas.
 
 ### Athus Homework
 
 :::note Sobre
-Desenvolvido como freelaancer.
+Desenvolvido como freelancer.
 :::
 
 Esse projeto foi um desafio, criar um aplicativo para uma escola de idiomas que tivesse um sistema de reconhecimento de voz para atividades de pronúncia. O aplicativo foi desenvolvido em Flutter, com backend em Ruby on Rails e banco de dados em Postgres.
@@ -211,7 +211,7 @@ Os valores abaixo são o quanto eu me sinto confortável em cada tecnologia. Nã
 ### Desenvolvimento
 
 <ProgressBar value={100} />
-Eu gosto muito de programar, resolvo diversos problemas com programação. Eu não sou o melhor programador do mundo, mas consigo entregar soluções que funcionam. É algo que de 2013 até o momento continuo aperfeiçoando.
+Eu gosto muito de programar, resolvo diversos problemas com programação. Eu não sou o melhor programador do mundo, mas consigo entregar soluções que funcionam. É algo que venho aperfeiçoando desde 2013.
 
 Eu consigo ajudar outros desenvolvedores a quebrar o problema em partes menores, e assim conseguir superar o problema de forma mais fácil.
 
@@ -225,7 +225,7 @@ Não quero atuar só como suporte, mas atuando como suporte interno dos times de
 ### DevOps
 
 <ProgressBar value={100} />
-É a área que estou atuando atualmente. Eu gosto muito de DevOps, é algo que me fascina.Eu gosto de automatizar processos, criar soluções e ajudar os desenvolvedores a entregar software de forma mais rápida e eficiente.
+É a área na qual atuo atualmente. Gosto muito de DevOps; é algo que me fascina. Eu gosto de automatizar processos, criar soluções e ajudar os desenvolvedores a entregar software de forma mais rápida e eficiente.
 ### Git
 
 <ProgressBar value={100} />
@@ -236,7 +236,7 @@ Eu já fiz apresentações sobre Git, GitHub para novatos na área de tecnologia
 ### Docker
 
 <ProgressBar value={100} />
-Depois que comecei a utilizar Docker, eu viciei, sempre que posso utilizo. É uma ferramenta que facilita muito a vida, principalmente para desenvolvimento e automação de processos.
+Depois que comecei a utilizar Docker, me viciei, sempre que posso, uso. É uma ferramenta que facilita muito a vida, principalmente para desenvolvimento e automação de processos.
 
 ### Docker Compose
 

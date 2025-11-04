@@ -7,6 +7,7 @@ Conforme mencionado na página **[sobre o site](/info/)**, esse site surgiu da i
 
 ## Tutoriais disponíveis
 
+- [Docker](/tutorial/docker/)
 - [Git - Guia rápido](/tutorial/git/guia_rapido)
 - [Git](/tutorial/git/)
 - [Site com Docusaurus](/tutorial/site_docusaurus/introducao)

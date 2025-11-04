@@ -19,8 +19,9 @@ gerar_pdf () {
   TITULO=$1
   URL_PATH=$2
   FILE_NAME=$3
+  FIND_NEXT_PAGE=${4:-true}
 
-  gerar "$TITULO" "$BASE_URL" "$URL_PATH" "$FILE_NAME"
+  gerar "$TITULO" "$BASE_URL" "$URL_PATH" "$FILE_NAME" "$FIND_NEXT_PAGE"
 }
 
 gerar () {
@@ -34,12 +35,20 @@ gerar () {
   echo "BASE_URL: $BASE_URL"
   echo "URL_PATH: $URL_PATH"
   echo "FILE_NAME: $FILE_NAME"
+  echo "FIND_NEXT_PAGE: $FIND_NEXT_PAGE"
   echo "========================"
+
+  # Se o FIND_NEXT_PAGE for true, adicionar a flag --paginationSelector
+  if [ "$FIND_NEXT_PAGE" = true ] ; then
+    PAGINATION_SELECTOR="nav > a.pagination-nav__link.pagination-nav__link--next"
+  else
+    PAGINATION_SELECTOR="nav"
+  fi
 
   npx --yes mr-pdf-args \
     --initialDocURLs=$BASE_URL$URL_PATH \
     --contentSelector="main" \
-    --paginationSelector="nav > a.pagination-nav__link.pagination-nav__link--next" \
+    --paginationSelector="$PAGINATION_SELECTOR" \
     --excludeSelectors="header.navbar,aside.sidebar,footer,.global-ui,.page-nav,article > nav.theme-doc-breadcrumbs" \
     --coverImage="https://code.lucasbaccan.com.br/img/programmer.png" \
     --coverTitle="$TITULO" \
@@ -49,7 +58,10 @@ gerar () {
     <br /> \
     " \
     --outputPDFFilename="$CAMINHO_ARQUIVOS/$FILE_NAME.pdf" \
-    --puppeteerArgs="--no-sandbox"
+    --puppeteerArgs="--no-sandbox" \
+    --cssStyle="body { font-family: Roboto; }"
+    # --cssStyle="body { font-family: 'Noto Color Emoji', 'Arial', sans-serif; }"
+
 
     echo "------------------------"
     echo "PDF gerado em $CAMINHO_ARQUIVOS/$FILE_NAME.pdf"
@@ -59,4 +71,5 @@ gerar () {
 
 # Gerar o PDF dos curso para a Germantech.
 # gerar_pdf 'Titulo' 'URL' 'Nome do arquivo'
-gerar_pdf 'Mini curso de DevOps' '/off/germantech' 'germantech'
+# gerar_pdf 'Mini curso de DevOps' '/off/germantech' 'germantech' 
+gerar_pdf 'Curso Docker' '/tutorial/docker/' 'curso-docker' false

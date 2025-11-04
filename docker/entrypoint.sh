@@ -6,9 +6,9 @@ dos2unix /app/docker/gerar_pdf.sh
 
 git config --global --add safe.directory /app
 
-npm install mr-pdf-args
+npm ci mr-pdf-args
 
-npm install --no-progress -g wait-on
+npm install --no-progress -g wait-on@7.2.0
 
 echo "BASE_URL=${BASE_URL}"
 
