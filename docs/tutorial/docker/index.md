@@ -347,7 +347,7 @@ Agora que vimos alguns conceitos do Docker, vamos ver como isso funciona na prá
 
 Como dito anteriormente, você não precisa ter o Docker instalado no seu computador para praticar, mas é recomendado que você tenha o Docker instalado para facilitar o uso do Docker no dia a dia. Vamos utilizar o ambiente online [Play with Docker](https://labs.play-with-docker.com/) para praticar. Ele é um ambiente Docker online gratuito e temporário, ótimo para testar o Docker sem precisar instalar nada no seu computador.
 
-Cada atividade vai ser um exemplo, incrementando o conhecimento anterior, então siga o passo a passo para entender melhor como Docker funciona.
+Cada atividade vai ser um exemplo, incrementando o conhecimento anterior, então siga o passo a passo para entender melhor como Docker funciona na prática.
 
 ### Play with Docker
 
@@ -912,10 +912,355 @@ phpMyAdmin conectado ao banco de dados MySQL.
 
 :::
 
-## Pratica 3 - Docker Compose
+## Pratica 3
+
+Vamos agora aprofundar na construção de nossas imagens customizadas.
+
+<Center>
+
+![Build](https://media.giphy.com/media/l0JMrPWRQkTeg3jjO/giphy.gif)  
+Let's build!
+
+</Center>
+
+### 3.1 - Construção normal
+
+Assim como no item [2.1 - Dockerfile](#21---dockerfile), vamos fazer a construção de uma imagem a partir de um Dockerfile.
+
+<Tabs>
+<TabItem value="dockerfile.spring" label="dockerfile.spring" default>
+
+```bash title="dockerfile.spring"
+# Define a imagem base
+FROM maven:3-openjdk-17
+
+# Define o diretório de trabalho
+WORKDIR /app
+
+# Git clone (Não é uma boa prática fazer isso em produção, mas assim evita de termos que baixar o código na nossa máquina local)
+RUN git clone https://github.com/spring-projects/spring-petclinic.git .
+
+# Build da aplicação
+RUN mvn clean package
+
+# Expõe a porta 8080
+EXPOSE 8080
+
+# Copia o arquivo jar gerado para o diretório raiz e renomeia para app.jar
+RUN cp target/*.jar app.jar
+
+# Define o comando de execução quando o container for iniciado
+CMD ["java", "-jar", "app.jar"]
+```
+
+</TabItem>
+</Tabs>
+
+Crie o arquivo acima e rode o comando abaixo para construir a imagem.
+
+```bash
+docker build -t curso-docker:1 -f dockerfile.spring .
+
+# Tamanho da imagem
+docker images
+```
+
+<Center>
+
+![Imagem](./pratica-3.1.png)  
+Resultado do comando `docker build`.
+
+</Center>
+
+Podemos ver que a imagem foi construida e o tamanho final foi de 1.14GB. Vamos ver como podemos otimizar essa imagem na próxima seção.
+
+:::note O que foi visto:
+
+- Como construir uma imagem Docker a partir de um Dockerfile.
+
+:::
+
+### 3.2 - Construção otimizada
+
+Vamos otimizar a construção da imagem utilizando multi-stage builds. Com essa técnica, podemos utilizar múltiplas etapas de construção no mesmo Dockerfile, assim podemos separar as etapas de build e runtime, reduzindo o tamanho final da imagem.
+
+<Tabs>
+<TabItem value="dockerfile.spring2" label="dockerfile.spring2" default>
+
+```bash title="dockerfile.spring2"
+# Etapa de build
+FROM maven:3-openjdk-17 AS build
+
+# Define o diretório de trabalho
+WORKDIR /app
+
+# Git clone (Não é uma boa prática fazer isso em produção, mas assim evita de termos que baixar o código na nossa máquina local)
+RUN git clone https://github.com/spring-projects/spring-petclinic.git .
+
+# Build da aplicação
+RUN mvn clean package
+
+# Etapa de runtime
+FROM eclipse-temurin:17-jre-alpine
+
+# Define o diretório de trabalho
+WORKDIR /app
+
+# Copia o arquivo jar gerado na etapa de build para o diretório raiz e renomeia para app.jar
+COPY --from=build /app/target/*.jar app.jar
+
+# Expõe a porta 8080
+EXPOSE 8080
+
+# Define o comando de execução quando o container for iniciado
+CMD ["java", "-jar", "app.jar"]
+```
+
+</TabItem>
+</Tabs>
+
+Agora rode o comando abaixo para construir a imagem otimizada.
+
+```bash
+docker build -t curso-docker:2 -f dockerfile.spring2 .
+# Tamanho da imagem
+docker images
+```
+
+<Center>
+
+![Imagem](./pratica-3.2.png)  
+Resultado do comando `docker build`.
+
+</Center>
+
+Podemos observar na imagem que o build normal teve um tamanho final de 1.14GB, enquanto o build otimizado teve um tamanho final de 250MB. Isso mostra como a técnica de multi-stage builds pode ajudar a reduzir o tamanho final da imagem, separando as etapas de build e runtime.
+
+Elas continuam funcionando da mesma forma, mas a imagem otimizada é mais leve e eficiente, o que ajuda até com vulnerabilidades, já que há menos componentes na imagem final.
+
+Caso queira validar o funcionamento das imagens, rode o comando abaixo e lembre de abrir as portas 8080 e 8081 no Play with Docker.
+
+```bash
+# Rodando a imagem normal
+docker run --rm -d -p 8080:8080 curso-docker:1
+
+# Rodando a imagem otimizada
+docker run --rm -d -p 8081:8080 curso-docker:2
+```
+
+:::note O que foi visto:
+
+- Como utilizar multi-stage builds para otimizar a construção de imagens Docker.
+- Como separar as etapas de build e runtime em um Dockerfile.
+
+:::
+
+### 3.3 - Entrypoint vs CMD
+
+Vamos entender a diferença entre os comandos `ENTRYPOINT` e `CMD` no Dockerfile.
+
+```bash
+# Exemplo de Dockerfile com ENTRYPOINT e CMD
+FROM alpine:latest
+
+ENTRYPOINT ["echo"]
+CMD ["Hello, World!"]
+```
+
+No exemplo acima, o comando `ENTRYPOINT` define o comando principal que será executado quando o container for iniciado, enquanto o comando `CMD` define os argumentos padrão para o comando `ENTRYPOINT`.
+
+Se você construir a imagem acima e executar o container sem passar nenhum argumento, o comando `echo` será executado com o argumento `Hello, World!`, resultando na saída `Hello, World!`.
+
+```bash
+docker build -t exemplo-entrypoint-cmd .
+docker run --rm exemplo-entrypoint-cmd
+# Saída: Hello, World!
+```
+
+Se você executar o container passando um argumento, o comando `echo` será executado com o argumento passado, substituindo o argumento padrão definido pelo `CMD`.
+
+```bash
+docker run --rm exemplo-entrypoint-cmd "Olá, Docker!"
+# Saída: Olá, Docker!
+```
+
+Podemos ver que o comando `ENTRYPOINT` define o comando principal do container, enquanto o comando `CMD` define os argumentos padrão para esse comando. Se nenhum argumento for passado ao executar o container, o argumento padrão será utilizado. Caso contrário, o argumento passado substituirá o argumento padrão.
+
+:::note O que foi visto:
+
+- Diferença entre `ENTRYPOINT` e `CMD` no Dockerfile.
+- Como utilizar `ENTRYPOINT` para definir o comando principal do container.
+- Como utilizar `CMD` para definir argumentos padrão para o comando principal.
+- Como os argumentos passados ao executar o container substituem os argumentos padrão definidos pelo `CMD`.
+
+:::
+
+### 3.4 - Entrypoint script
+
+Vamos ver como utilizar um script de entrypoint para configurar o ambiente do container antes de iniciar a aplicação.
+
+<Tabs>
+<TabItem value="dockerfile.entrypoint" label="dockerfile.entrypoint" default>
+
+```bash title="dockerfile.entrypoint"
+# Define a imagem base
+FROM alpine:latest
+
+# Diretório de trabalho
+WORKDIR /app
+
+# Instala dos2unix para converter finais de linha
+RUN apk add --no-cache dos2unix
+
+# Copia o script de entrypoint para o container
+COPY entrypoint.sh /app/entrypoint.sh
+
+# Converte o script para formato Unix e dá permissão de execução
+RUN dos2unix /app/entrypoint.sh && chmod +x /app/entrypoint.sh
+
+# Define o entrypoint
+ENTRYPOINT ["/app/entrypoint.sh"]
+```
+
+</TabItem>
+<TabItem value="entrypoint.sh" label="entrypoint.sh">
+
+```bash title="entrypoint.sh"
+#!/bin/sh
+echo "Iniciando o container..."
+# Aqui você pode adicionar comandos para configurar o ambiente do container
+sleep 2
+
+echo "Versão do Alpine:"
+cat /etc/alpine-release
+
+echo "Container iniciado!"
+```
+
+</TabItem>
+</Tabs>
+
+Agora rode o comando abaixo para construir a imagem com o script de entrypoint.
+
+```bash
+docker build -t exemplo-entrypoint -f dockerfile.entrypoint .
+```
+
+e depois execute o container.
+
+```bash
+docker run --rm exemplo-entrypoint
+```
+
+<Center>
+
+![Imagem](./pratica-3.4.png)  
+Resultado do comando `docker run`.
+
+</Center>
+
+Podemos ver que o script de entrypoint é executado quando o container é iniciado, exibindo mensagens no terminal. Você pode adicionar comandos adicionais no script para configurar o ambiente do container antes de iniciar a aplicação principal ou até validar pré-requisitos.
+
+:::note O que foi visto:
+
+- Como utilizar um script de entrypoint em um Dockerfile.
+- Como configurar o ambiente do container antes de iniciar a aplicação principal.
+
+:::
+
+## Docker Compose
 
 :::info Observação
 🚧 Em construção 🚧
+:::
+
+Agora que você já conhece o básico do Docker, vamos ver como utilizar o Docker Compose para orquestrar múltiplos containers.
+
+Você vai ver que o Docker Compose facilita muito a vida na hora de gerenciar múltiplos containers, redes e volumes.
+
+:::warning Observação
+
+Existem duas versões do Docker Compose: a versão clássica, que é um binário separado do Docker, e a versão integrada ao Docker CLI (a partir da versão 20.10 do Docker). Nesse tutorial, vamos utilizar a versão integrada ao Docker CLI, que é a mais recente e recomendada pela comunidade.
+
+Uma das principais diferenças entre as duas versões é a forma de executar os comandos. Na versão clássica, os comandos são executados com o comando `docker-compose`, enquanto na versão integrada ao Docker CLI, os comandos são executados com o comando `docker compose` (sem o hífen).
+
+:::
+
+Vamos seguir utilizando a versão integrada `docker compose` para os exemplos a seguir.
+
+### O que é o Docker Compose?
+
+O Docker Compose é uma ferramenta que permite definir e gerenciar múltiplos containers Docker utilizando um arquivo de configuração em formato YAML. Com o Docker Compose, você pode definir os serviços, redes e volumes necessários para a sua aplicação em um único arquivo, facilitando a criação, execução e gerenciamento dos containers.
+
+:::info Observação
+
+Você pode criar arquivos `.yaml` ou `.yml` para definir a configuração do Docker Compose. Ambos os formatos são válidos e funcionam da mesma forma.
+
+No passado, alguns sistemas operacionais não sabiam lidar com formatos com mais de 3 letras, então o formato `.yml` era mais utilizado. Hoje em dia, ambos os formatos são amplamente suportados, então você pode escolher o que preferir.
+
+:::
+
+:::info Observação 2
+
+Pode ser que veja em algum lugar aquivos `docker-compose.yaml`, esse tipo de nome é a forma antiga de nomear arquivos do Docker Compose, mas hoje em dia o mais comum é utilizar `compose.yaml` que é o vamos utilizar nesse tutorial.
+
+:::
+
+### Principais comandos
+
+- `docker compose up`: Cria e inicia os containers definidos no arquivo `compose.yml`.
+- `docker compose down`: Para e remove os containers, redes e volumes definidos no arquivo `compose.yml`.
+- `docker compose logs`: Exibe os logs dos containers definidos no arquivo `compose.yml`.
+- `docker compose build`: Constrói as imagens definidas no arquivo `compose.yml`.
+- `docker compose stop`: Para os containers em execução definidos no arquivo `compose.yml`.
+- `docker compose start`: Inicia os containers parados definidos no arquivo `compose.yml`.
+
+## Pratica 4 - Docker Compose
+
+### 4.1 - Criando o arquivo compose.yaml
+
+Vamos subir alguns sistemas operacionais diferentes utilizando o Docker Compose. Crie um arquivo chamado `compose.yaml` com o seguinte conteúdo:
+
+```yaml title="compose.yaml"
+services:
+  ubuntu-22-04:
+    image: ubuntu:22.04
+    command: cat /etc/lsb-release
+
+  ubuntu-20-04:
+    image: ubuntu:20.04
+    command: cat /etc/lsb-release
+
+  ubuntu-18-04:
+    image: ubuntu:18.04
+    command: cat /etc/lsb-release
+
+  debian-11:
+    image: debian:11
+    command: cat /etc/debian_version
+
+  debian-10:
+    image: debian:10
+
+  alpine-3.18:
+    image: alpine:3.18
+    command: cat /etc/alpine-release
+
+  alpine-3.17:
+    image: alpine:3.17
+    command: cat /etc/alpine-release
+```
+
+Vamos lembrar que um arquivo `yaml` é sensível a espaços, então tome cuidado para não errar a indentação.
+
+Podemos notar que no primeiro nível temos a chave `services`, que define os serviços (containers) que serão criados. Cada serviço é definido por um nome (ex: `ubuntu-22-04`, `debian-11`, etc) e possui algumas propriedades, como a imagem utilizada (`image`) e o comando a ser executado (`command`).
+
+::::note O que foi visto:
+
+- Como criar um arquivo `compose.yaml`.
+- Estrutura básica de um arquivo `compose.yaml`.
+- Definição de serviços, imagens e comandos.
+
 :::
 
 ## Conclusão
@@ -926,7 +1271,7 @@ Espero que esse tutorial tenha te ajudado a entender melhor como Docker funciona
 
 <Center>
 
-![Container](https://media.giphy.com/media/5JIVuCsk5v6gM/giphy.gif)  
+![Container](https://media.giphy.com/media/5JIVuCsk5v6gM/giphy.gif)
 Parabéns por chegar até aqui! 🎉
 
 </Center>
