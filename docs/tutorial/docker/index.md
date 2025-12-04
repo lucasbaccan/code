@@ -229,7 +229,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: app
     volumes:
-      - db-data:/var/lib/mysql
+      - ./db-data:/var/lib/mysql
 ```
 
 O exemplo acima cria dois containers:
@@ -1255,11 +1255,223 @@ Vamos lembrar que um arquivo `yaml` é sensível a espaços, então tome cuidado
 
 Podemos notar que no primeiro nível temos a chave `services`, que define os serviços (containers) que serão criados. Cada serviço é definido por um nome (ex: `ubuntu-22-04`, `debian-11`, etc) e possui algumas propriedades, como a imagem utilizada (`image`) e o comando a ser executado (`command`).
 
-::::note O que foi visto:
+:::note O que foi visto:
 
 - Como criar um arquivo `compose.yaml`.
 - Estrutura básica de um arquivo `compose.yaml`.
 - Definição de serviços, imagens e comandos.
+
+:::
+
+### 4.2 - Subindo os containers
+
+Agora que o arquivo `compose.yaml` foi criado, vamos subir os containers utilizando o comando `docker compose up`.
+
+```bash
+docker compose up
+```
+
+Ao rodar o comando acima, o Docker Compose vai ler o arquivo `compose.yaml` e criar os containers definidos nele. Como cada container tem um comando diferente, cada um vai executar o comando definido e depois finalizar.
+
+Caso o comando não seja informado, o container vai iniciar e ficar em execução, e vai prender o terminal, para liberar o terminal, você pode utilizar o atalho `Ctrl + C` para parar todos os containers ou subir os containers em segundo plano utilizando o parâmetro `-d`.
+
+```bash
+docker compose up -d
+```
+
+:::note O que foi visto:
+
+- Como subir os containers definidos no arquivo `compose.yaml`. (Ex: `docker compose up`)
+- Como subir os containers em segundo plano. (Ex: `docker compose up -d`)
+
+:::
+
+### 4.3 - Exemplo aplicação e banco de dados
+
+Assim como vimos no item [2.5 - Network](#25---network), vamos ver um exemplo de aplicação web com banco de dados utilizando o Docker Compose.
+
+Crie um arquivo chamado `compose2.yaml` com o seguinte conteúdo:
+
+```yaml title="compose2.yaml"
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: senha123
+      MYSQL_DATABASE: meu_banco
+      MYSQL_USER: usuario
+      MYSQL_PASSWORD: senha
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: usuario
+      PMA_PASSWORD: senha
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+```
+
+Agora rode o comando abaixo para subir os containers definidos no arquivo `compose2.yaml`.
+
+```bash
+docker compose -f compose2.yaml up phpmyadmin
+```
+
+Se olharmos o log da execução, podemos ver que temos um `depends on` no serviço `phpmyadmin`, isso indica que o serviço `phpmyadmin` depende do serviço `mysql`, então o Docker Compose vai iniciar o serviço `mysql` antes de iniciar o serviço `phpmyadmin`, mesmo que não tenhamos especificado para subir o serviço `mysql` no comando acima.
+
+:::note O que foi visto:
+
+- Como definir múltiplos serviços em um arquivo `compose.yaml`.
+- Como utilizar variáveis de ambiente para configurar serviços.
+- Como mapear volumes para persistência de dados.
+- Como mapear portas para acessar serviços externamente.
+- Como definir dependências entre serviços utilizando `depends_on`.
+
+:::
+
+### 4.4 - Variáveis de ambiente
+
+Vamos ver como utilizar variáveis de ambiente em um arquivo `compose.yaml`. Crie um arquivo chamado `.env` com o seguinte conteúdo:
+
+<Tabs>
+<TabItem value=".env" label=".env" default>
+
+```env title=".env"
+MYSQL_ROOT_PASSWORD=senha123
+MYSQL_DATABASE=meu_banco
+MYSQL_USER=usuario
+MYSQL_PASSWORD=senha
+```
+
+</TabItem>
+<TabItem value="compose3.yaml" label="compose3.yaml">
+
+```yaml title="compose3.yaml"
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: ${MYSQL_USER}
+      PMA_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+```
+
+</TabItem>
+</Tabs>
+
+É importante notar que o arquivo `.env` deve estar no mesmo diretório do arquivo `compose3.yaml` para que o Docker Compose possa carregar as variáveis de ambiente corretamente.
+
+Agora rode o comando abaixo para subir os containers definidos no arquivo `compose3.yaml`.
+
+```bash
+docker compose -f compose3.yaml up
+```
+
+Caso o `.env` não esteja no mesmo diretório do `compose3.yaml`, você pode especificar o caminho do arquivo `.env` utilizando a opção `--env-file`.
+
+```bash
+docker compose --env-file /caminho/para/.env -f compose3.yaml up
+```
+
+O arquivo acima funciona exatamente como no item [4.3 - Exemplo aplicação e banco de dados](#43---exemplo-aplicação-e-banco-de-dados), mas agora as variáveis de ambiente estão sendo carregadas do arquivo `.env`, facilitando a configuração dos serviços e a manutenção do arquivo `compose3.yaml`.
+
+:::note O que foi visto:
+
+- Como utilizar variáveis de ambiente em um arquivo `compose.yaml`.
+- Como criar um arquivo `.env` para armazenar variáveis de ambiente.
+- Como carregar variáveis de ambiente do arquivo `.env` no Docker Compose.
+
+:::
+
+### 4.5 - Campos úteis do Docker Compose
+
+Vamos ver alguns campos úteis que podem ser utilizados em um arquivo `compose.yaml`.
+
+- `build`: Define o contexto de build para criar uma imagem personalizada a partir de um Dockerfile.
+- `ports`: Mapeia portas do container para o host.
+- `volumes`: Mapeia volumes do host para o container.
+- `environment`: Define variáveis de ambiente para o container.
+- `depends_on`: Define dependências entre serviços.
+- `networks`: Define redes personalizadas para os serviços.
+- `restart`: Define a política de reinício do container (ex: `no`, `always`, `on-failure`, `unless-stopped`).
+- `command`: Define o comando a ser executado no container.
+- `healthcheck`: Define um comando para verificar a saúde do container.
+- `labels`: Adiciona metadados ao container na forma de pares chave-valor.
+- `configs` e `secrets`: Gerencia configurações e segredos de forma segura para os containers.
+- `profiles`: Permite definir perfis para ativar ou desativar serviços com base no perfil selecionado.
+- `deploy`: Configurações relacionadas à implantação, como réplicas, recursos e políticas de atualização (mais usado em ambientes de orquestração como Docker Swarm).
+
+Vamos ver trechos de exemplos para cada um dos campos acima.
+
+```yaml title="compose4.yaml"
+services:
+  meu_servico:
+    build:
+      context: ./meu_servico
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./dados:/var/lib/dados
+    environment:
+      - VARIAVEL_EXEMPLO=valor
+    depends_on:
+      - outro_servico
+    networks:
+      - minha_rede
+    restart: always
+    command: ["./start.sh"]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    labels:
+      com.exemplo.ambiente: desenvolvimento
+```
+
+Cada item tem seu uso específico, e você pode combinar vários deles para configurar seus serviços da melhor forma possível, então use de acordo com a necessidade do seu projeto.
+
+A documentação oficial do Docker Compose tem uma lista completa dos campos disponíveis e suas descrições: [Docker Compose file reference](https://docs.docker.com/compose/compose-file/)
+
+### 4.6 - Limpando
+
+Vamos fazer uma pausa para limpar os containers, redes e volumes criados até agora com o Docker Compose.
+
+```bash
+docker-compose down --volumes --remove-orphans
+```
+
+::warning Observação
+
+O parâmetro `--volumes` é utilizado para remover os volumes associados aos containers, e o parâmetro `--remove-orphans` é utilizado para remover containers que não estão mais definidos no arquivo `compose.yaml`.
+
+:::
+
+Com esse comando, todos os containers, redes e volumes criados pelo Docker Compose serão removidos, então certifique-se de que não tem nenhum container importante rodando antes de executar esse comando.
+
+:::note O que foi visto:
+
+- Como limpar containers, redes e volumes criados pelo Docker Compose. (Ex: `docker-compose down --volumes --remove-orphans`)
 
 :::
 
@@ -1271,7 +1483,7 @@ Espero que esse tutorial tenha te ajudado a entender melhor como Docker funciona
 
 <Center>
 
-![Container](https://media.giphy.com/media/5JIVuCsk5v6gM/giphy.gif)
+![Container](https://media.giphy.com/media/5JIVuCsk5v6gM/giphy.gif)  
 Parabéns por chegar até aqui! 🎉
 
 </Center>
