@@ -38,29 +38,22 @@ gerar () {
   echo "FIND_NEXT_PAGE: $FIND_NEXT_PAGE"
   echo "========================"
 
-  # Se o FIND_NEXT_PAGE for true, adicionar a flag --paginationSelector
-  if [ "$FIND_NEXT_PAGE" = true ] ; then
-    PAGINATION_SELECTOR="nav > a.pagination-nav__link.pagination-nav__link--next"
-  else
-    PAGINATION_SELECTOR="nav"
-  fi
-
-  npx --yes mr-pdf-args \
-    --initialDocURLs=$BASE_URL$URL_PATH \
-    --contentSelector="main" \
-    --paginationSelector="$PAGINATION_SELECTOR" \
-    --excludeSelectors="header.navbar,aside.sidebar,footer,.global-ui,.page-nav,article > nav.theme-doc-breadcrumbs" \
-    --coverImage="https://code.lucasbaccan.com.br/img/programmer.png" \
-    --coverTitle="$TITULO" \
-    --coverSub=" \
+  npx --yes docs-to-pdf docusaurus \
+  --version=3 \
+  --baseUrl="$BASE_URL" \
+  --initialDocURLs="$BASE_URL$URL_PATH" \
+  --excludeSelectors="header.navbar,aside.sidebar,footer,.global-ui,.page-nav,article > nav.theme-doc-breadcrumbs" \
+  --restrictPaths \
+  --coverImage="https://code.lucasbaccan.com.br/img/programmer.png" \
+  --coverTitle="$TITULO" \
+  --outputPDFFilename="$CAMINHO_ARQUIVOS/$FILE_NAME.pdf" \
+  --puppeteerArgs="--no-sandbox" \
+  --coverSub=" \
     <p><h4>Feito por <h2>Lucas Elias Baccan</h2></h4><p> \
     <a href='https://code.lucasbaccan.com.br$URL_PATH'>https://code.lucasbaccan.com.br$URL_PATH</a> \
     <br /> \
     " \
-    --outputPDFFilename="$CAMINHO_ARQUIVOS/$FILE_NAME.pdf" \
-    --puppeteerArgs="--no-sandbox" \
-    --cssStyle="body { font-family: Roboto; }"
-    # --cssStyle="body { font-family: 'Noto Color Emoji', 'Arial', sans-serif; }"
+  --tocTitle="Sumário" 
 
 
     echo "------------------------"
@@ -71,5 +64,5 @@ gerar () {
 
 # Gerar o PDF dos curso para a Germantech.
 # gerar_pdf 'Titulo' 'URL' 'Nome do arquivo'
-# gerar_pdf 'Mini curso de DevOps' '/off/germantech' 'germantech' 
-gerar_pdf 'Curso Docker' '/tutorial/docker/' 'curso-docker' false
+gerar_pdf 'Tutorial Docker' '/tutorial/docker/' 'curso-docker'
+
