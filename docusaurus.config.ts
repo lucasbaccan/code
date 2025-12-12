@@ -46,6 +46,35 @@ const config: Config = {
   plugins: [
     // [require.resolve("./webpack.config")],
     ["./webpack.config", {}],
+    // Adicionar PWA
+    [
+      "@docusaurus/plugin-pwa",
+      {
+        debug: true,
+        offlineModeActivationStrategies: [
+          "appInstalled",
+          "standalone",
+          "queryString",
+        ],
+        pwaHead: [
+          {
+            tagName: "link",
+            rel: "icon",
+            href: "/img/programmer.png",
+          },
+          {
+            tagName: "link",
+            rel: "manifest",
+            href: "/manifest.json", // your PWA manifest
+          },
+          {
+            tagName: "meta",
+            name: "theme-color",
+            content: "rgba(196, 21, 8, 1)",
+          },
+        ],
+      },
+    ],
     // Adicionar componente docs - /docs
     [
       "@docusaurus/plugin-content-docs",
