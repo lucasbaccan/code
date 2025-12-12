@@ -1,14 +1,19 @@
 {
   "name": "Code",
   "short_name": "Code",
-  "description": "",
-  "display": "standalone",
-  "start_url": "/",
-  "scope": "/",
-  "orientation": "any",
-  "id": "",
+  "description": "Lucas Elias Baccan Website",
   "lang": "en",
-  "dir": "auto",
+  "theme_color": "#ffffff",
+  "background_color": "#c41508",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./index.html",
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://pos-unipar.github.io/manifest.json"
+    }
+  ],
   "icons": [
     {
       "src": "icons/icon-72x72.png",
@@ -51,13 +56,6 @@
       "type": "image/png"
     }
   ],
-  "screenshots": [],
-  "categories": [],
-  "protocol_handlers": [],
-  "related_applications": [],
-  "display_override": [],
-  "share_target": null,
-  "launch_handler": null,
-  "shortcuts": [],
-  "iarc_rating_id": ""
+  "prefer_related_applications": "false"
+
 }
