@@ -269,26 +269,6 @@ ip link show eno1 | awk '/ether/ {print $2}'
 </TabItem>
 </Tabs>
 
-### Tailscale
-
-Eu gosto de utilizar o Tailscale para acessar o Proxmox remotamente, então vou instalar ele também em cada nó, basta seguir a instalação oficial do Tailscale.
-
-```bash
-curl -fsSL https://tailscale.com/install.sh | sh && sudo tailscale up --auth-key=tskey-auth-XXXXXXXXXXXXXXXXXXXXXXX
-```
-
-Após instalar, eu gosto de utilizar a seguinte configuração:
-
-```bash
-tailscale up --reset --ssh --advertise-routes=192.168.50.0/24 --accept-dns=false
-```
-
-Essa configuração vai anunciar a rota da minha rede local, para que eu possa acessar os dispositivos da minha rede local através do Tailscale, habilitar o SSH e não aceitar as configurações de DNS do Tailscale, pois tive problema com o MagicDNS do Tailscale em outras maquinas virtuais.
-
-:::info
-Ao utilizar o MagicDNS do Tailscale, as maquinas virtuais não conseguiam resolver os nomes dos hosts, então optei por não utilizar o MagicDNS e configurar o DNS manualmente.
-:::
-
 ## Pós-instalação Scripts
 
 ### [Proxmox VE Post Install](https://community-scripts.github.io/ProxmoxVE/scripts?id=post-pve-install)
@@ -448,6 +428,26 @@ Agora, para finalizar a configuração do Ceph, crie o pool de armazenamento, qu
 OSDs do Ceph
 
 </Center>
+
+## Tailscale
+
+Eu gosto de utilizar o Tailscale para acessar o Proxmox remotamente, então vou instalar ele também em cada nó, basta seguir a instalação oficial do Tailscale, mas antes da instalação, você deve ter rodado um `apt update` para atualizar os repositórios.
+
+```bash
+curl -fsSL https://tailscale.com/install.sh | sh && sudo tailscale up --auth-key=tskey-auth-XXXXXXXXXXXXXXXXXXXXXXX
+```
+
+Após instalar, eu gosto de utilizar a seguinte configuração:
+
+```bash
+tailscale up --reset --ssh --advertise-routes=192.168.50.0/24 --accept-dns=false
+```
+
+Essa configuração vai anunciar a rota da minha rede local, para que eu possa acessar os dispositivos da minha rede local através do Tailscale, habilitar o SSH e não aceitar as configurações de DNS do Tailscale, pois tive problema com o MagicDNS do Tailscale em outras maquinas virtuais.
+
+:::info
+Ao utilizar o MagicDNS do Tailscale, as maquinas virtuais não conseguiam resolver os nomes dos hosts, então optei por não utilizar o MagicDNS e configurar o DNS manualmente.
+:::
 
 ## Considerações Finais
 
